@@ -1,0 +1,47 @@
+{
+  "case_budget_template": "configs/s3_training_timing_advance_plan.json",
+  "cases": [
+    {
+      "checked_initial_clearance_m": 0.01493691378144087,
+      "physical_initial_sha256": "27739e2f986997fab732b65689ee3c75c399e4f14e57597c1422c03bde23b1a6",
+      "seed": 1666646064,
+      "source_config": "runs/s3_coverage_20261113/coverage_train_yminus_config.json",
+      "source_episode": "coverage_train_yminus",
+      "training_group": "coverage_train_yminus_initial"
+    },
+    {
+      "checked_initial_clearance_m": 0.00334960908871872,
+      "physical_initial_sha256": "c98b7a28efbd15dbcfe4a7dff45d70a7c8d50d01861c3efdbd0f10e26e0fab9c",
+      "seed": 2048115030,
+      "source_config": "runs/s3_pair_refit_20261112/train_pitch_config.json",
+      "source_episode": "train_pitch",
+      "training_group": "lifted_basin"
+    }
+  ],
+  "evidence": {
+    "capture_validation": "runs/s3_pitch_full_tool_capture_20261117/validation.json",
+    "coverage_validation": "runs/s3_pitch_full_tool_coverage_20261117/validation.json"
+  },
+  "files_sha256": {
+    "configs/s3_deterministic_action_response_plan.json": "f1ea393adce1fadf3f80a749634d1eae162031537fe94bdbd33d8179bbd39a66",
+    "configs/s3_training_timing_advance_plan.json": "805e137c8bd3866ea145a9edc3290084fa767ea6ad59db3d6ebbce971f5ad1b5",
+    "runs/s3_coverage_20261113/capture_manifest_0.20.json": "a96bd85a40b7f230d554c53c66cda9a77b39976f463500bb48c4b027ab138e99",
+    "runs/s3_coverage_20261113/coverage_train_yminus_config.json": "4e5be9c868e01ab4be4f1d7da013c7624b09384918913eae36b954be984a09d8",
+    "runs/s3_pair_refit_20261112/capture_manifest.json": "b29ec44f9dae7ca39b13e82263912dfd444e7c7bda22dd7cd508aaeae87b1cc3",
+    "runs/s3_pair_refit_20261112/train_pitch_config.json": "2f433f385f5d96b6c5c0a705daa8e3864dcf6eea6ec82251d1712be85bd6d4a5",
+    "runs/s3_pitch_full_tool_capture_20261117/validation.json": "a33851dedd29c1ed76df5747d154c858ee5c711d498707581033edd6a3d8e2fa",
+    "runs/s3_pitch_full_tool_coverage_20261117/validation.json": "1d28336d64b88bad1c6ee7cba3c2e2c8e867efdb0e69c96bad1b8cfa8aecf2d7"
+  },
+  "followup": "Check each candidate statically and stage its read-only admission. Compare measured H9-H16 direction coverage, ball/geometry and whole-H32 response against the unchanged development archive before planning a matched training run.",
+  "horizon": 32,
+  "max_total_physics_substeps": 13568,
+  "physics_substeps_per_control": 16,
+  "reference_clock_tick": 168,
+  "schema": "s3-pitch-full-tool-batch-scope-v1",
+  "sequential_environments": 1,
+  "status": "static_commands_pending",
+  "test_episode_files_read": false,
+  "tool_protocol": "configs/s3_deterministic_action_response_plan.json",
+  "total_worker_starts": 2,
+  "training_updates": 0
+}

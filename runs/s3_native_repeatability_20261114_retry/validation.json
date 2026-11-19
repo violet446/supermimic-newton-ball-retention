@@ -1,0 +1,93 @@
+{
+  "status": "completed",
+  "physics_steps": 3712,
+  "branches": [
+    "native_replay_1",
+    "native_replay_2"
+  ],
+  "passed": true,
+  "comparison": {
+    "numerical_equivalent": true,
+    "position_resolution_passed": true,
+    "tool_relative_component_limits": {
+      "position_m": 1e-05,
+      "velocity_m_s": 0.001,
+      "spin_rad_s": 0.02
+    },
+    "position_resolution_m": 1e-06,
+    "pairwise": {
+      "actions_and_timing_match": true,
+      "executed_commands_match": true,
+      "retention_classification_match": true,
+      "tool_relative_max_component_errors": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "body_world_errors": {
+        "ball": {
+          "max_component_position_m": 0.0,
+          "max_rotation_geodesic_rad": 0.0,
+          "max_component_origin_velocity_m_s": 0.0,
+          "max_component_angular_velocity_rad_s": 0.0
+        },
+        "tool": {
+          "max_component_position_m": 0.0,
+          "max_rotation_geodesic_rad": 0.0,
+          "max_component_origin_velocity_m_s": 0.0,
+          "max_component_angular_velocity_rad_s": 0.0
+        }
+      },
+      "numerical_equivalent": true
+    },
+    "half_spread_by_lead": {
+      "8": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "16": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "32": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      }
+    },
+    "contact_candidates_and_shape_pairs_match": true,
+    "contact_candidate_counts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ]
+  },
+  "control_accepted": false,
+  "test_episode_files_read": false,
+  "wall_s": 132.6794080999971,
+  "artifacts_sha256": {
+    "admission.json": "9d06f4a3442031efa2dac8ee132293af67f5b128da8f72d2430b21be387b5b73",
+    "config.json": "834d623a30649b3fb8a91f2ec0a82ceef08f7e1232a0025ad528a340d5eb1d3c",
+    "execution_plan.json": "80c599a553dd4c7cc13ffe5c4fb5cbe87408dc8437ac8b858ae0319c58c2ea9f",
+    "launcher.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "worker/comparison.json": "31d946a350369f6895b608fa513700e6194d09ede7803c1b3363dd6fcad931f1",
+    "worker/effective_config.json": "0ece36c6887e3f97c1d18fa209fc0804e9464d613e1e5f6663723ac55a29f54f",
+    "worker/native_layout.json": "d50bb85ac024ac4a3d7d1902f09df24b9395e1bd1a9e2f20039ef7f5b84297af",
+    "worker/native_replay_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/native_replay_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/resources.jsonl": "c9bb9e73013a51e483189003cb87fa84066db979174298764e8af7f262339c44",
+    "worker/result.json": "67bd0189340bf2a664b8d25110c63cf08fa16385c047dfe686db5e470a25ff73",
+    "worker/snapshot.json": "31e32d8497db295859c4fe07801d05bbe57ff2a25ea7a392790b453a33f95b8d",
+    "worker/worker.log": "645dc84a554ffd721bfc580324eb9bf91799576fc74a393f26e414ec1c253b77",
+    "worker/worker_result.json": "2b7c44a3b3c1a863164e8919e07596bace9550b24232044c5568ced2fc816461"
+  }
+}

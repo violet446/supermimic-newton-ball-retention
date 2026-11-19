@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "phase": "small_action_response_audit",
+  "plan_sha256": "b4e85d7b57b76d7e7f91ea8876d80e485e6f869173150cd913fa133b8c9ac01d",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "newton_actuation_cases": 6,
+  "amplitude_leads": 32,
+  "models": 2,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 1.3500988999730907,
+    "available_ram_bytes": 4264300544,
+    "min_available_ram_bytes": 4231577600,
+    "rss_bytes": 97808384,
+    "peak_rss_bytes": 105410560,
+    "private_commit_bytes": 70823936,
+    "peak_private_commit_bytes": 78209024,
+    "output_bytes_before_record": 1379861
+  },
+  "artifacts_sha256": {
+    "amplitude_and_axis_attribution.json": "3547ab45d4fe091415fe0f74e13666c7ae4562a2b346fac8d28b5a88e1f2c172",
+    "execution_plan.json": "a1b4d6ad1598b2f829b4c2307b4633d59be287104e5ccc9aef437eda2f19ff8b",
+    "resources.jsonl": "190e4b91bdf21122bbfd3ff48981ab97c1f3d8f1c844d6771383e4b708c7cd89"
+  }
+}

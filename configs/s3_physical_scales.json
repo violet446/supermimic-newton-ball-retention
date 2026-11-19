@@ -1,0 +1,9 @@
+{
+  "schema": "fixed-physical-scales-v1",
+  "state_error_scale_si": [0.005, 0.005, 0.005, 0.05, 0.05, 0.05, 2.5, 2.5, 2.5],
+  "residual_gain_si": [0.00025, 0.00025, 0.00025, 0.0125, 0.0125, 0.0125, 0.625, 0.625, 0.625],
+  "rationale": "Fixed diagnostic units: position one quarter of the 20mm sphere radius; velocity 0.05m/s and rolling-equivalent spin 0.05/0.02=2.5rad/s. Residual gain uses prior dimensionless 0.05 position / 0.25 velocity and spin multiplied by these fixed units, once per 1/60s control step. Gains multiply unconstrained network outputs; they are not hard motion bounds.",
+  "data_estimated": false,
+  "acceptance_thresholds": false,
+  "protocol": "Retained-training-v2 input statistics; unchanged architecture, optimizer, sampling, response loss, seed and fixed 900 updates. Five fits total; no sweep, no holdout checkpoint selection, no new simulation. Compare SI metrics to saved normalization run; this jointly changes absolute loss scale and physical residual gain, not an attribution between those two."
+}

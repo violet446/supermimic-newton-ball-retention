@@ -1,0 +1,79 @@
+{
+  "schema": "s3-training-timing-capture-plan-v1",
+  "scope": "Two existing training initial-state groups with their frozen reverse histories. Generate deterministic data for timing coverage at tick 168. This plan defines the future capture. The current round only performs static preflight.",
+  "source_run": "runs/s3_history_coverage_20261114",
+  "reference_design": "configs/s3_deterministic_action_response_plan.json",
+  "diagnosis_validation": "runs/s3_deterministic_response_diagnosis_20261115_verified/validation.json",
+  "development_holdout": {"episode": "validation_lateral", "group": "negative_y_basin", "config": "runs/s3_pair_refit_20261112/validation_lateral_config.json"},
+  "cases": [
+    {"episode_id": "history_train_yminus004_reverse", "group_id": "history_train_yminus004", "split": "train", "history_id": "reverse", "seed": 2800128709},
+    {"episode_id": "history_train_yplus004_reverse", "group_id": "history_train_yplus004", "split": "train", "history_id": "reverse", "seed": 2732760663}
+  ],
+  "runtime": {"newton": "1.6.0", "warp": "1.17.0", "device": "cuda:0", "cuda_arch": 89, "collision_pipeline_deterministic": true, "xpbd_deterministic_mode": "RUN_TO_RUN"},
+  "snapshot_tick": 168,
+  "horizon": 32,
+  "control_substeps": 16,
+  "amplitude": 0.2,
+  "report_leads": [1, 8, 16, 24, 32],
+  "branches": "Reuse directions and branch order from the pinned reference design. Add the signed offsets to each training history's own nominal requests. Keep all H32 steps, including the offset-zero tail and the nominal release at absolute tick 184.",
+  "prefix": "For each case, start from its original initial conditions and replay absolute ticks 0 through 167 exactly once under the deterministic backend. Keep the solver running through the prefix; capture a native snapshot at control tick 168, then restore independently for all eight branches. Check both state buffers, snapshot layout, controls and clock. Older default-solver ball trajectories are provenance only.",
+  "gates": {
+    "nominal": "Both H32 same-case nominal branches must finish and pass exact controls, timing and retention checks, tool-frame max component differences <=1e-5 m, <=1e-3 m/s, <=2e-2 rad/s, and position half spread <=1e-6 m at H8/H16/H24/H32 before any perturbation.",
+    "shared_prefix": "Per sign, pitch pulse and pitch reversal share the first eight transitions. Require identical actions, executed commands, clock and retention categories through H8, the nominal numerical ceilings and position half-distance <=1e-6 m at each shared lead. Record candidate counts and shape pairs.",
+    "signal": "Record sign-pair half differences for every lead. Report SI vector-family floors 1e-6 m, 1e-5 m/s, 1e-4 rad/s, raised to 5x nominal noise or float roundoff where needed; 10x is strong. Weak signals stay in the capture with eligibility annotations. These are capture and resolution checks only."
+  },
+  "data_contract": {
+    "schema": "s3-timed-action-pairs-v1",
+    "eligibility": "Publish a training manifest only after both cases finish all branches and all consistency and nominal gates pass. Keep partial artifacts with stopped status outside the training manifest.",
+    "identity_fields": ["episode_id", "group_id", "split", "seed", "history_id", "snapshot_tick", "native_snapshot_sha256", "clock", "source_config_sha256", "prefix_actions_sha256"],
+    "pair_fields": ["direction_id", "direction_Hx2", "amplitude", "sign", "requested_actions_Hx2", "executed_joint_q", "executed_joint_qd", "before_reset_public_states", "tool_frame_p_v_spin_si", "contact_candidates_and_shape_pairs", "retention_and_ending"],
+    "nominal": "Two named zero-offset branches per snapshot. Store requested Hx2 sequences and trace hashes for both.",
+    "split_rule": "All branches and future amplitudes of a physical initial group use the existing group split. Keep negative_y_basin as development validation. Preserve relative training group mass in any later coverage-only ablation and measure state and paired response separately."
+  },
+  "static_budget": {"cpu_threads": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "max_new_output_mib": 16},
+  "budget": {
+    "sequential_environments": 1,
+    "max_worker_starts": 2,
+    "branches_per_case": 8,
+    "nominal_replays_per_case": 2,
+    "prefix_substeps_per_case": 2688,
+    "max_physics_substeps_per_worker": 6784,
+    "max_physics_substeps": 13568,
+    "max_worker_wall_s": 300,
+    "max_wall_s": 660,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_total_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_new_output_mib": 128,
+    "max_worker_output_mib": 64,
+    "worker_output_plus_shared_cache_and_temp_gib": 1
+  },
+  "stop_conditions": [
+    "Frozen inputs, source identity, controller preflight or scene layout fail",
+    "Prefix or branch incomplete, terminated or invalid; timing, exact tracked control, restore check, nominal gate or shared prefix gate fails",
+    "Any resource or physics step cap, or both cases complete",
+    "No automatic retry, replacement case, increased amplitude, or expansion beyond the fixed branch list"
+  ],
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "configs/s3_deterministic_action_response_plan.json": "f1ea393adce1fadf3f80a749634d1eae162031537fe94bdbd33d8179bbd39a66",
+    "configs/s3_history_coverage_plan.json": "627ee244c59820414384a6a979b0aaaf81cf1c00e0134413f5ce15270734c381",
+    "configs/s1_online_episode.json": "25bfeaef2ea3c1c876a5f17c6c25e46295aded0ffd5b0d030e1d3411a227f89d",
+    "assets/manifest.json": "0dd7a790ff229702abba0aa5d2b2d449d4fd24021c8dfa19b7aaf315901009f3",
+    "requirements.lock": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+    "runs/s1_reachability_20261111/joint_paths.npz": "c1dafea9b961ba0562652f7b7573d1ba5574965549a2e56a10a17cb0902d70d7",
+    "runs/s3_deterministic_response_diagnosis_20261115_verified/validation.json": "f388ae73b0076ca52fd0debc3783a10c2c9b651bbc9fc63a2ca85456abee5c95",
+    "runs/s3_pair_refit_20261112/validation_lateral_config.json": "7d26f9066c8ff8d304abc3c8facfed3f9158c75f0d94159644e372dc9bcefc39",
+    "runs/s3_history_coverage_20261114/capture_manifest.json": "31a7dc2d8adb48d1fdec8dc20fab63a7bc4f4536161861c5ba30ec01b823f4ab",
+    "runs/s3_history_coverage_20261114/capture_validation.json": "801cdb1111859525f01677e62f6728fac7965dfe92bbebdb3ee1ff1e02f365bc",
+    "runs/s3_history_coverage_20261114/history_train_yminus004_reverse_config.json": "f957001298dcb6d01dbab787f09a5641519bdb05fb1f6524ba585d1a0850f129",
+    "runs/s3_history_coverage_20261114/history_train_yminus004_reverse/action_pairs.jsonl": "e46ec0e06598861d7b08d229602c865b2a304724f5f2731ba498427d9795e5bc",
+    "runs/s3_history_coverage_20261114/history_train_yplus004_reverse_config.json": "ddf487b20c17491e471ab9e8bd8950b1e15d411d0ce606cfa699411919886217",
+    "runs/s3_history_coverage_20261114/history_train_yplus004_reverse/action_pairs.jsonl": "fc701835ea51e2a883445774afad216f22c0838375643b854101c7bcea7ff929"
+  }
+}

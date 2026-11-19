@@ -1,0 +1,27 @@
+{
+  "schema_version": "s2-world-model-pilot-v1",
+  "dataset": "data/s2_pilot_20261112",
+  "dataset_manifest_sha256": "9ab789e9661a4d4db74249519bcdb5c8b1479c58d4bbbdb919da5b8a6086d9f0",
+  "seed": 20261111,
+  "hidden": 32,
+  "horizons": [1, 4, 8],
+  "batch_size": 64,
+  "max_updates": 1600,
+  "validate_every": 40,
+  "patience_validations": 14,
+  "learning_rate": 0.001,
+  "gradient_clip_norm": 5.0,
+  "component_weights": [1.5, 1.5, 1.5, 0.7, 0.7, 0.7, 0.4, 0.4, 0.4],
+  "residual_gain": [0.05, 0.05, 0.05, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+  "ending_l2": 0.0001,
+  "budget": {
+    "threads": 1,
+    "wall_s": 480,
+    "min_start_ram_gib": 2,
+    "min_running_ram_gib": 0.75,
+    "min_disk_free_gib": 10,
+    "max_process_rss_gib": 1,
+    "max_process_commit_gib": 1.5,
+    "max_new_output_mib": 64
+  }
+}

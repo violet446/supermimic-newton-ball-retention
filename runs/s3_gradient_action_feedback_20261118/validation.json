@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "phase": "gradient_action_feedback",
+  "plan_sha256": "3332dce05b32a6ab8c317079839693c39094f626ff7ebcce4eefe62c9ba769b0",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "development_cases": 2,
+  "traces": 8,
+  "archived_physics_scores_reproduced": true,
+  "max_trajectory_error_closure_si": 1.5525775109992423e-16,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 2.3211222999962047,
+    "available_ram_bytes": 4295720960,
+    "min_available_ram_bytes": 4294844416,
+    "rss_bytes": 105799680,
+    "peak_rss_bytes": 111542272,
+    "private_commit_bytes": 112750592,
+    "peak_private_commit_bytes": 118231040,
+    "output_bytes_before_record": 961047
+  },
+  "artifacts_sha256": {
+    "execution_plan.json": "39876c4ea0c173b75aab8a235c927756f362b20078316b027480b76d702623bf",
+    "feedback_decomposition.json": "91df7490f518ae68808d90e647c183dc0aec25314509c2d348aca649e20499ec",
+    "resources.jsonl": "6baab0972e6418b74997048ab6f5c3757990247392ec5bf7662f36822c243d9f"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "available_ram_bytes": 3348385792,
+  "required_ram_bytes": 2147483648,
+  "disk_free_bytes": 42892378112,
+  "required_disk_bytes": 33554432,
+  "measurement": "Win32_OperatingSystem.FreePhysicalMemory",
+  "admitted": true,
+  "plan_sha256": "b3455defeb54c0a9fd435bee71829bcf50af1965c729cafd8c471038d27e083b"
+}

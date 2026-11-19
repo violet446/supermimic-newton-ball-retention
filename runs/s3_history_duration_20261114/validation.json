@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "model_regression_passed": {
+    "old_900_to_old_1800": false,
+    "expanded_900_to_expanded_1800": false,
+    "old_1800_to_expanded_1800": false,
+    "old_900_to_expanded_900": false,
+    "old_900_to_expanded_1800": false
+  },
+  "project_tests_passed": 83,
+  "resource_diagnostic_tests_passed": 8,
+  "plan_source_input_and_checkpoint_hashes_verified": true,
+  "reproduction_900_array_equal": true,
+  "prior_900_metrics_exact": true,
+  "reload_1800_equal": true,
+  "common_validation_pair_ids_newton_responses_replay_noise_and_resolvability_identical": true,
+  "max_resolution_threshold_delta_si": {
+    "position": 0.0,
+    "velocity": 0.0,
+    "angular_velocity": 2.344111117178737e-14
+  },
+  "threshold_note": "The angular velocity numerical floor depends on predicted state norm; Newton resolvability and position gates are unchanged.",
+  "fixed_total_updates": 3600,
+  "peak_rss_bytes": 120557568,
+  "peak_private_commit_bytes": 129380352,
+  "wall_s": 37.279284299999745,
+  "output_bytes_before_validation": 5190198,
+  "test_episode_files_read": false,
+  "test_metrics_used": false,
+  "control_accepted": false,
+  "simulation_steps": 0,
+  "artifacts_sha256": {
+    "comparison.json": "1d3d5d8592e4dc9a916605de77cb515f7b949cb9763a99b87d02e858b3cc4d47",
+    "expanded_1800.npz": "e597efe29a2c9ff56b5df91657918fef25946855a98f7f105acfa0b70707d0c9",
+    "expanded_reproduction.json": "5d666aabf8b434bdfffa040e363b0cbd3f13263a3996f082a1ad6bb55a56f426",
+    "expanded_training.jsonl": "b1f1595ec2463f0db8bd072432dcdd0a1153476cd8b7b9c3ca36ddef1b6352c9",
+    "expanded_training_data.json": "1a446b62c9f4c13f7adf17071aea2680d9295ebccb7f8f0fc818faf4b9fdb2ec",
+    "old_1800.npz": "9bb8af66763a1b9280521701555068404f493ecee4d6696c4e540840fe75f816",
+    "old_reproduction.json": "e6dd2502294fb32c7568d4a76ff498655e2e334267cfc6692b592798d0992e9c",
+    "old_training.jsonl": "bf634b743a90da2f7c0881cd77fab3c084473f7d076f046756475295f01fed1e",
+    "old_training_data.json": "6f92c2afc7272bac6a977d7bbb1da49575dc8e54fab06e86787598dd3db60542",
+    "plan.json": "6bc8464f65ab7e0cc8fb39754d31382dd05941f6b334980d98b9c42e51032f3c",
+    "resources.jsonl": "11cc2f558d2c20f0cd1ee9701d1fa0d81745f488f61cdbb9dbbd329863b8a172",
+    "summary.json": "eec35307243bf5161fb23463d167cacb1c317ec015b135c76d5528ac0ff6e269",
+    "position_error_decomposition.json": "f07bdd30a662c6529c73f1c49f7ff29d92f8299021aaeab5cbd66570c4ae92d4"
+  }
+}

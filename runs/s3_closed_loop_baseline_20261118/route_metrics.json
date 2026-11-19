@@ -1,0 +1,90 @@
+{
+  "source_validation_sha256": "2dda37233461815fb82037252b9cc7196d67a9df3e3b9ee40ad53acea188aefe",
+  "source_comparison_sha256": "61ed3f34f821a98261d65f7c245b27eda17ad6fc24e4bfaec25c4a993ac14b8b",
+  "target_xy_tool_m": [
+    0.28574578846838633,
+    -0.0324954414973409
+  ],
+  "observation_scope_s": [
+    1.0,
+    4.0
+  ],
+  "paired_offline_metrics": {
+    "broad_train_72_center": {
+      "nominal": {
+        "episode_id": "broad_train_72_center_nominal",
+        "trajectory_sha256": "9d6b0ab87cb9f93afc6b4c674752f0e8735187675287219eb8509c20c1436907",
+        "final_distance_to_target_mm": 27.713646797020235,
+        "max_distance_to_target_mm": 31.65625373437274,
+        "rms_distance_to_target_mm": 19.29259734970734,
+        "max_excursion_from_1s_xy_mm": 33.700372946936675,
+        "final_xy_speed_mm_s": 48.59907131860208,
+        "max_abs_executed_tilt_deg": [
+          0.0,
+          0.0
+        ],
+        "sample_count": 181,
+        "success": true
+      },
+      "feedback": {
+        "episode_id": "broad_train_72_center_feedback",
+        "trajectory_sha256": "4ecfc7af08a2e0ddd704c11834996f0d392426ce1e655f95164eed6afffb36d8",
+        "final_distance_to_target_mm": 18.0230849846637,
+        "max_distance_to_target_mm": 30.780685441382587,
+        "rms_distance_to_target_mm": 18.270034641720976,
+        "max_excursion_from_1s_xy_mm": 33.02365852705392,
+        "final_xy_speed_mm_s": 49.40387857567021,
+        "max_abs_executed_tilt_deg": [
+          0.28866114608852433,
+          0.19884282429300465
+        ],
+        "sample_count": 181,
+        "success": true
+      }
+    },
+    "broad_train_72_right": {
+      "nominal": {
+        "episode_id": "broad_train_72_right_nominal",
+        "trajectory_sha256": "7867cbcda9d43b045189fc55e02001c78485a542a9132c953c1ce308445f7e79",
+        "final_distance_to_target_mm": 32.462389717820706,
+        "max_distance_to_target_mm": 37.699799114434555,
+        "rms_distance_to_target_mm": 23.15057466711908,
+        "max_excursion_from_1s_xy_mm": 42.27258346074098,
+        "final_xy_speed_mm_s": 78.92516579313263,
+        "max_abs_executed_tilt_deg": [
+          0.0,
+          0.0
+        ],
+        "sample_count": 181,
+        "success": true
+      },
+      "feedback": {
+        "episode_id": "broad_train_72_right_feedback",
+        "trajectory_sha256": "81d3f1019ae887b66476c895de06b4f85e580d6b7232ec1bd490f223ca38108a",
+        "final_distance_to_target_mm": 28.754483890752272,
+        "max_distance_to_target_mm": 37.56413195943607,
+        "rms_distance_to_target_mm": 23.10045457151809,
+        "max_excursion_from_1s_xy_mm": 42.17331287280336,
+        "final_xy_speed_mm_s": 92.70436057449875,
+        "max_abs_executed_tilt_deg": [
+          0.31462589997240703,
+          0.1287542636035785
+        ],
+        "sample_count": 181,
+        "success": true
+      }
+    }
+  },
+  "whole_worker_loop_throughput": {
+    "episodes": 3,
+    "control_rows": 720,
+    "recording_wall_s": 441.5612467000028,
+    "environment_step_wall_s": 440.4596949001425,
+    "encoding_and_write_wall_s": 0.21772330038947985,
+    "control_rows_per_s": 1.6305778765254026,
+    "physics_substeps_per_s": 26.089246024406442,
+    "million_control_rows_hours_excluding_init_and_interruptions": 170.3554192515443
+  },
+  "accepted_jsonl_bytes": 7942907,
+  "all_capture_phases_wall_s": 674.9433022000594
+}

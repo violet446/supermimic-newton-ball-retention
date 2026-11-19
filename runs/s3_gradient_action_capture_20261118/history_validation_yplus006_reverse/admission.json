@@ -1,0 +1,27 @@
+{
+  "hardware": {
+    "passed": false,
+    "checks": {
+      "ram": false,
+      "gpu_free": true,
+      "gpu_used": true,
+      "disk": true
+    }
+  },
+  "sample": {
+    "available_ram_bytes": 2073128960,
+    "total_ram_bytes": 16779862016,
+    "gpu_total_bytes": 8585740288,
+    "gpu_used_bytes": 421527552,
+    "disk_free_bytes": 37807058944
+  },
+  "storage": {
+    "passed": true,
+    "total_bytes": 616929847,
+    "limit_bytes": 1073741824,
+    "output_bytes": 1613852,
+    "cache_bytes": 615315995,
+    "temp_bytes": 0
+  },
+  "environment_bytes": 597306385
+}

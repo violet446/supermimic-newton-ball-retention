@@ -1,0 +1,88 @@
+{
+  "schema": "s3-deterministic-archive-import-plan-v1",
+  "status": "planned_not_run",
+  "question": "Does importing the public State from a proven deterministic native snapshot reproduce its nominal trajectory, and can an older public State yield repeatable nominal dynamics under the same worker options?",
+  "case": {
+    "episode": "validation_lateral",
+    "group": "negative_y_basin",
+    "seed": 536873541,
+    "tick": 168,
+    "archive_config": "runs/s3_pair_refit_20261112/validation_lateral_config.json",
+    "archive_trace": "runs/s3_pair_refit_20261112/validation_lateral/action_pairs.jsonl",
+    "archive_config_sha256": "7d26f9066c8ff8d304abc3c8facfed3f9158c75f0d94159644e372dc9bcefc39",
+    "archive_trace_sha256": "58b10231993821f533dd054c99d3d21b079c33836d53d800bf1da4490aff611e"
+  },
+  "runtime": {
+    "newton": "1.6.0",
+    "warp": "1.17.0",
+    "device": "cuda:0 on the same GPU architecture as the native retry",
+    "collision_pipeline_deterministic": true,
+    "xpbd_deterministic_mode": "RUN_TO_RUN"
+  },
+  "native_reference": {
+    "snapshot": "runs/s3_native_repeatability_20261114_retry/worker/snapshot.json",
+    "layout": "runs/s3_native_repeatability_20261114_retry/worker/native_layout.json",
+    "replays": [
+      "runs/s3_native_repeatability_20261114_retry/worker/native_replay_1.json",
+      "runs/s3_native_repeatability_20261114_retry/worker/native_replay_2.json"
+    ]
+  },
+  "preflight": [
+    "Validate hashes, seed, asset layout, archive config, Backend options, clock and static nominal controller commands.",
+    "Decode the saved native snapshot as its original schema. Verify declared array names, shapes and finite dtype conversion against a fresh scene template. Reconstitute tuple and dataclass fields, restore both buffers, and compare observed public state, clocks, counters and controller before stepping.",
+    "Reuse the earlier public-State importer with a fresh deterministic scene template and statically derived qdd and filter state. Preserve zero time for initializer physics and check every transition of each branch."
+  ],
+  "procedure": [
+    "Load the saved same-configuration native snapshot at tick 168. Run two nominal native restores and compare to each other and the two recorded native branches. The saved snapshot avoids another nominal physics prefix.",
+    "Import the public State from the saved snapshot, then run two nominal restores. Compare all same-session native and reconstructed branches with the frozen live same-run numerical, control, retention and H32 position gates.",
+    "If those pass, import archived validation_lateral tick 168 State and run two nominal branches. Compare and report their H8/H16/H32 half spreads with the original archive replays as context from a different solver configuration. This is an import and repeatability check; cross-configuration differences are reported separately and cannot establish whether the imported archive trajectory matches its original dynamics."
+  ],
+  "gates": {
+    "before_step": "Match discrete fields and lead clock; position <= 1e-6 m, quaternion geodesic <= 1e-5 rad, linear velocity <= 1e-5 m/s, angular velocity <= 1e-5 rad/s; controller q/qd and tilt/rate match archived state. Report native and derived arrays or explicit use and derivation.",
+    "native_reference": "Compare both new native branches with both previously recorded same-configuration branches; require the same numerical, controls/retention and H32 half-spread ceilings before using either import.",
+    "same_configuration": "Require identical controls, timing and retention classes and maximum tool-frame position, linear speed and spin component differences <= 1e-5 m, 1e-3 m/s and 2e-2 rad/s. Require across-source H32 position half spread <= 1e-6 m. Retain H8/H16 evidence.",
+    "historical_same_session": "Repeatability uses the same numerical ceilings and <=1e-6 m half spread at H8/H16/H32; separately report divergence from the old configuration. Perturbed or scalar objective tests require independent acceptance."
+  },
+  "budget": {
+    "sequential_environments": 1,
+    "max_worker_starts": 1,
+    "max_physics_substeps": 3072,
+    "max_wall_s": 450,
+    "max_worker_wall_s": 270,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_total_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_new_output_mib": 64,
+    "worker_output_plus_shared_cache_and_temp_gib": 1,
+    "nominal_prefix_substeps": 0,
+    "native_reference_replays": 2,
+    "same_configuration_import_replays": 2,
+    "historical_import_replays": 2
+  },
+  "stop_conditions": [
+    "Frozen input, layout, replay or pre-step equivalence failure",
+    "Resource or step cap",
+    "All six fixed branches complete"
+  ],
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "runs/s3_native_repeatability_20261114_retry/validation.json": "84ae774e66d5a3df5d19f10cfb96aa67e99977fe2a57b3264d764d94c27ec322",
+    "runs/s3_native_repeatability_20261114_retry/worker/snapshot.json": "31e32d8497db295859c4fe07801d05bbe57ff2a25ea7a392790b453a33f95b8d",
+    "runs/s3_native_repeatability_20261114_retry/worker/native_layout.json": "d50bb85ac024ac4a3d7d1902f09df24b9395e1bd1a9e2f20039ef7f5b84297af",
+    "runs/s3_native_repeatability_20261114_retry/worker/native_replay_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "runs/s3_native_repeatability_20261114_retry/worker/native_replay_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "runs/s3_native_repeatability_20261114_retry/config.json": "834d623a30649b3fb8a91f2ec0a82ceef08f7e1232a0025ad528a340d5eb1d3c",
+    "configs/s3_native_repeatability_plan.json": "235f9e6675c17fb1fd31fc49aa9b2ad745332470615caaca68843bbb77bf98c7",
+    "configs/s3_archive_restore_pilot_plan.json": "64342978c153534038bea439b920c01e8b299c38c31709f763beb2ec558fb738",
+    "assets/manifest.json": "0dd7a790ff229702abba0aa5d2b2d449d4fd24021c8dfa19b7aaf315901009f3",
+    "requirements.lock": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+    "runs/s1_reachability_20261111/joint_paths.npz": "c1dafea9b961ba0562652f7b7573d1ba5574965549a2e56a10a17cb0902d70d7",
+    "runs/s3_pair_refit_20261112/validation_lateral_config.json": "7d26f9066c8ff8d304abc3c8facfed3f9158c75f0d94159644e372dc9bcefc39",
+    "runs/s3_pair_refit_20261112/validation_lateral/action_pairs.jsonl": "58b10231993821f533dd054c99d3d21b079c33836d53d800bf1da4490aff611e"
+  }
+}

@@ -1,0 +1,11 @@
+.venv/
+.cache/
+.tmp/
+__pycache__/
+*.pyc
+*.npz
+*.jsonl
+*.urdf
+*.STL
+*.stl
+.env

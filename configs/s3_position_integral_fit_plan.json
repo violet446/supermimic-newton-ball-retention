@@ -1,0 +1,36 @@
+{
+  "schema": "s3-position-integral-fit-plan-v1",
+  "scope": "One fixed trajectory-model structure comparison on the same 46 training pairs. Replace only the standardized position update with SI trapezoidal integration of tool-frame relative velocity. Keep the learned velocity and spin equations, all 20 causal features, original lead weights, state/feature normalization, optimizer and S2 anchor stream.",
+  "parent_design": "configs/s3_timing_coverage_fit_plan.json",
+  "parent_run": "runs/s3_timing_coverage_fit_20261115_resume/validation.json",
+  "matched_reference": "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_plus_timing_900.npz",
+  "legacy_protection_reference": "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_900.npz",
+  "diagnosis": "runs/s3_action_input_gradients_20261115_final/validation.json",
+  "position_integration_probe": "runs/s3_action_input_gradients_20261115_final/position_integration_probe.json",
+  "model_type": "trapezoid_position_residual_v1",
+  "position_update": "p_next = p_current + dt * (v_current + v_next_predicted) / 2 in the tool frame. Reuse the 29-32-32-9 parameter shapes and fresh seeded initialization. The three old position output columns are dormant under this transition. Match velocity and spin equations at the same state, features and parameters. No measured future velocity enters any rollout.",
+  "seed": 20261111,
+  "updates": 900,
+  "anchor_draws_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "paired_leads": [8, 16, 32],
+  "paired_lead_weights": [0.20, 0.30, 0.50],
+  "static_checks": {"vjp_centered_step": 1e-6, "vjp_rtol": 2e-5, "vjp_atol": 2e-8, "action_centered_step": 1e-5, "action_rtol": 2e-5, "action_atol_si": 3e-8},
+  "static_budget": {"cpu_threads": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "max_new_output_mib": 16},
+  "evaluation": {
+    "held_timing": "Use the frozen validation_lateral tick-168 nominal and signed trajectories. Retain short-pulse H32 position JVP and finite secant agreement, and require both to pass for at least one of reversal or dual axis. Require nominal H32 position error <=1.10 times the matched 46-pair reference. Report SI position, velocity and spin, H1 over-response, and H8/H16/H24/H32 timing metrics.",
+    "legacy_protection": "Require the existing 22 legacy protections against the 40-pair reference, and report them against the matched 46-pair reference separately. Report the held-roll sign at history_validation_yminus006_advance tick 72 by identity. A replacement gate is a world-model development gate only."
+  },
+  "budget": {"cpu_threads": 1, "worker_starts": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "min_start_ram_gib": 2, "min_running_ram_gib": 0.75, "max_new_output_mib": 32, "gpu_compute": false},
+  "stop_conditions": ["Frozen evidence or training identity mismatch", "Failed position law, checkpoint compatibility, or gradient preflight", "Nonfinite loss, gradient or model; resource or time cap", "Fixed 900-update endpoint and development evaluation completed; no automatic rerun or checkpoint selection"],
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "configs/s3_timing_coverage_fit_plan.json": "eb38c904f8dfba58e922f15ba3bc634e48c7a04645ff0959ea42505887894094",
+    "runs/s3_timing_coverage_fit_20261115_resume/validation.json": "73ba0d9b301099beaf5c3f630fe1b425a6b1826db7277772b5c0a4ebfe6fbfe7",
+    "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_plus_timing_900.npz": "1121de5f43180b22d14b725e162f7e5eec1ceace14aad29d3b45d3bae3b38138",
+    "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_900.npz": "06b369d67f02bb7f7c49df467cb5bfb2452cc2525ed2ce40d8b9ee9cb19e8415",
+    "runs/s3_action_input_gradients_20261115_final/validation.json": "83661fd4b94a28d3f474493fda4e16bc8b3e535673431c01b700dee1a0a422da",
+    "runs/s3_action_input_gradients_20261115_final/position_integration_probe.json": "67c0e27e01350a314667181af770ad410dcf739c06c7e1237e230e9e3e03cd26"
+  }
+}

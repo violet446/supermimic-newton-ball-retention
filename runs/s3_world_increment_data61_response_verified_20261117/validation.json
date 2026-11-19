@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "phase": "world_increment_data61_response",
+  "plan_sha256": "0743aa176faee211b10b2c00e9a13111fd16fc8d2008f2eec9e80646b9482c84",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "fixed_checkpoints": 2,
+  "development_pairs": 3,
+  "legacy_pairs": 16,
+  "max_development_closure_si": 2.445960101127298e-16,
+  "max_legacy_closure_si": 3.191891195797325e-16,
+  "archived_scores_reproduced": true,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 2.490194999962114,
+    "available_ram_bytes": 4028760064,
+    "min_available_ram_bytes": 4024958976,
+    "rss_bytes": 111742976,
+    "peak_rss_bytes": 138264576,
+    "private_commit_bytes": 117837824,
+    "peak_private_commit_bytes": 144412672,
+    "output_bytes_before_record": 8589356
+  },
+  "artifacts_sha256": {
+    "execution_plan.json": "22e7cf96e2c9e62c07f174a8eb08eb528f4eda8f18dd55618fc2504ae4765230",
+    "response_attribution.json": "f4614cce302e31a6eb27a1ddbb45553dd8be02555805a8fd8cb0e6f764c9bc38",
+    "resources.jsonl": "d962585a076425820160855a4e00c9ccb975228c5e0aff6185b35d29978ae983"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "s3-advance-coverage-fit-plan-v1",
+  "status": "data_scope_frozen_execution_binding_pending",
+  "scope": "One matched 49-pair candidate against the archived fixed 46-pair dense-velocity endpoint. Change only training coverage and the selected cell redistribution.",
+  "reference_design": "configs/s3_velocity_response_lead_fit_plan.json",
+  "reference_checkpoint": "runs/s3_velocity_response_leads_fit_20261115/velocity_response_leads_900.npz",
+  "reference_run": "runs/s3_velocity_response_leads_fit_20261115/validation.json",
+  "supplement_manifest": "runs/s3_training_timing_advance_20261116/capture_manifest.json",
+  "supplement_acceptance": "runs/s3_training_timing_advance_20261116/validation.json",
+  "static_data_audit": "runs/s3_training_timing_advance_20261116/coverage_fit_preflight.json",
+  "seed": 20261111,
+  "candidate_updates": 900,
+  "anchor_draws_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "training_pair_counts": {
+    "reference": 46,
+    "candidate": 49
+  },
+  "additional_pair_ids": {
+    "group": "history_train_yplus004",
+    "episode": "history_train_yplus004_advance",
+    "tick": 168,
+    "directions": [
+      "pitch_pulse",
+      "pitch_reversal",
+      "dual_axis_pulse"
+    ]
+  },
+  "weighting": "Share the existing cell total equally among its original and three new rows. Preserve all other cell and group totals and all normalization arrays.",
+  "reference_recipe": "Reuse fresh zero-output trapezoid initialization, Adam, S2 draws, absolute weights, response scales and dense velocity lead weights from the pinned dense velocity fit.",
+  "evaluation": "H1/H8/H16/H24/H32 state and response on frozen validation_lateral tick 168, position JVP plus finite agreement, training reverse and advance rows and existing 22 protections. Keep original nominal position ceiling and 40-pair protection, also compare 22 checks against the matched dense 46-pair reference.",
+  "budget": {
+    "cpu_threads": 1,
+    "gpu_compute": false,
+    "worker_starts": 1,
+    "max_wall_s": 120,
+    "max_rss_gib": 1,
+    "max_private_commit_gib": 1.5,
+    "max_new_output_mib": 32,
+    "min_start_ram_gib": 2,
+    "min_running_ram_gib": 0.75
+  },
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "stop_conditions": [
+    "Accepted data, frozen implementation or input mismatch",
+    "Resource cap and nonfinite values",
+    "Fixed endpoint and offline evaluation complete; no automatic retry or checkpoint selection"
+  ],
+  "inputs_sha256": {
+    "configs/s3_training_timing_advance_plan.json": "805e137c8bd3866ea145a9edc3290084fa767ea6ad59db3d6ebbce971f5ad1b5",
+    "configs/s3_velocity_response_lead_fit_plan.json": "d32dae1e74e5479cd9579b5e2f91184790f54f103f7bfa08a33d2f0e4dc42470",
+    "runs/s3_velocity_response_leads_fit_20261115/validation.json": "eb21441489c9a122093c8c6a32b35d66a783f2acf2ee2eee1771a5d5a8a66983",
+    "runs/s3_velocity_response_leads_fit_20261115/velocity_response_leads_900.npz": "f7c782bf28832439146ff90db5b33988856802b17161412ae99d39fb5a2f1e6f",
+    "runs/s3_velocity_response_leads_fit_20261115/comparison.json": "05f5eb2268b20658656cb20b3b2029189e66169fced9a64b0f3cf0a2b038daaa",
+    "runs/s3_velocity_response_leads_fit_20261115/execution_plan.json": "6a96c2b02eca9da5343a752d1ad32258514816ebf80135f15714b39bcb9874d0",
+    "src/ball_retention/timing_coverage_fit.py": "cb7e13a3c388480151cd2c3e67639ef3f174012cf69191e2612acb4a480abb46",
+    "src/ball_retention/timed_pair_data.py": "2834064e5858bdb474e7fb1d42e87e1dbf2d43224a86adbac93144ea90668ec5",
+    "scripts/train_s3_velocity_response_leads.py": "cffae8735e512b77a0a7d4fe2ac83bc592330b30e9e7fccbebd5efc8db8e3da3",
+    "requirements.lock": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+    "runs/s3_training_timing_advance_20261116/validation.json": "394537c452a5415276473dc2ff8a28cfd753e41b7220d931410b6b289b199e44",
+    "runs/s3_training_timing_advance_20261116/capture_manifest.json": "fddd5f234af92a2d35804354feb795d67730c14f6a744e43fec8bb310e32972d",
+    "runs/s3_training_timing_advance_20261116/coverage_fit_preflight.json": "58b65a3168bacd962fc03fa45da19ec5ac011d1f16d2586969bfe0220662c563"
+  }
+}

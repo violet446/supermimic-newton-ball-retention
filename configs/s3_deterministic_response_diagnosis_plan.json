@@ -1,0 +1,23 @@
+{
+  "schema": "s3-deterministic-response-diagnosis-plan-v1",
+  "source_run": "runs/s3_deterministic_action_response_20261115",
+  "case": {"episode": "validation_lateral", "group": "negative_y_basin", "tick": 168, "seed": 536873541},
+  "scope": "Read the accepted eight H32 branches, same snapshot and frozen old_900 model. Use the exact signed sequences at amplitude 0.20. Keep the development group held out.",
+  "measurement": {
+    "free": "Reproduce the saved model predictions from the initial public State and causal analytic tool features. Feed model predictions forward.",
+    "local": "For a separate one-step diagnostic, predict each branch lead from its own measured pre-step ball state and the same causal features used in the free rollout. No later measured ball or tool state is fed to the free rollout.",
+    "error_decomposition": "free minus Newton equals (one-step from measured pre-state minus Newton) plus (free minus one-step). Apply the same identity to the sign-pair half differences. Also subtract measured pre-step half difference to compare increments.",
+    "responses": "Apply the frozen capture's signal floors for all 32 leads. Compare signed tool-frame position, velocity and spin; distinguish the model local directional derivative scaled to the capture amplitude and the finite model secant. For position record first strong opposing lead and first three consecutive strong opposing leads for each comparison.",
+    "contacts": "Align all 16 candidate records by lead and compare each sign with nominal and with each other. Keep candidate counts and shape pairs distinct. Candidate logs carry no force magnitudes or contact manifold coordinates. Timing co-occurrence alone cannot identify causes."
+  },
+  "onset_consecutive_leads": 3,
+  "report_leads": [1, 8, 16, 24, 32],
+  "budget": {"cpu_threads": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "max_new_output_mib": 16, "physical_substeps": 0, "training_updates": 0},
+  "stop_conditions": ["Frozen artifact or shape/clock mismatch", "Recomputed free trajectory disagrees with frozen predictions", "Resource cap", "Eight branches and three response pairs complete"],
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "runs/s3_deterministic_action_response_20261115/validation.json": "bb5cbb12a0541e07e7afa4ba761d4a69bc50afa532076040684ebf1e17eb0fe2",
+    "runs/s3_deterministic_action_response_20261115/execution_plan.json": "a8cd1ffb7912ffde84aa818b765006f41632e42901ac6589d8f69cf15638772b"
+  }
+}

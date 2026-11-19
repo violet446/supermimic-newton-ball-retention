@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "phase": "world_increment_late_coverage",
+  "plan_sha256": "6791bc786322249fef1655269ac142c98e5a98ca4c991facc3e1fdb1323836f6",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_pairs": 9,
+  "development_pairs": 3,
+  "early_mask_and_weighted_head_rmse_reproduced": true,
+  "archived_development_scores_reproduced": true,
+  "archived_one_step_scores_reproduced": true,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 2.430052300042007,
+    "available_ram_bytes": 3623493632,
+    "min_available_ram_bytes": 3611127808,
+    "rss_bytes": 111403008,
+    "peak_rss_bytes": 113786880,
+    "private_commit_bytes": 117493760,
+    "peak_private_commit_bytes": 119902208,
+    "output_bytes_before_record": 415508
+  },
+  "artifacts_sha256": {
+    "execution_plan.json": "7844d6230c582b2e5d9ff37987109b1ea2836a62b59432c362c7fc3dd09a1445",
+    "late_coverage.json": "0b17c9e0a7e03e577f355b3180c079cec48d1c54ca343056c2adb6aa40c8da0f",
+    "resources.jsonl": "dd910cd9cd007dc71f64ce947c47ae24162413f6a599fe916b7d45ea64bd28b4"
+  }
+}

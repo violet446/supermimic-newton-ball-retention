@@ -1,0 +1,414 @@
+{
+  "lead_window": [
+    9,
+    16
+  ],
+  "groups": {
+    "history_train_yminus004": [
+      "history_train_yminus004_reverse"
+    ],
+    "history_train_yplus004": [
+      "history_train_yplus004_reverse",
+      "history_train_yplus004_advance"
+    ]
+  },
+  "results": {
+    "pitch_pulse": {
+      "supervised": {
+        "training": {
+          "history_train_yminus004_reverse": {
+            "group": "history_train_yminus004",
+            "donor_group": "history_train_yplus004",
+            "target_cosine_vs_development": 0.9997769091533684,
+            "local_error_cosine_vs_development": 0.7953743009676219,
+            "target_along_own_newton_h32_m": 0.00032311605603470663,
+            "local_error_along_own_newton_h32_m": 4.023708125326879e-05,
+            "free_error_along_own_newton_h32_m": -8.244824122556759e-05,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                -3.992371268279603e-06,
+                0.00010583384960163622,
+                -2.380117110117536e-05
+              ],
+              "applied_along_newton_h32_m": 8.380488284314123e-05,
+              "window_position_error_norm_before_after_m": [
+                9.064085538848541e-05,
+                0.00012753944425430167
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.0001190658115791,
+                0.0001371353577979457
+              ]
+            }
+          },
+          "history_train_yplus004_reverse": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.9895737242531021,
+            "local_error_cosine_vs_development": 0.7531870067439849,
+            "target_along_own_newton_h32_m": -0.0004471012856310706,
+            "local_error_along_own_newton_h32_m": 1.94205002641192e-05,
+            "free_error_along_own_newton_h32_m": 7.754528595656887e-05,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                7.150023684770664e-05,
+                3.104378681742153e-05,
+                4.4316275537868726e-05
+              ],
+              "applied_along_newton_h32_m": 7.025292462957139e-05,
+              "window_position_error_norm_before_after_m": [
+                0.00010162621497374821,
+                0.00011078713981873235
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.0001493925250304827,
+                0.00022154805418518944
+              ]
+            }
+          },
+          "history_train_yplus004_advance": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.9897561462448157,
+            "local_error_cosine_vs_development": 0.2047675295105273,
+            "target_along_own_newton_h32_m": -0.00040714534055868876,
+            "local_error_along_own_newton_h32_m": 2.7647736307475394e-05,
+            "free_error_along_own_newton_h32_m": 8.490492082752564e-06,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                7.174944725073492e-05,
+                3.091876090254211e-05,
+                4.399977493093425e-05
+              ],
+              "applied_along_newton_h32_m": 8.550566884073294e-05,
+              "window_position_error_norm_before_after_m": [
+                0.00013925182434856541,
+                0.00016121117891525127
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.00013689769353234535,
+                0.00021989660541943333
+              ]
+            }
+          }
+        },
+        "development_target_along_newton_h32_m": -0.0004295070107807951,
+        "development_local_error_along_newton_h32_m": -0.00044962426485174116,
+        "development_free_error_along_newton_h32_m": -0.00043141304868452745,
+        "equal_train_group_correction_on_development": {
+          "applied_position_vector_m": [
+            3.335339585020769e-05,
+            6.851070511571533e-05,
+            1.1056952352984956e-05
+          ],
+          "applied_along_newton_h32_m": 6.313167852888834e-05,
+          "window_position_error_norm_before_after_m": [
+            0.00047867607835394316,
+            0.000416575376590641
+          ],
+          "terminal_position_error_norm_before_after_m": [
+            0.00016791910296903127,
+            0.00024033150633985355
+          ]
+        }
+      },
+      "extended": {
+        "training": {
+          "history_train_yminus004_reverse": {
+            "group": "history_train_yminus004",
+            "donor_group": "history_train_yplus004",
+            "target_cosine_vs_development": 0.9997769091533684,
+            "local_error_cosine_vs_development": 0.6642251152965839,
+            "target_along_own_newton_h32_m": 0.00032311605603470663,
+            "local_error_along_own_newton_h32_m": -0.00018406439505441112,
+            "free_error_along_own_newton_h32_m": -0.0001093539033391583,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                4.381249822434411e-05,
+                0.0002240966345921467,
+                1.1829411822745994e-06
+              ],
+              "applied_along_newton_h32_m": 0.00012495794800783212,
+              "window_position_error_norm_before_after_m": [
+                0.0002981177794097591,
+                9.584717469507216e-05
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.00017422529059200927,
+                0.0003739267750076016
+              ]
+            }
+          },
+          "history_train_yplus004_reverse": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.9895737242531021,
+            "local_error_cosine_vs_development": 0.6011357205375648,
+            "target_along_own_newton_h32_m": -0.0004471012856310706,
+            "local_error_along_own_newton_h32_m": 7.305599665084113e-05,
+            "free_error_along_own_newton_h32_m": 8.385910838513692e-05,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                6.28275379939493e-05,
+                0.00028228082664113487,
+                -7.878615180600176e-05
+              ],
+              "applied_along_newton_h32_m": -7.700406319636302e-05,
+              "window_position_error_norm_before_after_m": [
+                0.0002232111840670714,
+                8.040269287386266e-05
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.00019004815413675095,
+                0.00030735952546861675
+              ]
+            }
+          },
+          "history_train_yplus004_advance": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.9897561462448157,
+            "local_error_cosine_vs_development": 0.6679348388770809,
+            "target_along_own_newton_h32_m": -0.00040714534055868876,
+            "local_error_along_own_newton_h32_m": -0.00010387326724932005,
+            "free_error_along_own_newton_h32_m": -5.410731672904025e-05,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                6.127712771915135e-05,
+                0.0002831216516836857,
+                -7.696924949078136e-05
+              ],
+              "applied_along_newton_h32_m": 6.770199840339192e-05,
+              "window_position_error_norm_before_after_m": [
+                0.0002474497596735142,
+                0.0001442961685955261
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.00011363873698686528,
+                0.00032690380804078584
+              ]
+            }
+          }
+        },
+        "development_target_along_newton_h32_m": -0.0004295070107807951,
+        "development_local_error_along_newton_h32_m": -0.00047325855215470006,
+        "development_free_error_along_newton_h32_m": -0.000562786362611401,
+        "equal_train_group_correction_on_development": {
+          "applied_position_vector_m": [
+            5.227755258411944e-05,
+            0.0002537835156131578,
+            -3.625080662473443e-05
+          ],
+          "applied_along_newton_h32_m": 0.00015111306437352672,
+          "window_position_error_norm_before_after_m": [
+            0.0005072837469659814,
+            0.00038492754274297336
+          ],
+          "terminal_position_error_norm_before_after_m": [
+            0.0005831332780499067,
+            0.0005625497491488909
+          ]
+        }
+      }
+    },
+    "pitch_reversal": {
+      "supervised": {
+        "training": {
+          "history_train_yminus004_reverse": {
+            "group": "history_train_yminus004",
+            "donor_group": "history_train_yplus004",
+            "target_cosine_vs_development": 0.9923961532937743,
+            "local_error_cosine_vs_development": 0.8051355832972192,
+            "target_along_own_newton_h32_m": -3.891634226921368e-05,
+            "local_error_along_own_newton_h32_m": 8.817014290158888e-05,
+            "free_error_along_own_newton_h32_m": -0.00020885382757682773,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                -7.558819933909082e-05,
+                -2.4554433171435684e-05,
+                -5.663624268464959e-05
+              ],
+              "applied_along_newton_h32_m": 4.468998171830438e-05,
+              "window_position_error_norm_before_after_m": [
+                0.0002648938531671774,
+                0.00036162877200583796
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                7.709958666480985e-05,
+                8.62961176120676e-05
+              ]
+            }
+          },
+          "history_train_yplus004_reverse": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.9228182535074207,
+            "local_error_cosine_vs_development": 0.5180045644917056,
+            "target_along_own_newton_h32_m": -9.296938954946354e-06,
+            "local_error_along_own_newton_h32_m": -7.462593566852081e-05,
+            "free_error_along_own_newton_h32_m": 0.0003806842587489997,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                0.00018316469683536506,
+                9.925351524465081e-05,
+                0.00016320339210241694
+              ],
+              "applied_along_newton_h32_m": 0.00017215067172030328,
+              "window_position_error_norm_before_after_m": [
+                0.00013137960872659825,
+                0.0002785140107797263
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                7.689545407252555e-05,
+                0.00021456775942709275
+              ]
+            }
+          },
+          "history_train_yplus004_advance": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.6546599704468569,
+            "local_error_cosine_vs_development": -0.8704445083917985,
+            "target_along_own_newton_h32_m": 7.253837682298929e-05,
+            "local_error_along_own_newton_h32_m": 0.00025908254850998873,
+            "free_error_along_own_newton_h32_m": 0.0003090458380795403,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                0.00018413452277793107,
+                9.852714994992821e-05,
+                0.00016255087644380628
+              ],
+              "applied_along_newton_h32_m": 0.00023737043574314115,
+              "window_position_error_norm_before_after_m": [
+                0.00026343686214841405,
+                0.000501301585959907
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.0003184113794466675,
+                0.0005173131622631213
+              ]
+            }
+          }
+        },
+        "development_target_along_newton_h32_m": -2.459233107365548e-05,
+        "development_local_error_along_newton_h32_m": -0.0007201150287366929,
+        "development_free_error_along_newton_h32_m": -0.001072915470399594,
+        "equal_train_group_correction_on_development": {
+          "applied_position_vector_m": [
+            5.329691642425927e-05,
+            3.713958187207729e-05,
+            5.3920275837462516e-05
+          ],
+          "applied_along_newton_h32_m": 6.576467136758021e-05,
+          "window_position_error_norm_before_after_m": [
+            0.000848712063954573,
+            0.0007842735266556635
+          ],
+          "terminal_position_error_norm_before_after_m": [
+            0.00033531826168723615,
+            0.00030657570602426744
+          ]
+        }
+      },
+      "extended": {
+        "training": {
+          "history_train_yminus004_reverse": {
+            "group": "history_train_yminus004",
+            "donor_group": "history_train_yplus004",
+            "target_cosine_vs_development": 0.9923961532937743,
+            "local_error_cosine_vs_development": 0.9761329471685539,
+            "target_along_own_newton_h32_m": -3.891634226921368e-05,
+            "local_error_along_own_newton_h32_m": -9.947240977949077e-06,
+            "free_error_along_own_newton_h32_m": -4.606284366745015e-05,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                2.0383182308961897e-05,
+                1.6581467427397274e-05,
+                -3.164623700052351e-06
+              ],
+              "applied_along_newton_h32_m": 2.0928371361206282e-06,
+              "window_position_error_norm_before_after_m": [
+                0.00038360677503056673,
+                0.0003581716075639684
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.00016731801498995753,
+                0.00018832678950676183
+              ]
+            }
+          },
+          "history_train_yplus004_reverse": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.9228182535074207,
+            "local_error_cosine_vs_development": 0.8056914932495249,
+            "target_along_own_newton_h32_m": -9.296938954946354e-06,
+            "local_error_along_own_newton_h32_m": -0.00017630944382572694,
+            "free_error_along_own_newton_h32_m": 0.00038671347573543326,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                0.00028308105740350846,
+                0.0002531802611658732,
+                5.513959054643256e-05
+              ],
+              "applied_along_newton_h32_m": 0.0001249212294880998,
+              "window_position_error_norm_before_after_m": [
+                0.00022522496588632673,
+                0.00022977872669135567
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                7.533179414456687e-05,
+                0.0003700274273601208
+              ]
+            }
+          },
+          "history_train_yplus004_advance": {
+            "group": "history_train_yplus004",
+            "donor_group": "history_train_yminus004",
+            "target_cosine_vs_development": 0.6546599704468569,
+            "local_error_cosine_vs_development": -0.6917080398454776,
+            "target_along_own_newton_h32_m": 7.253837682298929e-05,
+            "local_error_along_own_newton_h32_m": 0.00018539746617298575,
+            "free_error_along_own_newton_h32_m": 0.0003054079431802537,
+            "leave_group_out_correction": {
+              "applied_position_vector_m": [
+                0.00028268435191546997,
+                0.00025366194511981956,
+                5.496075374632679e-05
+              ],
+              "applied_along_newton_h32_m": 0.0003118101715836711,
+              "window_position_error_norm_before_after_m": [
+                0.0001869386586258912,
+                0.0005369973050219107
+              ],
+              "terminal_position_error_norm_before_after_m": [
+                0.0002939980474892621,
+                0.0006732485749305751
+              ]
+            }
+          }
+        },
+        "development_target_along_newton_h32_m": -2.459233107365548e-05,
+        "development_local_error_along_newton_h32_m": -0.0007366970901392149,
+        "development_free_error_along_newton_h32_m": -0.0011227209301579392,
+        "equal_train_group_correction_on_development": {
+          "applied_position_vector_m": [
+            0.00015090735674634084,
+            0.00013539166260779766,
+            2.8051993648725444e-05
+          ],
+          "applied_along_newton_h32_m": 0.00019572249184208077,
+          "window_position_error_norm_before_after_m": [
+            0.0008011274247322824,
+            0.0006025007125322181
+          ],
+          "terminal_position_error_norm_before_after_m": [
+            0.0007320909003284102,
+            0.0005348140188334794
+          ]
+        }
+      }
+    }
+  },
+  "convention": "Corrections estimated only from the other training group (or equally from both groups for development). Terminal correction propagates with fixed recorded future learned increments; it is diagnostic only."
+}

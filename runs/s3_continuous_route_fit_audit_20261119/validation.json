@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "phase": "continuous_route_fit_audit",
+  "plan_sha256": "f6906e35e2eb3bc17716a30edcd5d51cdf684cea419dbca9fa181120bf5aa1c0",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "fixed_endpoints": 3,
+  "archived_development_scores_reproduced": true,
+  "diagnostic_tracks": 3,
+  "training_draws_per_tier": 900,
+  "max_trajectory_closure_si": 2.6645352591003757e-15,
+  "max_gradient_closure": 2.7755575615628914e-17,
+  "main_model_replaced": false,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 20.428275599959306,
+    "available_ram_bytes": 2930466816,
+    "min_available_ram_bytes": 2898079744,
+    "rss_bytes": 129212416,
+    "peak_rss_bytes": 257368064,
+    "private_commit_bytes": 136597504,
+    "peak_private_commit_bytes": 263548928,
+    "output_bytes_before_record": 4561024
+  },
+  "artifacts_sha256": {
+    "execution_plan.json": "d89a2a98b292e129f99742cdeadabf4ad12213d0f5394923b53bddddb64422e6",
+    "training_gradient_audit.json": "82a5eb40c746f7e00cbb6573cc5d6f9d00e0fd8e4a09611bd21509a6a2d751cf",
+    "trajectory_audit.json": "018db45b4d5c6267a4984bb9a2b3011b45c001709f0657bdcd8ba08ea650ce46",
+    "resources.jsonl": "2024c8554e03e290d671985edb6c3a9b18dba782d285a19067d8700170ec6573"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "s3-timing-lead-weight-fit-plan-v1",
+  "scope": "One fixed 900-update fit on the same 46 training pairs. The intervention is the lead-weight vector inside the joint paired loss. The completed augmented endpoint is the matched reference. No data, model, optimizer, scale, seed or update-count change.",
+  "parent_design": "configs/s3_timing_coverage_fit_plan.json",
+  "parent_run": "runs/s3_timing_coverage_fit_20261115_resume/validation.json",
+  "diagnosis": "runs/s3_timing_coverage_diagnosis_20261115_verified/validation.json",
+  "matched_reference": "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_plus_timing_900.npz",
+  "legacy_protection_reference": "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_900.npz",
+  "seed": 20261111,
+  "updates": 900,
+  "anchor_draws_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "paired_leads": [1, 8, 16, 24, 32],
+  "reference_lead_weights": [0, 0.20, 0.30, 0, 0.50],
+  "intervention_lead_weights": [0.10, 0.10, 0.20, 0.10, 0.50],
+  "rationale": "H1 makes early paired over-response visible to the existing unresolved-noise loss and absolute state loss. H24 gives direct supervision in the interval where the dual-axis and held-roll rollouts diverge. H32 retains half of the weight. This changes a single lead-weight vector shared by both terms of the existing paired loss.",
+  "evaluation": {
+    "held_timing": "Reuse the frozen validation_lateral tick 168 nominal and signed branches. Report absolute position, velocity and spin and Newton-resolved JVP/finite secants. Keep the H32 short-pulse JVP and secant passes, and require both metrics to pass for at least one of reversal or dual-axis. H32 nominal position error <=1.10 times the matched 46-pair reference.",
+    "legacy_protection": "Reuse all 22 legacy protections against the 40-pair reference and report the same checks against the 46-pair reference separately. Require all 22 against the 40-pair run before treating this candidate as a replacement. Report the held-roll sign at history_validation_yminus006_advance tick 72 by identity.",
+    "diagnostic": "Report per-lead signed position half differences and independent one-step versus free error at H1, H8, H16, H24 and H32, with the previously frozen floors. The single design does not identify which redistributed lead caused a change or establish policy performance."
+  },
+  "budget": {"cpu_threads": 1, "worker_starts": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "min_start_ram_gib": 2, "min_running_ram_gib": 0.75, "max_new_output_mib": 32, "gpu_compute": false},
+  "stop_conditions": ["Frozen data, recipe, reference or anchor stream mismatch", "Nonfinite losses or gradients, resource or wall-clock cap", "Fixed 900-update endpoint and development scoring complete", "No checkpoint selection, automatic rerun or added variants"],
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "configs/s3_timing_coverage_fit_plan.json": "eb38c904f8dfba58e922f15ba3bc634e48c7a04645ff0959ea42505887894094",
+    "runs/s3_timing_coverage_fit_20261115_resume/validation.json": "73ba0d9b301099beaf5c3f630fe1b425a6b1826db7277772b5c0a4ebfe6fbfe7",
+    "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_plus_timing_900.npz": "1121de5f43180b22d14b725e162f7e5eec1ceace14aad29d3b45d3bae3b38138",
+    "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_900.npz": "06b369d67f02bb7f7c49df467cb5bfb2452cc2525ed2ce40d8b9ee9cb19e8415",
+    "runs/s3_timing_coverage_diagnosis_20261115_verified/validation.json": "42e5ce4561b38a12d6ffafbc0cea4ea9a7d39807c457ad74cd705062abcf79f4"
+  }
+}

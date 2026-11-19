@@ -1,0 +1,108 @@
+{
+  "schema": "s3-local-surface-refit-plan-v1",
+  "status": "planned_not_run",
+  "question": "Does adding causal, smooth local surface geometry and sphere-point tangential velocity features reduce paired-mean drift without regressing position or action response?",
+  "evidence": "At 1800 updates the expanded model shows early tangential velocity error and excessive geometric slip proxy within the surface band. The mesh audit describes correlation and supplies no physical contact labels.",
+  "control": {
+    "expanded_same_updates": "runs/s3_history_duration_20261114/expanded_1800.npz",
+    "original_guard_reference": "runs/s3_physical_scales_20261113/full_training.npz"
+  },
+  "candidate": {
+    "base_fit_plan": "configs/s3_history_duration_plan.json",
+    "fit_split": "expanded",
+    "seed": 20261111,
+    "updates": 1800,
+    "initialization": "Use the identical fresh base network arrays and insert zero rows for added inputs into W1. Keep W3 zero at initialization.",
+    "network": [
+      36,
+      32,
+      32,
+      9
+    ],
+    "unchanged": [
+      "Residual state update and coarse integration",
+      "anchor and pair batches and group weights",
+      "SI scales, response masks and loss weights",
+      "Adam settings and S2 minibatch RNG"
+    ],
+    "additional_inputs": [
+      "g*n_x",
+      "g*n_y",
+      "g*n_z",
+      "g*tanh(gap_m/.005)",
+      "g*tanh(slip_x_m_s/.05)",
+      "g*tanh(slip_y_m_s/.05)",
+      "g*tanh(slip_z_m_s/.05)"
+    ],
+    "feature_source": "At each lead use current predicted p,v,w and tool angular velocity at the start of this step. Recover Omega_tool from causal midpoint tilt/rate and held request via the existing half-step inverse filter. Initial ball state and actions are the only trajectory inputs.",
+    "slip_proxy": "Tangential projection of v - R*cross(w - Omega_tool, n). This is the velocity of an ideal sphere point relative to the target tool."
+  },
+  "surface_field": {
+    "mesh": "assets/shovel.STL",
+    "faces": "Use local-tool triangles with upward facing normal (dot with nominal world-up in tool frame >= .2) and centroid tool x >= .22 m.",
+    "grid_low_tool_m": [
+      0.24,
+      -0.08,
+      -0.025
+    ],
+    "grid_high_tool_m": [
+      0.34,
+      -0.005,
+      0.06
+    ],
+    "spacing_m": 0.0025,
+    "grid_values": "At each grid node, use closest selected face n and dot(point - closest_point, n) minus sphere radius. Smooth the three normal components and gap separately with Gaussian sigma one grid cell using nearest boundary extension.",
+    "interpolation": "Tensor cubic B-spline for each smoothed channel, with nearest extension and analytic spatial derivatives. Normalize the interpolated normal by sqrt(dot(n_raw,n_raw)+1e-12). Clamp sampling coordinates outside the grid; feature weight and its derivative must reach zero one cell before grid boundary.",
+    "weight_g": "Multiply smoothstep windows for all six domain edges and a gap window. Domain weights are zero in outer 1 cell and reach 1 inward at 3 cells. Gap weight is 1 at |gap| <= .003 m, falls to 0 at |gap| >= .008 m. Use smoothstep(u)=u^2*(3-2*u) on u clipped to [0,1].",
+    "edge_behavior": "Outside the local field and outside the near-surface band, new features and their derivatives are zero. Position, motion and departure are still predicted by the baseline residual path."
+  },
+  "preflight": [
+    "Freeze implementation, dependencies, grid/source hashes, and allocation size before fitting.",
+    "Record training coverage of the field and compare normal and gap to nearest-face geometry on the existing training snapshots. A flat-zero field or nonfinite field halts the run.",
+    "Verify the raw baseline and zero-feature extension agree at initialization.",
+    "Check state, known and parameter VJPs by centered finite differences, including taper regions and zero-feature cases. Check end-to-end requested-action VJP on causal multistep rollouts.",
+    "Check active-domain geometry near boundaries and show zero influence outside. Geometry never uses reference states or future measured tool poses for predictions."
+  ],
+  "evaluation": {
+    "datasets": "Same 36 development pairs (5 initial-state groups), grouped by cohort, physical initial state, history, and amplitude. Same S2 validation and complete routes. Original test trajectories stay sealed.",
+    "endpoint_only": 1800,
+    "report": [
+      "Free position and velocity in SI at H8/16/32",
+      "H32 pair-mean position and cumulative tangent velocity error",
+      "Strong directional counts and amplitude ratios",
+      "Face/gap and geometric slip proxy as descriptive diagnostics only"
+    ],
+    "required_protections": "Keep all 22 existing criteria against the frozen original 900 baseline, and apply the same criteria against the matched expanded 1800 baseline. Preserve initial group and amplitude keys. H32 position <=1.1x baseline and both strong cosine counts nondecreasing; S2 complete-route H8 position <=1.1x baseline.",
+    "interpretation": "Use the single matched candidate and fixed endpoint, with no checkpoint selection. Development-informed representation proposal requires separate action-gradient realization and Newton control verification."
+  },
+  "budget": {
+    "seed": 20261111,
+    "cpu_threads": 1,
+    "wall_s": 600,
+    "rss_gib": 1,
+    "commit_gib": 1.5,
+    "output_mib": 64,
+    "minimum_available_ram_gib": 0.75,
+    "gpu_compute": false,
+    "simulation_steps": 0
+  },
+  "stop_conditions": [
+    "failed input or gradient preflight",
+    "nonfinite parameter, loss or gradient",
+    "split identity or source hash mismatch",
+    "resource cap",
+    "fixed 1800 update endpoint"
+  ],
+  "control_accepted": false,
+  "sha256": {
+    "configs/s3_history_duration_plan.json": "aae24b9831b447087435ec4f0bedb8ddb6064f1e14cd9c2146b1994d6220f257",
+    "configs/s3_position_drift_plan.json": "bf3b4e4a93b67170fbb1477066e2912d3c380afd7a5be7dcd67b0964ab10f1f3",
+    "configs/s3_physical_scales.json": "ba13b57ddb8a52d46db15d453026c8a86df5ced53db6cb3c531f9fcd528985c9",
+    "assets/shovel.STL": "ab51ce9f029bb4517c6bbfbd3c807ae5ee944f8ac6dbfc5b329ba9550276c5b5",
+    "runs/s3_history_duration_20261114/comparison.json": "1d3d5d8592e4dc9a916605de77cb515f7b949cb9763a99b87d02e858b3cc4d47",
+    "runs/s3_history_duration_20261114/expanded_1800.npz": "e597efe29a2c9ff56b5df91657918fef25946855a98f7f105acfa0b70707d0c9",
+    "runs/s3_physical_scales_20261113/full_training.npz": "15a70656a6154102f702a1d8c9e39a1fa35573b26d30b3107b3be0b0cb37924b",
+    "runs/s3_position_drift_20261114/summary.json": "6079c96af5bcacc57710dae0765075146475d3aceb4f4b53641ea024941d24eb",
+    "runs/s3_position_drift_20261114/findings.json": "4f42b5a06b36f54048be6aaf357bd362a3695092645b2816d8202a09bf8aef7a"
+  }
+}

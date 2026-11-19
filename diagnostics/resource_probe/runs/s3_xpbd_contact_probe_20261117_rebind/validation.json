@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "plan_sha256": "f514910c9607153e14b3fed561a5e856883b9dcb1484bee89cf50b680ec0177b",
+  "physics_steps": 768,
+  "branches": [
+    "pitch_pulse_plus",
+    "pitch_pulse_minus"
+  ],
+  "wall_s": 49.710325599997304,
+  "artifacts_sha256": {
+    "admission.json": "d0179799b46614d4a686098b1fde84eef7f59417e8197f3755b6363ef02599ae",
+    "execution_plan.json": "c41b591571620f7071ad97594fa2e5c1d187f18f0c7a91c5c77dc642d8bb5020",
+    "momentum.json": "46be92e8fdfe9e9b792f949c6a340b13250c6f79877cf3be730cc3cd14dffab7",
+    "pitch_pulse_minus.json": "0b6c2d61e2a04d4cabfa7add57deda7cfe4aa4dee76c740c552f0156469d3287",
+    "pitch_pulse_plus.json": "2b17507ce29cb36bb87ba8f817d757af6afade2d6f31dfa31375764aed0f543b",
+    "preflight.json": "e69ddf55a5671e8b9fbfee472cdb67809691f8bd8d54f5e620c27fdd1e00eec2",
+    "resources.jsonl": "9a8f876fd4806e1f73fefcf5d98dd6a2d526a3442298075f728dd56b1ae24b35",
+    "worker.log": "29e0969df19e12eb07e8c8ab037b7848a0bebf76a9dc92070db4f399cb37fbc8",
+    "worker_result.json": "b9df172e493a0656dc64018813acd3bd5da94da9e2f9addd787ecb2494e05132"
+  },
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

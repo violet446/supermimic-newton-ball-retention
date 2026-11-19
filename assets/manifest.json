@@ -1,0 +1,221 @@
+{
+  "source_head": "866019f3d00a3400e76bca9162f0c084483e0786",
+  "asset_commit": "484e981a76f68b4bb5ce7b334bfa92c581f4139f",
+  "license": "unknown; no asset-specific license verified",
+  "tool_transform": "(z,x-138,y-30)*0.001, then flange Rx(90deg)@Rz(90deg), no mount translation",
+  "robot_units": "URDF loader interprets meters/radians; CAD provenance unverified",
+  "collision_plan": "full triangle meshes; sphere-shape contacts required; runtime filters not yet validated",
+  "assets": [
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66_description.urdf",
+      "bytes": 7106,
+      "sha256": "cedd8d294d5884547757b322f547f53b820b5ea527319a78dc2871c86c1ea0dd",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "local_path": "assets\\ec66_description.urdf"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\shovel.STL",
+      "bytes": 1068884,
+      "sha256": "ab51ce9f029bb4517c6bbfbd3c807ae5ee944f8ac6dbfc5b329ba9550276c5b5",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 21376,
+        "bounds": [
+          [
+            -2.26806624154495e-16,
+            -0.13608533489704133,
+            -0.029674975872039794
+          ],
+          [
+            0.54387939453125,
+            0.134969970703125,
+            0.20106353759765624
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": [
+          -0.017556960741678874,
+          0.10518005625406901
+        ]
+      },
+      "local_path": "assets\\shovel.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\base_link.STL",
+      "bytes": 135384,
+      "sha256": "61fcad61f58200fa35736e9df442c3bec76c9565451dfbb090c721b0a07aacca",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 2706,
+        "bounds": [
+          [
+            -0.07500000298023224,
+            -0.07500000298023224,
+            -5.699392645113974e-14
+          ],
+          [
+            0.07500000298023224,
+            0.07500000298023224,
+            0.02800000086426735
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\base_link.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link1.STL",
+      "bytes": 905284,
+      "sha256": "2f981a971b80d9f5f7d794059b31a0c1ade747119e553019f2807a606748b447",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 18104,
+        "bounds": [
+          [
+            -0.05900003761053085,
+            -0.05900000035762787,
+            -0.06800000369548798
+          ],
+          [
+            0.05900003761053085,
+            0.07000000029802322,
+            0.08171633630990982
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\link1.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link2.STL",
+      "bytes": 2030184,
+      "sha256": "05f68c43341b16ca295167d37c84ab10361f9018af1b9c462e8a9f23a95835e7",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 40602,
+        "bounds": [
+          [
+            -0.05900003761053085,
+            -0.052000001072883606,
+            -0.05900000035762787
+          ],
+          [
+            0.05900003761053085,
+            0.0977163314819336,
+            0.46650001406669617
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\link2.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link3.STL",
+      "bytes": 1142084,
+      "sha256": "6c1b5906a7d96c45543cf588f8a2dbda0402c6acbf663565e8f812759c3a3d0d",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 22840,
+        "bounds": [
+          [
+            -0.04849341884255409,
+            -0.03095179796218872,
+            -0.048500001430511475
+          ],
+          [
+            0.0484393909573555,
+            0.07800000160932541,
+            0.4359999895095825
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\link3.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link4.STL",
+      "bytes": 851784,
+      "sha256": "ce9667629f7f591e3b85baf1b9626f9f03a8fb68c9edece328f505bc0927bc94",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 17034,
+        "bounds": [
+          [
+            -0.03799999877810478,
+            0.07349999994039536,
+            -0.05495179817080498
+          ],
+          [
+            0.03799999877810478,
+            0.1599999964237213,
+            0.0494999997317791
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\link4.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link5.STL",
+      "bytes": 851784,
+      "sha256": "f9d1170b2683012b10056cd648ba03ed8c679e17f39adba0ae0968a0221d3a8f",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 17034,
+        "bounds": [
+          [
+            -0.03799999877810478,
+            -0.0494999997317791,
+            0.0494999997317791
+          ],
+          [
+            0.03799999877810478,
+            0.05495179817080498,
+            0.13599999248981476
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\link5.STL"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link6.STL",
+      "bytes": 359484,
+      "sha256": "ddc6b367f1c888a8f6fd7a784e2d836645c23ef9ef83e62055b0cd769c7a1712",
+      "license": "unknown: no asset-specific license verified",
+      "copied": true,
+      "geometry": {
+        "triangles": 7188,
+        "bounds": [
+          [
+            -0.038100000470876694,
+            -0.08900000154972076,
+            -0.03800000250339508
+          ],
+          [
+            0.038100000470876694,
+            -0.0494999997317791,
+            0.03800000250339508
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      },
+      "local_path": "assets\\ec66\\link6.STL"
+    }
+  ]
+}

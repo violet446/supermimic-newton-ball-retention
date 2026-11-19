@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "stage": "verify",
+  "updates": 0,
+  "reason": "'runs/s3_world_increment_data61_fit_20261117/comparison.json'",
+  "wall_s": 1.8996250000200234,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

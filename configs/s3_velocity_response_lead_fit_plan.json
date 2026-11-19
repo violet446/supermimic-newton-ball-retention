@@ -1,0 +1,40 @@
+{
+  "schema": "s3-velocity-response-lead-fit-plan-v1",
+  "scope": "One fixed fit on the frozen 46 pairs and S2 anchor stream using the trapezoid transition. Change only the velocity half-difference response lead weights. Preserve the absolute state term and the position and spin response terms.",
+  "parent_design": "configs/s3_position_integral_fit_plan.json",
+  "parent_run": "runs/s3_position_integral_fit_20261115/validation.json",
+  "matched_reference": "runs/s3_position_integral_fit_20261115/position_integral_900.npz",
+  "nominal_gate_reference": "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_plus_timing_900.npz",
+  "legacy_protection_reference": "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_900.npz",
+  "diagnosis": "runs/s3_pair_state_diagnosis_20261115/validation.json",
+  "model_type": "trapezoid_position_residual_v1",
+  "seed": 20261111,
+  "updates": 900,
+  "pair_count": 46,
+  "anchor_draws_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "base_leads": [8, 16, 32],
+  "base_lead_weights": [0.20, 0.30, 0.50],
+  "velocity_response_leads": [{"first": 1, "last": 31, "total": 0.50}, {"first": 32, "last": 32, "total": 0.50}],
+  "weight_normalization": "Scale the replacement velocity weights to the original velocity mass after applying pair weights and the binary replay-noise eligibility mask, before the shared response normalization. Preserve per-component weights and existing resolved or unresolved response treatment.",
+  "evaluation": {
+    "held_timing": "Use frozen validation_lateral tick-168 branches. Require short-pulse H32 position JVP and finite secant agreement and both to pass for at least one of reversal or dual axis. Require H32 nominal position error <=1.10 times the original 46-pair non-trapezoid endpoint. Report H1/H8/H16/H24/H32 position, velocity and spin, and improvements versus the matched trapezoid endpoint.",
+    "legacy_protection": "Require 22 protections against the 40-pair reference. Report the 22 checks against the original and trapezoid 46-pair references separately. Report history_validation_yminus006_advance tick 72 held roll by identity. Report velocity half-difference results as development evidence."
+  },
+  "static_checks": {"gradient_step": 1e-6, "gradient_atol": 2e-8, "gradient_rtol": 2e-5, "weight_atol": 1e-14},
+  "static_budget": {"cpu_threads": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "max_new_output_mib": 16},
+  "budget": {"cpu_threads": 1, "worker_starts": 1, "max_wall_s": 120, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "min_start_ram_gib": 2, "min_running_ram_gib": 0.75, "max_new_output_mib": 32, "gpu_compute": false},
+  "stop_conditions": ["Frozen source, evidence, data or anchor identity mismatch", "Failed branch mask, weight or gradient preflight", "Nonfinite loss, gradient or model; resource or time cap", "900-update endpoint and development evaluation complete; no automatic rerun or checkpoint selection"],
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "configs/s3_position_integral_fit_plan.json": "c62cbe84bdbd53bba28c318ee0a03ff41d33d206881c981d276b47eb7a232c7f",
+    "runs/s3_position_integral_preflight_20261115_verified/preflight.json": "c8eb095bf729e0a953e4fd2103c8245a14792026bf32c373066c6d96b6bf095e",
+    "runs/s3_position_integral_fit_20261115/validation.json": "e050b747c3feb1f22777bbf6d62975a788fb581b464ed45894ffba50c7d628f4",
+    "runs/s3_position_integral_fit_20261115/position_integral_900.npz": "0e531527519db516b1dd18ca4e619e1429f9e829d1219708e5eee815361058d8",
+    "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_plus_timing_900.npz": "1121de5f43180b22d14b725e162f7e5eec1ceace14aad29d3b45d3bae3b38138",
+    "runs/s3_timing_coverage_fit_20261115_resume/held_offsets_900.npz": "06b369d67f02bb7f7c49df467cb5bfb2452cc2525ed2ce40d8b9ee9cb19e8415",
+    "runs/s3_pair_state_diagnosis_20261115/validation.json": "cc4107eb0a1d94490497b9a1777fc22bb0d582a79c5c6305ed928abe82dfae9d",
+    "runs/s3_pair_state_diagnosis_20261115/pair_state_contributions.json": "c4ef280e26e08cfda4923e5a89124d172485633b5179cc698ed1ec18c2c8447e"
+  }
+}

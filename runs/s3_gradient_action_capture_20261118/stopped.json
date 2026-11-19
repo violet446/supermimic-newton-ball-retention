@@ -1,0 +1,23 @@
+{
+  "status": "stopped",
+  "reason": "history_validation_yplus006_reverse: resource admission failed",
+  "scored_cases": [
+    "validation_lateral"
+  ],
+  "last_worker_events": {
+    "validation_lateral": {
+      "status": "completed",
+      "physics_steps": 2048,
+      "completed_branches": [
+        "nominal_1",
+        "nominal_2",
+        "gradient",
+        "reverse"
+      ]
+    }
+  },
+  "wall_s": 82.45270989998244,
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

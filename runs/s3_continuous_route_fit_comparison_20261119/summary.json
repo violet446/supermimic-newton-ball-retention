@@ -1,0 +1,823 @@
+{
+  "fixed_update": 900,
+  "training_updates": {
+    "6": 900,
+    "12": 900
+  },
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "main_model_replaced": false,
+  "checkpoints_sha256": {
+    "61_pairs": "e3f614e29716fda4e392731842ce3a156468f644403da8378144e9c293b81e2b",
+    "6": "64afe1bc6d79d089ac6ae586a863f45bc0c0aa11a790d9ab5b2ca097999c7cc3",
+    "12": "aa58515f2fbc328ac14635b837fd12f0684aca05b08cb29fb0c392c5e40dd131"
+  },
+  "acceptance_sha256": {
+    "runs/s3_continuous_route_fit_preflight_20261119": "14dda5638c773d1b5f7430118d946d7e17c9312c27b59bbb719acafa342d87bc",
+    "runs/s3_continuous_route_fit_6_score_20261119": "e58222f76fd0aa147381f1e7460e17e6b19950fc2fe7bbc1e0683ef15c0fecdc",
+    "runs/s3_continuous_route_fit_12_20261119": "f42fd7c5228a9abbb447f1949791e63fc583e85302ca8f259546b72aa0e48815",
+    "runs/s3_world_increment_data61_fit_20261117": "3d912cd296849c9c86ce2b755887ed6dfe49c82b82ee91dae9db143c4c18464b"
+  },
+  "original_s2_sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "scores": {
+    "full": {
+      "pitch_pulse": {
+        "61_pairs": {
+          "Newton_mm": 0.3357681699222214,
+          "finite": {
+            "cosine": 0.9304534133872898,
+            "direction": "aligned",
+            "relative_error": 0.4680410753685542,
+            "magnitude_ratio": 0.6392387112924066,
+            "agrees": true,
+            "mm": 0.21463601223409065,
+            "error_mm": 0.15715329532492794
+          },
+          "derivative": {
+            "cosine": 0.8623702325526753,
+            "direction": "aligned",
+            "relative_error": 0.5555560263044902,
+            "magnitude_ratio": 0.6336238307095196,
+            "agrees": false,
+            "mm": 0.21275071405644286,
+            "error_mm": 0.1865380302415202
+          }
+        },
+        "6": {
+          "Newton_mm": 0.3357681699222214,
+          "finite": {
+            "cosine": 0.8124452639816544,
+            "direction": "aligned",
+            "relative_error": 0.6275641896297158,
+            "magnitude_ratio": 1.0446178701862234,
+            "agrees": false,
+            "mm": 0.3507494305404769,
+            "error_mm": 0.21071607946069165
+          },
+          "derivative": {
+            "cosine": -0.17019925477670889,
+            "direction": "opposed",
+            "relative_error": 2.0417520795789343,
+            "magnitude_ratio": 1.6180175499736131,
+            "agrees": false,
+            "mm": 0.5432787916566766,
+            "error_mm": 0.6855553591951087
+          }
+        },
+        "12": {
+          "Newton_mm": 0.3357681699222214,
+          "finite": {
+            "cosine": 0.7836616351346897,
+            "direction": "aligned",
+            "relative_error": 0.6215957068179253,
+            "magnitude_ratio": 0.8061734346285477,
+            "agrees": false,
+            "mm": 0.2706873787851391,
+            "error_mm": 0.20871205290976447
+          },
+          "derivative": {
+            "cosine": -0.329509085340467,
+            "direction": "opposed",
+            "relative_error": 2.1236336332193284,
+            "magnitude_ratio": 1.5726991171080023,
+            "agrees": false,
+            "mm": 0.5280623043896473,
+            "error_mm": 0.713048578611332
+          }
+        }
+      },
+      "pitch_reversal": {
+        "61_pairs": {
+          "Newton_mm": 0.20041979837898533,
+          "finite": {
+            "cosine": 0.9979133815770151,
+            "direction": "aligned",
+            "relative_error": 0.3613174353959703,
+            "magnitude_ratio": 0.6424117553478311,
+            "agrees": true,
+            "mm": 0.12875203448310238,
+            "error_mm": 0.07241516755287242
+          },
+          "derivative": {
+            "cosine": 0.44637257982550615,
+            "direction": "aligned",
+            "relative_error": 0.907731379744757,
+            "magnitude_ratio": 0.5987692260924037,
+            "agrees": false,
+            "mm": 0.12000520756898064,
+            "error_mm": 0.18192734011072237
+          }
+        },
+        "6": {
+          "Newton_mm": 0.20041979837898533,
+          "finite": {
+            "cosine": -0.015036632304954618,
+            "direction": "opposed",
+            "relative_error": 2.5320451586814374,
+            "magnitude_ratio": 2.311221905758513,
+            "agrees": false,
+            "mm": 0.4632146283612154,
+            "error_mm": 0.5074719801894196
+          },
+          "derivative": {
+            "cosine": -0.354681443210524,
+            "direction": "opposed",
+            "relative_error": 1.3021159768233281,
+            "magnitude_ratio": 0.5515773185437943,
+            "agrees": false,
+            "mm": 0.11054701497296862,
+            "error_mm": 0.26096982154098697
+          }
+        },
+        "12": {
+          "Newton_mm": 0.20041979837898533,
+          "finite": {
+            "cosine": -0.1258923397029688,
+            "direction": "opposed",
+            "relative_error": 2.7031000637214766,
+            "magnitude_ratio": 2.388585505832151,
+            "agrees": false,
+            "mm": 0.47871982548984643,
+            "error_mm": 0.5417547697692807
+          },
+          "derivative": {
+            "cosine": -0.6761086054623109,
+            "direction": "opposed",
+            "relative_error": 1.5477031132199597,
+            "magnitude_ratio": 0.6849600089179289,
+            "agrees": false,
+            "mm": 0.1372795468849993,
+            "error_mm": 0.31019034590207223
+          }
+        }
+      },
+      "dual_axis_pulse": {
+        "61_pairs": {
+          "Newton_mm": 0.22491844779787765,
+          "finite": {
+            "cosine": -0.19946355396683763,
+            "direction": "opposed",
+            "relative_error": 2.896755714420165,
+            "magnitude_ratio": 2.526518723742789,
+            "agrees": false,
+            "mm": 0.5682606696765029,
+            "error_mm": 0.6515337989370158
+          },
+          "derivative": {
+            "cosine": -0.18350421523479807,
+            "direction": "opposed",
+            "relative_error": 3.4554063004308873,
+            "magnitude_ratio": 3.12912412160989,
+            "agrees": false,
+            "mm": 0.7037977403993938,
+            "error_mm": 0.777184621603922
+          }
+        },
+        "6": {
+          "Newton_mm": 0.22491844779787765,
+          "finite": {
+            "cosine": -0.8352575539607439,
+            "direction": "opposed",
+            "relative_error": 7.191649405973714,
+            "magnitude_ratio": 6.335340493614546,
+            "agrees": false,
+            "mm": 1.4249349500948236,
+            "error_mm": 1.6175346214981365
+          },
+          "derivative": {
+            "cosine": -0.8271826869648511,
+            "direction": "opposed",
+            "relative_error": 8.504902573265543,
+            "magnitude_ratio": 7.6591356536557305,
+            "agrees": false,
+            "mm": 1.7226809026936298,
+            "error_mm": 1.9129094854510613
+          }
+        },
+        "12": {
+          "Newton_mm": 0.22491844779787765,
+          "finite": {
+            "cosine": -0.8601958218503483,
+            "direction": "opposed",
+            "relative_error": 7.27816623173308,
+            "magnitude_ratio": 6.400082447518431,
+            "agrees": false,
+            "mm": 1.4394966098742872,
+            "error_mm": 1.6369938516563327
+          },
+          "derivative": {
+            "cosine": -0.846956255771296,
+            "direction": "opposed",
+            "relative_error": 8.7805340532501,
+            "magnitude_ratio": 7.9174668946405315,
+            "agrees": false,
+            "mm": 1.7807843644336308,
+            "error_mm": 1.9749040900934196
+          }
+        }
+      }
+    },
+    "small": {
+      "pitch_pulse_quarter": {
+        "61_pairs": {
+          "Newton_mm": 0.15799327301924562,
+          "finite": {
+            "cosine": -0.036980541327093705,
+            "direction": "opposed",
+            "relative_error": 1.0667895244434935,
+            "magnitude_ratio": 0.33639252933979247,
+            "agrees": false,
+            "mm": 0.05314775672961643,
+            "error_mm": 0.16854556858947206
+          },
+          "derivative": {
+            "cosine": -0.04891390029524971,
+            "direction": "opposed",
+            "relative_error": 1.070636846739608,
+            "magnitude_ratio": 0.33664520961998023,
+            "agrees": false,
+            "mm": 0.053187678514110714,
+            "error_mm": 0.16915341963139513
+          }
+        },
+        "6": {
+          "Newton_mm": 0.15799327301924562,
+          "finite": {
+            "cosine": -0.955407327152743,
+            "direction": "opposed",
+            "relative_error": 1.7967942269781576,
+            "magnitude_ratio": 0.8169562514843218,
+            "agrees": false,
+            "mm": 0.12907359208554195,
+            "error_mm": 0.28388140086236446
+          },
+          "derivative": {
+            "cosine": -0.9669558482570753,
+            "direction": "opposed",
+            "relative_error": 1.8443165036646525,
+            "magnitude_ratio": 0.859654941749479,
+            "agrees": false,
+            "mm": 0.13581969791416915,
+            "error_mm": 0.29138960089738997
+          }
+        },
+        "12": {
+          "Newton_mm": 0.15799327301924562,
+          "finite": {
+            "cosine": -0.9901414701829323,
+            "direction": "opposed",
+            "relative_error": 1.7827296846735037,
+            "magnitude_ratio": 0.7870769349637476,
+            "agrees": false,
+            "mm": 0.1243528610728784,
+            "error_mm": 0.28165929779013454
+          },
+          "derivative": {
+            "cosine": -0.9941999550321203,
+            "direction": "opposed",
+            "relative_error": 1.8329350432587599,
+            "magnitude_ratio": 0.8355771962603156,
+            "agrees": false,
+            "mm": 0.13201557609741182,
+            "error_mm": 0.28959140671612404
+          }
+        }
+      },
+      "pitch_reversal_quarter": {
+        "61_pairs": {
+          "Newton_mm": 0.1501859907003549,
+          "finite": {
+            "cosine": -0.9875135382976401,
+            "direction": "opposed",
+            "relative_error": 1.1896950564824167,
+            "magnitude_ratio": 0.1917054047913122,
+            "agrees": false,
+            "mm": 0.028791466141195786,
+            "error_mm": 0.17867553068912642
+          },
+          "derivative": {
+            "cosine": -0.9951550459939141,
+            "direction": "opposed",
+            "relative_error": 1.198954028654556,
+            "magnitude_ratio": 0.19976098804117198,
+            "agrees": false,
+            "mm": 0.03000130189224516,
+            "error_mm": 0.18006609859766615
+          }
+        },
+        "6": {
+          "Newton_mm": 0.1501859907003549,
+          "finite": {
+            "cosine": 0.8813574650661357,
+            "direction": "aligned",
+            "relative_error": 0.8164961011823231,
+            "magnitude_ratio": 0.2154318952959554,
+            "agrees": false,
+            "mm": 0.03235485262347819,
+            "error_mm": 0.1226262758590444
+          },
+          "derivative": {
+            "cosine": 0.8088092376352637,
+            "direction": "aligned",
+            "relative_error": 0.8580169799815304,
+            "magnitude_ratio": 0.1840168554627835,
+            "agrees": false,
+            "mm": 0.027636753743242155,
+            "error_mm": 0.12886213017625273
+          }
+        },
+        "12": {
+          "Newton_mm": 0.1501859907003549,
+          "finite": {
+            "cosine": 0.9245962131582738,
+            "direction": "aligned",
+            "relative_error": 0.7670853917069084,
+            "magnitude_ratio": 0.25878981820793884,
+            "agrees": false,
+            "mm": 0.038866605230724036,
+            "error_mm": 0.11520547950527184
+          },
+          "derivative": {
+            "cosine": 0.867444245454903,
+            "direction": "aligned",
+            "relative_error": 0.8097962167098836,
+            "magnitude_ratio": 0.22851589926069402,
+            "agrees": false,
+            "mm": 0.034319886721249825,
+            "error_mm": 0.12162004707197316
+          }
+        }
+      },
+      "pitch_pulse_half": {
+        "61_pairs": {
+          "Newton_mm": 0.20127972051175502,
+          "finite": {
+            "cosine": 0.5764015881724155,
+            "direction": "aligned",
+            "relative_error": 0.8186291572399135,
+            "magnitude_ratio": 0.5274885231384803,
+            "agrees": false,
+            "mm": 0.10617274251047172,
+            "error_mm": 0.16477344797202337
+          },
+          "derivative": {
+            "cosine": 0.5381995855511423,
+            "direction": "aligned",
+            "relative_error": 0.8428732894634156,
+            "magnitude_ratio": 0.5284951546919946,
+            "agrees": false,
+            "mm": 0.10637535702822143,
+            "error_mm": 0.16965330013001986
+          }
+        },
+        "6": {
+          "Newton_mm": 0.20127972051175502,
+          "finite": {
+            "cosine": -0.44599115923903865,
+            "direction": "opposed",
+            "relative_error": 1.7885431070153104,
+            "magnitude_ratio": 1.1024902128708622,
+            "agrees": false,
+            "mm": 0.22190892191359246,
+            "error_mm": 0.3599974567032676
+          },
+          "derivative": {
+            "cosine": -0.6097207136232757,
+            "direction": "opposed",
+            "relative_error": 2.113534506853699,
+            "magnitude_ratio": 1.3495616703843452,
+            "agrees": false,
+            "mm": 0.2716393958283383,
+            "error_mm": 0.42541163483146255
+          }
+        },
+        "12": {
+          "Newton_mm": 0.20127972051175502,
+          "finite": {
+            "cosine": -0.6066934091074214,
+            "direction": "opposed",
+            "relative_error": 1.814268356510417,
+            "magnitude_ratio": 1.0241488769795548,
+            "agrees": false,
+            "mm": 0.20614039972087256,
+            "error_mm": 0.36517542773173783
+          },
+          "derivative": {
+            "cosine": -0.730754009724139,
+            "direction": "opposed",
+            "relative_error": 2.1535718040334744,
+            "magnitude_ratio": 1.3117623152671452,
+            "agrees": false,
+            "mm": 0.26403115219482365,
+            "error_mm": 0.43347033081785385
+          }
+        }
+      },
+      "pitch_reversal_half": {
+        "61_pairs": {
+          "Newton_mm": 0.10063654670706947,
+          "finite": {
+            "cosine": -0.17285191304414585,
+            "direction": "opposed",
+            "relative_error": 1.2067740665256022,
+            "magnitude_ratio": 0.5244152032619075,
+            "agrees": false,
+            "mm": 0.052775335096964276,
+            "error_mm": 0.12144557471078392
+          },
+          "derivative": {
+            "cosine": -0.4764132706331454,
+            "direction": "opposed",
+            "relative_error": 1.386937486668867,
+            "magnitude_ratio": 0.5962307506351993,
+            "agrees": false,
+            "mm": 0.06000260378449032,
+            "error_mm": 0.139576599156937
+          }
+        },
+        "6": {
+          "Newton_mm": 0.10063654670706947,
+          "finite": {
+            "cosine": 0.6473293088691834,
+            "direction": "aligned",
+            "relative_error": 0.8275570547598259,
+            "magnitude_ratio": 0.9696426858857327,
+            "agrees": false,
+            "mm": 0.09758149144730784,
+            "error_mm": 0.08328248419410207
+          },
+          "derivative": {
+            "cosine": 0.34422107562304693,
+            "direction": "aligned",
+            "relative_error": 0.961012052264232,
+            "magnitude_ratio": 0.54923891265241,
+            "agrees": false,
+            "mm": 0.05527350748648431,
+            "error_mm": 0.0967129342837461
+          }
+        },
+        "12": {
+          "Newton_mm": 0.10063654670706947,
+          "finite": {
+            "cosine": 0.4815105871731581,
+            "direction": "aligned",
+            "relative_error": 1.0622436869194276,
+            "magnitude_ratio": 1.0816889739549707,
+            "agrees": false,
+            "mm": 0.10885744294994144,
+            "error_mm": 0.10690053641295667
+          },
+          "derivative": {
+            "cosine": 0.1285849188029663,
+            "direction": "aligned",
+            "relative_error": 1.1356919911351218,
+            "magnitude_ratio": 0.6820561285980402,
+            "agrees": false,
+            "mm": 0.06863977344249965,
+            "error_mm": 0.1142921201107144
+          }
+        }
+      },
+      "roll_component": {
+        "61_pairs": {
+          "Newton_mm": 0.11055413740465433,
+          "finite": {
+            "cosine": 0.8449657914292003,
+            "direction": "aligned",
+            "relative_error": 6.383322440122069,
+            "magnitude_ratio": 7.205844076953263,
+            "agrees": false,
+            "mm": 0.7966358762000056,
+            "error_mm": 0.7057027061434685
+          },
+          "derivative": {
+            "cosine": 0.7995234807932056,
+            "direction": "aligned",
+            "relative_error": 6.841540362534834,
+            "magnitude_ratio": 7.614647274865691,
+            "agrees": false,
+            "mm": 0.8418307611134782,
+            "error_mm": 0.7563605932991646
+          }
+        },
+        "6": {
+          "Newton_mm": 0.11055413740465433,
+          "finite": {
+            "cosine": 0.9963073115396157,
+            "direction": "aligned",
+            "relative_error": 14.07302210655135,
+            "magnitude_ratio": 15.069067505279516,
+            "agrees": false,
+            "mm": 1.6659477595386833,
+            "error_mm": 1.555830819666416
+          },
+          "derivative": {
+            "cosine": 0.9932934900545018,
+            "direction": "aligned",
+            "relative_error": 13.574867673485116,
+            "magnitude_ratio": 14.567668772549672,
+            "agrees": false,
+            "mm": 1.6105160551459485,
+            "error_mm": 1.5007577860244736
+          }
+        },
+        "12": {
+          "Newton_mm": 0.11055413740465433,
+          "finite": {
+            "cosine": 0.9933135538573568,
+            "direction": "aligned",
+            "relative_error": 14.032218987597886,
+            "magnitude_ratio": 15.025057619802238,
+            "agrees": false,
+            "mm": 1.6610822846124653,
+            "error_mm": 1.5513198660470962
+          },
+          "derivative": {
+            "cosine": 0.9956560827693646,
+            "direction": "aligned",
+            "relative_error": 13.465001822633969,
+            "magnitude_ratio": 14.460335994252285,
+            "agrees": false,
+            "mm": 1.598649972426036,
+            "error_mm": 1.4886116616533964
+          }
+        }
+      },
+      "pitch_component": {
+        "61_pairs": {
+          "Newton_mm": 0.2649020365326965,
+          "finite": {
+            "cosine": 0.9689048110456644,
+            "direction": "aligned",
+            "relative_error": 0.4716632226455589,
+            "magnitude_ratio": 0.5673544051638767,
+            "agrees": true,
+            "mm": 0.15029333736370754,
+            "error_mm": 0.1249445482363832
+          },
+          "derivative": {
+            "cosine": 0.961824115740672,
+            "direction": "aligned",
+            "relative_error": 0.4796579520362409,
+            "magnitude_ratio": 0.567898512901854,
+            "agrees": true,
+            "mm": 0.15043747261159093,
+            "error_mm": 0.12706236833350268
+          }
+        },
+        "6": {
+          "Newton_mm": 0.2649020365326965,
+          "finite": {
+            "cosine": 0.5852939857921,
+            "direction": "aligned",
+            "relative_error": 0.9083603485770984,
+            "magnitude_ratio": 0.9947907167576963,
+            "agrees": false,
+            "mm": 0.2635220867929346,
+            "error_mm": 0.24062650624362342
+          },
+          "derivative": {
+            "cosine": 0.17296310873772897,
+            "direction": "aligned",
+            "relative_error": 1.612876747085944,
+            "magnitude_ratio": 1.4501818207345252,
+            "agrees": false,
+            "mm": 0.3841561176552695,
+            "error_mm": 0.4272543349792974
+          }
+        },
+        "12": {
+          "Newton_mm": 0.2649020365326965,
+          "finite": {
+            "cosine": 0.41368932439962985,
+            "direction": "aligned",
+            "relative_error": 1.0122086141787312,
+            "magnitude_ratio": 0.856075056244419,
+            "agrees": false,
+            "mm": 0.22677602582398929,
+            "error_mm": 0.26813612329188435
+          },
+          "derivative": {
+            "cosine": 0.009244753366369145,
+            "direction": "aligned",
+            "relative_error": 1.7207002015366775,
+            "magnitude_ratio": 1.4095642344253048,
+            "agrees": false,
+            "mm": 0.37339643632291447,
+            "error_mm": 0.45581698764928713
+          }
+        }
+      }
+    }
+  },
+  "counts": {
+    "61_pairs": {
+      "full": {
+        "finite": 2,
+        "derivative": 0,
+        "joint": 0,
+        "cases": 3
+      },
+      "small": {
+        "finite": 1,
+        "derivative": 1,
+        "joint": 1,
+        "cases": 6
+      }
+    },
+    "6": {
+      "full": {
+        "finite": 0,
+        "derivative": 0,
+        "joint": 0,
+        "cases": 3
+      },
+      "small": {
+        "finite": 0,
+        "derivative": 0,
+        "joint": 0,
+        "cases": 6
+      }
+    },
+    "12": {
+      "full": {
+        "finite": 0,
+        "derivative": 0,
+        "joint": 0,
+        "cases": 3
+      },
+      "small": {
+        "finite": 0,
+        "derivative": 0,
+        "joint": 0,
+        "cases": 6
+      }
+    }
+  },
+  "nominal_h32_mm": {
+    "61_pairs": 4.31005573659293,
+    "6": 9.292870718588537,
+    "12": 9.212861963402718
+  },
+  "ordinary_routes_h32_position_rms_mm": {
+    "61_pairs": {
+      "shared_six": 39.82807170845579,
+      "additional_six": 39.96282825753078
+    },
+    "6": {
+      "shared_six": 25.899793293631124,
+      "additional_six": 26.12298625660651
+    },
+    "12": {
+      "shared_six": 25.86134173121318,
+      "additional_six": 25.774378132638923
+    }
+  },
+  "legacy_checks": {
+    "6": {
+      "40_pairs": {
+        "passed": 17,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5",
+          "S2_route/validation_lateral"
+        ]
+      },
+      "46_pairs": {
+        "passed": 16,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5",
+          "S2_route/validation_lateral"
+        ]
+      },
+      "49_pairs": {
+        "passed": 17,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/positive_cosine",
+          "S2_route/validation_lateral"
+        ]
+      },
+      "49_pairs_full_window": {
+        "passed": 21,
+        "total": 22,
+        "failures": [
+          "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5"
+        ]
+      },
+      "61_pairs": {
+        "passed": 13,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.2/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/cosine_ge_0_5",
+          "group/validation/negative_y_basin/0.2/position",
+          "group/validation/negative_y_basin/0.2/cosine_ge_0_5",
+          "S2_route/validation_lateral"
+        ]
+      }
+    },
+    "12": {
+      "40_pairs": {
+        "passed": 16,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/cosine_ge_0_5",
+          "group/validation/history_validation_yplus006/0.2/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5"
+        ]
+      },
+      "46_pairs": {
+        "passed": 15,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/cosine_ge_0_5",
+          "group/validation/history_validation_yplus006/0.2/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5",
+          "S2_route/validation_lateral"
+        ]
+      },
+      "49_pairs": {
+        "passed": 16,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/cosine_ge_0_5",
+          "group/validation/history_validation_yplus006/0.2/positive_cosine",
+          "S2_route/validation_lateral"
+        ]
+      },
+      "49_pairs_full_window": {
+        "passed": 20,
+        "total": 22,
+        "failures": [
+          "group/validation/history_validation_yplus006/0.2/positive_cosine",
+          "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5"
+        ]
+      },
+      "61_pairs": {
+        "passed": 13,
+        "total": 22,
+        "failures": [
+          "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5",
+          "group/validation/coverage_validation_diagonal_b_initial/0.2/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine",
+          "group/validation/coverage_validation_diagonal_b_initial/0.35/cosine_ge_0_5",
+          "group/validation/negative_y_basin/0.2/position",
+          "group/validation/negative_y_basin/0.2/cosine_ge_0_5",
+          "S2_route/validation_lateral"
+        ]
+      }
+    }
+  },
+  "replacement_gates": {
+    "6": {
+      "short_pulse_retained": false,
+      "reversal_or_dual_new_pass": false,
+      "nominal_h32_within_1_10": true,
+      "all_legacy_protections_vs_40_pairs": false,
+      "protections_vs_40_pairs": false,
+      "protections_vs_46_pairs": false,
+      "protections_vs_49_pairs": false,
+      "protections_vs_49_pairs_full_window": false,
+      "protections_vs_61_pairs": false
+    },
+    "12": {
+      "short_pulse_retained": false,
+      "reversal_or_dual_new_pass": false,
+      "nominal_h32_within_1_10": true,
+      "all_legacy_protections_vs_40_pairs": false,
+      "protections_vs_40_pairs": false,
+      "protections_vs_46_pairs": false,
+      "protections_vs_49_pairs": false,
+      "protections_vs_49_pairs_full_window": false,
+      "protections_vs_61_pairs": false
+    }
+  }
+}

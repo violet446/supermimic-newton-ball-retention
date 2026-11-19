@@ -1,0 +1,12 @@
+{
+  "status": "stopped",
+  "reason": "system_available_ram_floor",
+  "completed_cases": [],
+  "active_case": "broad_train_72_left",
+  "completed_physics_steps": 0,
+  "active_physics_steps_at_last_event": 4736,
+  "wall_s": 188.94273020001128,
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

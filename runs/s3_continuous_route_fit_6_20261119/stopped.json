@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "stage": "candidate_response",
+  "updates": 900,
+  "reason": "'held_offsets'",
+  "wall_s": 49.01423500000965,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

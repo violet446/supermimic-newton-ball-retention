@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "stage": "candidate_response",
+  "updates": 0,
+  "reason": "bad operand type for unary +: 'dict'",
+  "wall_s": 4.288295200036373,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

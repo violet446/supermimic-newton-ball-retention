@@ -1,0 +1,478 @@
+{
+  "status": "completed",
+  "case": {
+    "episode": "validation_lateral",
+    "group": "negative_y_basin",
+    "seed": 536873541,
+    "tick": 168
+  },
+  "execution_gates_passed": true,
+  "physics_steps": 4096,
+  "nominal_prefix_substeps": 0,
+  "branches": [
+    "nominal_1",
+    "nominal_2",
+    "pitch_pulse_plus",
+    "pitch_pulse_minus",
+    "pitch_reversal_plus",
+    "pitch_reversal_minus",
+    "dual_axis_pulse_plus",
+    "dual_axis_pulse_minus"
+  ],
+  "nominal_comparison": {
+    "passed": true,
+    "numerical_equivalent": true,
+    "position_resolution_passed": true,
+    "position_resolution_m": 1e-06,
+    "position_resolution_gate_leads": [
+      8,
+      16,
+      32
+    ],
+    "tool_relative_component_limits": {
+      "position_m": 1e-05,
+      "velocity_m_s": 0.001,
+      "spin_rad_s": 0.02
+    },
+    "pairwise": {
+      "native_1_vs_native_2": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true
+      },
+      "native_1_vs_recorded_1": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true
+      },
+      "native_1_vs_recorded_2": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true
+      },
+      "native_2_vs_recorded_1": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true
+      },
+      "native_2_vs_recorded_2": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true
+      },
+      "recorded_1_vs_recorded_2": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true
+      }
+    },
+    "all_branch_max_half_spread_by_lead": {
+      "8": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "16": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "32": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      }
+    },
+    "repeat_half_spread_by_source": {
+      "native": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      },
+      "recorded": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      }
+    },
+    "cross_source_max_half_spread_by_lead": {
+      "8": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "16": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      },
+      "32": {
+        "position_m": 0.0,
+        "velocity_m_s": 0.0,
+        "spin_rad_s": 0.0
+      }
+    },
+    "all_nominal_json_equal": true,
+    "new_nominal_sha256": {
+      "nominal_1": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+      "nominal_2": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49"
+    },
+    "recorded_nominal_sha256": [
+      "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+      "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49"
+    ],
+    "all_nominal_files_byte_identical": true
+  },
+  "shared_prefix_checks": {
+    "passed": true,
+    "by_sign": {
+      "plus": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true,
+        "passed": true,
+        "shared_leads": 8,
+        "position_half_spread_m_by_lead": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "position_resolution_m": 1e-06,
+        "contacts_match": true
+      },
+      "minus": {
+        "actions_and_timing_match": true,
+        "executed_commands_match": true,
+        "retention_classification_match": true,
+        "tool_relative_max_component_errors": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "body_world_errors": {
+          "ball": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          },
+          "tool": {
+            "max_component_position_m": 0.0,
+            "max_rotation_geodesic_rad": 0.0,
+            "max_component_origin_velocity_m_s": 0.0,
+            "max_component_angular_velocity_rad_s": 0.0
+          }
+        },
+        "numerical_equivalent": true,
+        "public_control_state_match": true,
+        "public_reference_phase_match": true,
+        "passed": true,
+        "shared_leads": 8,
+        "position_half_spread_m_by_lead": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "position_resolution_m": 1e-06,
+        "contacts_match": true
+      }
+    }
+  },
+  "primary": {
+    "pitch_pulse": {
+      "lead": 32,
+      "signal": "strong",
+      "newton_half_difference_norm_m": 0.00033576816992222144,
+      "strong_signal_floor_m": 9.999999999999999e-06,
+      "nominal_repeat_half_spread_m": 0.0,
+      "absolute_model_nominal_error_m": 0.028462939677454342,
+      "model_jvp_vs_newton": {
+        "cosine": -0.7504601228916497,
+        "direction": "opposed",
+        "relative_error": 2.456045078960821,
+        "magnitude_ratio": 1.6149886349423084,
+        "agrees": false
+      },
+      "model_secant_vs_newton": {
+        "cosine": -0.7806474924832313,
+        "direction": "opposed",
+        "relative_error": 2.657197299291455,
+        "magnitude_ratio": 1.8020077293538146,
+        "agrees": false
+      },
+      "both_agree": false
+    },
+    "pitch_reversal": {
+      "lead": 32,
+      "signal": "strong",
+      "newton_half_difference_norm_m": 0.00020041979837898534,
+      "strong_signal_floor_m": 9.999999999999999e-06,
+      "nominal_repeat_half_spread_m": 0.0,
+      "absolute_model_nominal_error_m": 0.028462939677454342,
+      "model_jvp_vs_newton": {
+        "cosine": -0.9612406982541353,
+        "direction": "opposed",
+        "relative_error": 2.7641018785719584,
+        "magnitude_ratio": 1.7890761698730866,
+        "agrees": false
+      },
+      "model_secant_vs_newton": {
+        "cosine": -0.9877529492901729,
+        "direction": "opposed",
+        "relative_error": 2.7281734107140694,
+        "magnitude_ratio": 1.7359551936206405,
+        "agrees": false
+      },
+      "both_agree": false
+    },
+    "dual_axis_pulse": {
+      "lead": 32,
+      "signal": "strong",
+      "newton_half_difference_norm_m": 0.00022491844779787764,
+      "strong_signal_floor_m": 9.999999999999999e-06,
+      "nominal_repeat_half_spread_m": 0.0,
+      "absolute_model_nominal_error_m": 0.028462939677454342,
+      "model_jvp_vs_newton": {
+        "cosine": 0.9484381379701807,
+        "direction": "aligned",
+        "relative_error": 0.8298213854498764,
+        "magnitude_ratio": 1.7153399786944656,
+        "agrees": false
+      },
+      "model_secant_vs_newton": {
+        "cosine": 0.9922265533485364,
+        "direction": "aligned",
+        "relative_error": 0.4045043602917641,
+        "magnitude_ratio": 1.377112654247186,
+        "agrees": true
+      },
+      "both_agree": false
+    }
+  },
+  "control_accepted": false,
+  "test_episode_files_read": false,
+  "wall_s": 150.7797511999961,
+  "artifacts_sha256": {
+    "admission.json": "67f3065cc422b2a895f3d659a57e196c3b46ebf89ffa846572b31d486a81af6f",
+    "config.json": "1585fed39892b8bfaa6b45eb18e03332128b57e03455d7c926b422cb2630eaff",
+    "execution_plan.json": "a8cd1ffb7912ffde84aa818b765006f41632e42901ac6589d8f69cf15638772b",
+    "launcher.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "static/branch_commands.json": "2ecf65e0f4509d9ae2b3e37070331fed8dd85fade9d7bea653133ee3f9ddf387",
+    "static/model_rollouts.json": "4a50e8fa74a8881d87a3431c131a47fa4a2ceadd219f7ccd62be777b620ffc90",
+    "static/preflight.json": "b740eead6c20e90b1a0b4bbf374e467b577a24ac9a7bae4f130a3d5b5963403e",
+    "worker/dual_axis_pulse_minus.json": "435d227094415c50021a7e1a29b78cc6dd409fa66eaa0fb1e540ae8a140be8a1",
+    "worker/dual_axis_pulse_minus_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/dual_axis_pulse_plus.json": "7a68373913043e24f3554a2686bcfafa5d66731c2e392693d8921fd6cb5e4256",
+    "worker/dual_axis_pulse_plus_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/effective_config.json": "6bf991af71cdfdcd79303462e65f9931cf8448efc433869e980fdf5961c33776",
+    "worker/native_layout.json": "d50bb85ac024ac4a3d7d1902f09df24b9395e1bd1a9e2f20039ef7f5b84297af",
+    "worker/nominal_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/nominal_1_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/nominal_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/nominal_2_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/nominal_comparison.json": "134dc65beb54d912d3415891daaa757482655d787ad73eae005039404a245751",
+    "worker/pitch_pulse_minus.json": "2d92f2678ff193a84bf1e8e65fd062c8a1197d74cdf2bbdbd9b1434cb3788050",
+    "worker/pitch_pulse_minus_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/pitch_pulse_plus.json": "0798d4ea473701524b19a6b7ac19f773a33e1e68434b72abeb293c3be439f8e2",
+    "worker/pitch_pulse_plus_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/pitch_reversal_minus.json": "67b7d8123c52784998cb7bfeff669fcfe8ba625d0eee1d99fdabebf3f8ca3834",
+    "worker/pitch_reversal_minus_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/pitch_reversal_plus.json": "f193f7bbe37271afd796cbfa58b4a50577d1400a277a1ee3fb6bb6426e4bf0ed",
+    "worker/pitch_reversal_plus_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/resources.jsonl": "956d4c7c3e563acd1eeb03e5cc33c48512054dfe7e8d23ad1b40571708f2fff4",
+    "worker/response_comparison.json": "bbdeb920aca0fa900fbc95ec146b43a942de64e20bc74acb8e560cf8fb00448b",
+    "worker/result.json": "9ad947ad99436e4c8f1a40cfd073ad50b4818b8d9269023f6938efd451fd4eb1",
+    "worker/shared_prefix_minus.json": "af86f5fd9c99f4e74485e460ef0891fe15b97939412f0e7d9479db26927d17a2",
+    "worker/shared_prefix_plus.json": "af86f5fd9c99f4e74485e460ef0891fe15b97939412f0e7d9479db26927d17a2",
+    "worker/worker.log": "8acdb7159118b01935ad68f52d3854bfc39e9cf905662b89fc76d0a322794ca3",
+    "worker/worker_result.json": "481e5ddcfeb0edf42a1b95828e2458ca41bcaf86130df30bf638091b52530317"
+  }
+}

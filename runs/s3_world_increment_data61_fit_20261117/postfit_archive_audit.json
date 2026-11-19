@@ -1,0 +1,613 @@
+{
+  "scope": "Frozen checkpoint, archived traces, matched-tool training rows only. Development legacy excerpt for protections. No test, simulation or optimizer.",
+  "source_sha256": {
+    "runs/s3_world_increment_data61_fit_20261117/world_increment_900.npz": "e3f614e29716fda4e392731842ce3a156468f644403da8378144e9c293b81e2b",
+    "runs/s3_pitch_full_tool_unseen_models_20261117/scores.json": "f3cae68102b0a3a20c241a895f9ef31216bffe7572daad379b13d77ace820a69",
+    "runs/s3_world_increment_extended_window_fit_20261117/comparison.json": "467f39a31a625fec30dd3b5448cff2b6531507b58e35105d471b5f5a494475f4",
+    "runs/s3_world_increment_data61_fit_20261117/comparison.json": "20cf3ce69d4d4a452c10befae1f40262dcde88dc7b5259038b0736cfd156fd57"
+  },
+  "new_training_snapshots": {
+    "coverage_train_yplus_matched_full_tool": {
+      "pitch_pulse": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.013037390352614827,
+          "absolute_model_positive_error_norm": 0.014498209162550192,
+          "absolute_model_negative_error_norm": 0.012472146352273278,
+          "model_fd_vs_newton": {
+            "cosine": -0.9938205719466044,
+            "direction": "opposed",
+            "relative_error": 2.9206743207285926,
+            "magnitude_ratio": 1.924743769812491,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.9901154418926974,
+            "direction": "opposed",
+            "relative_error": 2.981659863457933,
+            "magnitude_ratio": 1.9882438597414005,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0008538876497640161,
+          "absolute_model_positive_error_norm": 0.0005978965739647169,
+          "absolute_model_negative_error_norm": 0.000504182090147626,
+          "model_fd_vs_newton": {
+            "cosine": 0.9699439941161112,
+            "direction": "aligned",
+            "relative_error": 0.2855054410401064,
+            "magnitude_ratio": 0.8205963842074799,
+            "agrees": true
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.9499747886896182,
+            "direction": "aligned",
+            "relative_error": 0.4569931341987902,
+            "magnitude_ratio": 0.6163660000603041,
+            "agrees": true
+          }
+        }
+      },
+      "pitch_reversal": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.013037390352614827,
+          "absolute_model_positive_error_norm": 0.014207003551433242,
+          "absolute_model_negative_error_norm": 0.013141390439668717,
+          "model_fd_vs_newton": {
+            "cosine": -0.9633112162160942,
+            "direction": "opposed",
+            "relative_error": 3.4632344527541785,
+            "magnitude_ratio": 2.489508120794063,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.9841293613161464,
+            "direction": "opposed",
+            "relative_error": 4.395390564259259,
+            "magnitude_ratio": 3.407677648581243,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0008538876497640161,
+          "absolute_model_positive_error_norm": 0.0003323111194922218,
+          "absolute_model_negative_error_norm": 0.0005421655706094797,
+          "model_fd_vs_newton": {
+            "cosine": 0.9459310815197527,
+            "direction": "aligned",
+            "relative_error": 0.7117755642137817,
+            "magnitude_ratio": 1.5795003869607414,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.900438314496315,
+            "direction": "aligned",
+            "relative_error": 0.8447622262068669,
+            "magnitude_ratio": 1.624601539908201,
+            "agrees": false
+          }
+        }
+      },
+      "dual_axis_pulse": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.013037390352614827,
+          "absolute_model_positive_error_norm": 0.015270203156902806,
+          "absolute_model_negative_error_norm": 0.012654149247175698,
+          "model_fd_vs_newton": {
+            "cosine": -0.8421406194411092,
+            "direction": "opposed",
+            "relative_error": 3.6913795364988844,
+            "magnitude_ratio": 2.8096375372101643,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.8000861090093568,
+            "direction": "opposed",
+            "relative_error": 4.018206493235139,
+            "magnitude_ratio": 3.1730890952959814,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0008538876497640161,
+          "absolute_model_positive_error_norm": 0.00040834749054665433,
+          "absolute_model_negative_error_norm": 0.00046242233841783264,
+          "model_fd_vs_newton": {
+            "cosine": 0.9938726771636146,
+            "direction": "aligned",
+            "relative_error": 0.13661880828923706,
+            "magnitude_ratio": 0.9135757457730473,
+            "agrees": true
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.967937249787111,
+            "direction": "aligned",
+            "relative_error": 0.2891045198033838,
+            "magnitude_ratio": 0.8248151239777822,
+            "agrees": true
+          }
+        }
+      }
+    },
+    "coverage_train_yminus_matched_full_tool": {
+      "pitch_pulse": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0378717598979368,
+          "absolute_model_positive_error_norm": 0.03699453340239193,
+          "absolute_model_negative_error_norm": 0.03793445096138699,
+          "model_fd_vs_newton": {
+            "cosine": -0.7884867485201402,
+            "direction": "opposed",
+            "relative_error": 7.670085418292777,
+            "magnitude_ratio": 6.856898897508406,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.7137937794930576,
+            "direction": "opposed",
+            "relative_error": 7.937753022502099,
+            "magnitude_ratio": 7.19300232296742,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0018010114606963237,
+          "absolute_model_positive_error_norm": 0.0019551684242583153,
+          "absolute_model_negative_error_norm": 0.0019130372347921506,
+          "model_fd_vs_newton": {
+            "cosine": 0.8497131268849772,
+            "direction": "aligned",
+            "relative_error": 0.7658807526578864,
+            "magnitude_ratio": 1.4052180551191524,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.13778812854134898,
+            "direction": "opposed",
+            "relative_error": 1.1355891558926625,
+            "magnitude_ratio": 0.417683112251491,
+            "agrees": false
+          }
+        }
+      },
+      "pitch_reversal": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0378717598979368,
+          "absolute_model_positive_error_norm": 0.036976132626544166,
+          "absolute_model_negative_error_norm": 0.03791113416651419,
+          "model_fd_vs_newton": {
+            "cosine": 0.28037642815371133,
+            "direction": "aligned",
+            "relative_error": 16.217194187580976,
+            "magnitude_ratio": 16.469137908241507,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.18992665318364116,
+            "direction": "aligned",
+            "relative_error": 23.1415030478274,
+            "magnitude_ratio": 23.3105935001021,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0018010114606963237,
+          "absolute_model_positive_error_norm": 0.0017810862282580666,
+          "absolute_model_negative_error_norm": 0.0017966528039739282,
+          "model_fd_vs_newton": {
+            "cosine": 0.14216088129496046,
+            "direction": "aligned",
+            "relative_error": 1.2259066490358517,
+            "magnitude_ratio": 0.86538755967517,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.2834117954855091,
+            "direction": "opposed",
+            "relative_error": 8.748701682489505,
+            "magnitude_ratio": 8.412570229278286,
+            "agrees": false
+          }
+        }
+      },
+      "dual_axis_pulse": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0378717598979368,
+          "absolute_model_positive_error_norm": 0.03662033175922441,
+          "absolute_model_negative_error_norm": 0.03772638881475798,
+          "model_fd_vs_newton": {
+            "cosine": -0.13494118262374286,
+            "direction": "opposed",
+            "relative_error": 2.61517390615044,
+            "magnitude_ratio": 2.285253785179067,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.1532718503133929,
+            "direction": "opposed",
+            "relative_error": 2.910956206989175,
+            "magnitude_ratio": 2.5848220668317614,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0018010114606963237,
+          "absolute_model_positive_error_norm": 0.0019402411036831299,
+          "absolute_model_negative_error_norm": 0.002181425160355458,
+          "model_fd_vs_newton": {
+            "cosine": 0.8473360151022484,
+            "direction": "aligned",
+            "relative_error": 0.5752997059370034,
+            "magnitude_ratio": 0.6260938985408658,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.3286312738643654,
+            "direction": "aligned",
+            "relative_error": 2.0047923385433144,
+            "magnitude_ratio": 2.09701777993245,
+            "agrees": false
+          }
+        }
+      }
+    },
+    "train_pitch_matched_full_tool": {
+      "pitch_pulse": {
+        "before": {
+          "newton_strong": false,
+          "absolute_model_nominal_error_norm": 0.007261297300996312,
+          "absolute_model_positive_error_norm": 0.006696148670385387,
+          "absolute_model_negative_error_norm": 0.007244920326719502,
+          "model_fd_vs_newton": {
+            "cosine": null,
+            "direction": "newton_below_floor",
+            "relative_error": null,
+            "magnitude_ratio": null,
+            "agrees": null
+          },
+          "model_jvp_vs_newton": {
+            "cosine": null,
+            "direction": "newton_below_floor",
+            "relative_error": null,
+            "magnitude_ratio": null,
+            "agrees": null
+          }
+        },
+        "after": {
+          "newton_strong": false,
+          "absolute_model_nominal_error_norm": 0.0008736121268434047,
+          "absolute_model_positive_error_norm": 0.0009888374002484533,
+          "absolute_model_negative_error_norm": 0.0011051016728450946,
+          "model_fd_vs_newton": {
+            "cosine": null,
+            "direction": "newton_below_floor",
+            "relative_error": null,
+            "magnitude_ratio": null,
+            "agrees": null
+          },
+          "model_jvp_vs_newton": {
+            "cosine": null,
+            "direction": "newton_below_floor",
+            "relative_error": null,
+            "magnitude_ratio": null,
+            "agrees": null
+          }
+        }
+      },
+      "pitch_reversal": {
+        "before": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.007261297300996312,
+          "absolute_model_positive_error_norm": 0.006826427380310842,
+          "absolute_model_negative_error_norm": 0.007181917690593457,
+          "model_fd_vs_newton": {
+            "cosine": 0.5558565362090151,
+            "direction": "aligned",
+            "relative_error": 10.490889650282076,
+            "magnitude_ratio": 11.013759870206796,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.7217112915969582,
+            "direction": "aligned",
+            "relative_error": 15.762389096986722,
+            "magnitude_ratio": 16.468894443933262,
+            "agrees": false
+          }
+        },
+        "after": {
+          "newton_strong": true,
+          "absolute_model_nominal_error_norm": 0.0008736121268434047,
+          "absolute_model_positive_error_norm": 0.001584036874386703,
+          "absolute_model_negative_error_norm": 0.0016049581607003693,
+          "model_fd_vs_newton": {
+            "cosine": 0.6665358098145008,
+            "direction": "aligned",
+            "relative_error": 0.8163039170138632,
+            "magnitude_ratio": 0.9991347735790451,
+            "agrees": false
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.9413076624983464,
+            "direction": "aligned",
+            "relative_error": 4.915381743419534,
+            "magnitude_ratio": 5.845085573356478,
+            "agrees": false
+          }
+        }
+      },
+      "dual_axis_pulse": {
+        "before": {
+          "newton_strong": false,
+          "absolute_model_nominal_error_norm": 0.007261297300996312,
+          "absolute_model_positive_error_norm": 0.006755603089779754,
+          "absolute_model_negative_error_norm": 0.006889590378792353,
+          "model_fd_vs_newton": {
+            "cosine": 0.3789292166533411,
+            "direction": "aligned",
+            "relative_error": 62.90187614850407,
+            "magnitude_ratio": 63.273997468090826,
+            "agrees": null
+          },
+          "model_jvp_vs_newton": {
+            "cosine": 0.25862662945792453,
+            "direction": "aligned",
+            "relative_error": 88.25044245727908,
+            "magnitude_ratio": 88.50378219982898,
+            "agrees": null
+          }
+        },
+        "after": {
+          "newton_strong": false,
+          "absolute_model_nominal_error_norm": 0.0008736121268434047,
+          "absolute_model_positive_error_norm": 0.0008831691022620301,
+          "absolute_model_negative_error_norm": 0.0014436627377739006,
+          "model_fd_vs_newton": {
+            "cosine": 0.8602899564658677,
+            "direction": "aligned",
+            "relative_error": 53.41371209221879,
+            "magnitude_ratio": 54.271569086249265,
+            "agrees": null
+          },
+          "model_jvp_vs_newton": {
+            "cosine": -0.001041598337097896,
+            "direction": "opposed",
+            "relative_error": 75.83490212223496,
+            "magnitude_ratio": 75.82726697421306,
+            "agrees": null
+          }
+        }
+      }
+    }
+  },
+  "legacy_history_protections": {
+    "49_pairs": {
+      "group/validation/history_validation_yminus006/0.2": {
+        "position_all": {
+          "pairs": 8,
+          "resolved": 8,
+          "positive_cosine": 5,
+          "cosine_ge_0_5": 4,
+          "model_unresolved": 0,
+          "median_cosine": 0.35286721760266426,
+          "median_amplitude_ratio": 1.0927071661966399,
+          "amplitude_ratio_within_half_to_twice": 5,
+          "median_relative_vector_error": 1.4791219136457072
+        },
+        "position_strong": {
+          "pairs": 6,
+          "resolved": 6,
+          "positive_cosine": 4,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": 0.4493917053493207,
+          "median_amplitude_ratio": 0.9346847038175474,
+          "amplitude_ratio_within_half_to_twice": 5,
+          "median_relative_vector_error": 0.9402998493052614
+        },
+        "velocity": {
+          "pairs": 8,
+          "resolved": 8,
+          "positive_cosine": 3,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": -0.431694375872727,
+          "median_amplitude_ratio": 2.262058516028902,
+          "amplitude_ratio_within_half_to_twice": 3,
+          "median_relative_vector_error": 2.406549984419244
+        },
+        "spin": {
+          "pairs": 8,
+          "resolved": 8,
+          "positive_cosine": 5,
+          "cosine_ge_0_5": 2,
+          "model_unresolved": 0,
+          "median_cosine": 0.21888313500657436,
+          "median_amplitude_ratio": 2.542246534124859,
+          "amplitude_ratio_within_half_to_twice": 3,
+          "median_relative_vector_error": 2.8135280614109646
+        },
+        "absolute_rmse_p_v_w_si": [
+          0.004983825290319074,
+          0.05646541478647044,
+          2.990608015780384
+        ],
+        "branches": 16,
+        "unavailable_pairs": 0
+      },
+      "group/validation/history_validation_yplus006/0.2": {
+        "position_all": {
+          "pairs": 8,
+          "resolved": 6,
+          "positive_cosine": 5,
+          "cosine_ge_0_5": 5,
+          "model_unresolved": 0,
+          "median_cosine": 0.8913090319061384,
+          "median_amplitude_ratio": 1.5950033824979721,
+          "amplitude_ratio_within_half_to_twice": 3,
+          "median_relative_vector_error": 1.300650287828656
+        },
+        "position_strong": {
+          "pairs": 6,
+          "resolved": 6,
+          "positive_cosine": 5,
+          "cosine_ge_0_5": 5,
+          "model_unresolved": 0,
+          "median_cosine": 0.8913090319061384,
+          "median_amplitude_ratio": 1.5950033824979721,
+          "amplitude_ratio_within_half_to_twice": 3,
+          "median_relative_vector_error": 1.300650287828656
+        },
+        "velocity": {
+          "pairs": 8,
+          "resolved": 6,
+          "positive_cosine": 5,
+          "cosine_ge_0_5": 4,
+          "model_unresolved": 0,
+          "median_cosine": 0.5235049441611663,
+          "median_amplitude_ratio": 2.2192070939985635,
+          "amplitude_ratio_within_half_to_twice": 1,
+          "median_relative_vector_error": 1.9196082326475823
+        },
+        "spin": {
+          "pairs": 8,
+          "resolved": 6,
+          "positive_cosine": 5,
+          "cosine_ge_0_5": 4,
+          "model_unresolved": 0,
+          "median_cosine": 0.8600431214597128,
+          "median_amplitude_ratio": 2.3658994701473364,
+          "amplitude_ratio_within_half_to_twice": 1,
+          "median_relative_vector_error": 1.9366344409598382
+        },
+        "absolute_rmse_p_v_w_si": [
+          0.014633384409785491,
+          0.046638210506673564,
+          2.1589252721609173
+        ],
+        "branches": 16,
+        "unavailable_pairs": 0
+      }
+    },
+    "61_pairs": {
+      "group/validation/history_validation_yminus006/0.2": {
+        "position_all": {
+          "pairs": 8,
+          "resolved": 8,
+          "positive_cosine": 4,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": -0.0817180493792251,
+          "median_amplitude_ratio": 1.235961949330339,
+          "amplitude_ratio_within_half_to_twice": 5,
+          "median_relative_vector_error": 1.3092737661602576
+        },
+        "position_strong": {
+          "pairs": 6,
+          "resolved": 6,
+          "positive_cosine": 4,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": 0.5598990219849167,
+          "median_amplitude_ratio": 0.9784995208254426,
+          "amplitude_ratio_within_half_to_twice": 5,
+          "median_relative_vector_error": 0.7215635221447176
+        },
+        "velocity": {
+          "pairs": 8,
+          "resolved": 8,
+          "positive_cosine": 3,
+          "cosine_ge_0_5": 2,
+          "model_unresolved": 0,
+          "median_cosine": -0.26908404388726254,
+          "median_amplitude_ratio": 2.3052955954085412,
+          "amplitude_ratio_within_half_to_twice": 3,
+          "median_relative_vector_error": 2.6373333734941955
+        },
+        "spin": {
+          "pairs": 8,
+          "resolved": 8,
+          "positive_cosine": 4,
+          "cosine_ge_0_5": 1,
+          "model_unresolved": 0,
+          "median_cosine": -0.04467435770245445,
+          "median_amplitude_ratio": 2.291976488680591,
+          "amplitude_ratio_within_half_to_twice": 3,
+          "median_relative_vector_error": 2.7675710686479973
+        },
+        "absolute_rmse_p_v_w_si": [
+          0.007090304555045796,
+          0.04285095015146955,
+          2.1619969353286086
+        ],
+        "branches": 16,
+        "unavailable_pairs": 0
+      },
+      "group/validation/history_validation_yplus006/0.2": {
+        "position_all": {
+          "pairs": 8,
+          "resolved": 6,
+          "positive_cosine": 3,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": 0.25350593156065965,
+          "median_amplitude_ratio": 3.133317662011558,
+          "amplitude_ratio_within_half_to_twice": 2,
+          "median_relative_vector_error": 2.82225370844901
+        },
+        "position_strong": {
+          "pairs": 6,
+          "resolved": 6,
+          "positive_cosine": 3,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": 0.25350593156065965,
+          "median_amplitude_ratio": 3.133317662011558,
+          "amplitude_ratio_within_half_to_twice": 2,
+          "median_relative_vector_error": 2.82225370844901
+        },
+        "velocity": {
+          "pairs": 8,
+          "resolved": 6,
+          "positive_cosine": 4,
+          "cosine_ge_0_5": 3,
+          "model_unresolved": 0,
+          "median_cosine": 0.3657938319840624,
+          "median_amplitude_ratio": 2.129217519690746,
+          "amplitude_ratio_within_half_to_twice": 2,
+          "median_relative_vector_error": 1.8070969850912264
+        },
+        "spin": {
+          "pairs": 8,
+          "resolved": 6,
+          "positive_cosine": 6,
+          "cosine_ge_0_5": 4,
+          "model_unresolved": 0,
+          "median_cosine": 0.6501291144330887,
+          "median_amplitude_ratio": 2.724156981112894,
+          "amplitude_ratio_within_half_to_twice": 2,
+          "median_relative_vector_error": 2.2834430345458347
+        },
+        "absolute_rmse_p_v_w_si": [
+          0.012446465150828506,
+          0.04764691844715526,
+          2.022507632693386
+        ],
+        "branches": 16,
+        "unavailable_pairs": 0
+      }
+    }
+  }
+}

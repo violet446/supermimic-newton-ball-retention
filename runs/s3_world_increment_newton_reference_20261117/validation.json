@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "phase": "world_increment_newton_reference",
+  "plan_sha256": "cc2bc95722d421ad4a8b5b43c2840823f1c589607765685a95d0c9446645b8cf",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "fixed_endpoints": 2,
+  "development_pairs": 2,
+  "archived_scores_reproduced": true,
+  "newton_velocity_step_closure_m_s": 1.734723475976807e-18,
+  "trajectory_error_closure_max_si": 1.5959455978986625e-16,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 2.133856599975843,
+    "available_ram_bytes": 3436150784,
+    "min_available_ram_bytes": 3436150784,
+    "rss_bytes": 101371904,
+    "peak_rss_bytes": 111828992,
+    "private_commit_bytes": 107274240,
+    "peak_private_commit_bytes": 116293632,
+    "output_bytes_before_record": 803482
+  },
+  "artifacts_sha256": {
+    "execution_plan.json": "1512b0b85d56229de54d627d435e7dc8e4c429d3079748cec78da9ba9cfe3a69",
+    "newton_reference.json": "947e83669b0d6ab4e740390a48c0593179bfeb499e16223b68b814a1460e1242",
+    "resources.jsonl": "378805a47fdf75a117bed854f721c32c3e8cda0dae739f841b9a5c652baeaa4d"
+  }
+}

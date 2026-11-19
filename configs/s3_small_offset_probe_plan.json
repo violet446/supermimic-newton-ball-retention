@@ -1,0 +1,126 @@
+{
+  "schema": "s3-small-offset-probe-plan-v1",
+  "status": "planned_not_run",
+  "question": "For predeclared failure and sign-switch cases, do noise-resolved Newton secants near nominal action agree across smaller offsets, and how do their directions compare with frozen model Jacobians and secants?",
+  "scope": "Targeted development diagnosis on four preserved initial groups, one snapshot each. Rebuild physical prefixes from source configs and use a fresh solver snapshot in each run.",
+  "cases": [
+    {
+      "episode": "validation_lateral",
+      "group": "negative_y_basin",
+      "tick": 168,
+      "seed": 536873541,
+      "source_config": "runs/s3_pair_refit_20261112/validation_lateral_config.json",
+      "source_config_sha256": "7d26f9066c8ff8d304abc3c8facfed3f9158c75f0d94159644e372dc9bcefc39",
+      "source_trace": "runs/s3_pair_refit_20261112/validation_lateral/action_pairs.jsonl",
+      "source_trace_sha256": "58b10231993821f533dd054c99d3d21b079c33836d53d800bf1da4490aff611e",
+      "source_master_seed": 20261111,
+      "reserved_substeps": 9856,
+      "rationale": "Single amplitude negative_y_basin including opposed pitch"
+    },
+    {
+      "episode": "coverage_validation_diagonal_a",
+      "group": "coverage_validation_diagonal_a_initial",
+      "tick": 72,
+      "seed": 2063570561,
+      "source_config": "runs/s3_coverage_20261113/coverage_validation_diagonal_a_config.json",
+      "source_config_sha256": "1a4bccaeab71a952bc440382c57e8107527d5c0a5ae5f0bf9d599d2e044b4d21",
+      "source_trace": "runs/s3_coverage_20261113/coverage_validation_diagonal_a/action_pairs.jsonl",
+      "source_trace_sha256": "8df46eb6e1645d29d2076bcc04310d5dbc998564c6ba2a4010bb70c14a638c0d",
+      "source_master_seed": 20261111,
+      "reserved_substeps": 8320,
+      "rationale": "Dual amplitude stable Newton opposition in roll, pitch comparison"
+    },
+    {
+      "episode": "history_validation_yminus006_reverse",
+      "group": "history_validation_yminus006",
+      "tick": 168,
+      "seed": 2606165370,
+      "source_config": "runs/s3_history_coverage_20261114/history_validation_yminus006_reverse_config.json",
+      "source_config_sha256": "8013a7c92c8e3ac2e52dbc17d6df817505c4846b66f1288c27d948ccd28265da",
+      "source_trace": "runs/s3_history_coverage_20261114/history_validation_yminus006_reverse/action_pairs.jsonl",
+      "source_trace_sha256": "7a64c35fd923ca0ee59912c80fc2666c1d4d3c480c83ed87785dbf097a08f157",
+      "source_master_seed": 20261113,
+      "reserved_substeps": 9856,
+      "rationale": "Sign change between local Jacobian and finite pitch response"
+    },
+    {
+      "episode": "history_validation_yplus006_reverse",
+      "group": "history_validation_yplus006",
+      "tick": 168,
+      "seed": 3392718248,
+      "source_config": "runs/s3_history_coverage_20261114/history_validation_yplus006_reverse_config.json",
+      "source_config_sha256": "409c2dc5e691c11ded70877f9b5df8afed728f26d3e6ae2f4732c0da692e474a",
+      "source_trace": "runs/s3_history_coverage_20261114/history_validation_yplus006_reverse/action_pairs.jsonl",
+      "source_trace_sha256": "18bca58c30d6ed4ef092676364365558914c2f1966138063c38e3478121caecb",
+      "source_master_seed": 20261113,
+      "reserved_substeps": 9856,
+      "rationale": "Sign change between local Jacobian and finite pitch response in second initial group"
+    }
+  ],
+  "horizon": 32,
+  "control_substeps": 16,
+  "leads": [
+    8,
+    16,
+    32
+  ],
+  "amplitudes": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "axes": [
+    "roll",
+    "pitch"
+  ],
+  "baseline_replays_per_snapshot": 2,
+  "branches_per_snapshot": 14,
+  "branches_total": 56,
+  "reference_amplitude_notes": "Recollect .20 in the same restoration session for within-session scale comparisons; use saved .20 only as an external repeatability crosscheck. The .35 records provide separate context in the two diagonal groups.",
+  "preflight": [
+    "Verify the named sources, source seeds, anchor path and asset hashes; no synthesized prefix and no phase or action schedule edits.",
+    "Derive configs by changing only the allowed capture selection, amplitudes and resource controls. Keep the source master seed and per-episode seed. Extend the seed binding to this new design for reverse histories before spawning workers.",
+    "Verify exact nominal 32-step requested actions, legal unclipped perturbations and substep bounds. Run static pose, IK, continuity and clearance checks for the derived cases and bound hardware admission.",
+    "In Newton capture compare rebuilt snapshot state to the recorded one before branching. Require the same discrete state and max numeric difference <=1e-5 in the serialized state fields. Log the observed differences and stop if outside tolerance."
+  ],
+  "metrics": {
+    "strong_position": "Half spread >=10*max(1e-6 m, 5*same-session zero replay half spread, numerical floor).",
+    "stable": "For a smaller/larger pair, both strong, cosine >=.8, and norm of slope difference / norm of smaller slope <=.5. Classify .05 vs .10, .10 vs .20, and .05 vs .20 separately.",
+    "repeatability": "Compare the new .20 slope with the archived .20 slope for each axis/lead at the same tolerances after both pass their session noise gates. Report divergence and never combine the two sessions as a scale trend.",
+    "interpretation": "If .05/.10 is strong and stable, compare both with the frozen model Jacobian; disagreement across the two strong small scales or unresolved signal leaves near-nominal physics uncertain. H32 is the primary comparison. Preserve case-level results and mark all eligibility losses.",
+    "protection": "Retain the existing 22 development position/response protections and S2 complete-route check. The four already examined cases provide targeted diagnostic evidence. Future control admission also requires a separately frozen scalar objective and measured Newton objective improvement."
+  },
+  "budget": {
+    "sequential_environments": 1,
+    "max_worker_starts": 4,
+    "max_physics_substeps": 37888,
+    "max_wall_s": 1200,
+    "max_worker_wall_s": 270,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_total_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_new_output_mib": 128,
+    "worker_output_plus_shared_cache_and_temp_gib": 1
+  },
+  "stop_conditions": [
+    "Static preflight, hash, seed or snapshot mismatch",
+    "Resource cap or substep cap",
+    "Nominal or perturbed branch incomplete, invalid, or controller constraints fail",
+    "Four frozen snapshots and their branches completed"
+  ],
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "runs/s3_action_response_diagnosis_20261114/summary.json": "359b811feca2f8dd3035af815bdd6cb13cd5c3e6b3e17fd01278226190ff6967",
+    "runs/s3_action_response_diagnosis_20261114/cases.json": "73e0ceca8864b1db9920a78691db5d61a050f4c1d2c49e895d42aff6e7bc2759",
+    "runs/s3_action_response_diagnosis_20261114/findings.json": "60d9a9d9a6b26c5b00a91869edb93f42ef5773736c2fffc0e00645d30bd4b9d9",
+    "runs/s3_local_surface_refit_20261114/field.npz": "58b4ca8ab511a7aa853eb43f208e4fa99768a213be9b6a1b9582c5d5288a689a",
+    "runs/s3_physical_scales_20261113/full_training.npz": "15a70656a6154102f702a1d8c9e39a1fa35573b26d30b3107b3be0b0cb37924b",
+    "runs/s3_history_duration_20261114/expanded_1800.npz": "e597efe29a2c9ff56b5df91657918fef25946855a98f7f105acfa0b70707d0c9",
+    "runs/s3_local_surface_refit_20261114/candidate_1800.npz": "4249bb5912897209f91a447037d521c2c072fe6ba23768bd712362e20fbc04d3"
+  }
+}

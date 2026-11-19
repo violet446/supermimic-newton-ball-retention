@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "plan_sha256": "c7ca765f0604cb9bd470e9eb463f673391c06c43d60a5448c8e4c6b45f834584",
+  "case": {
+    "episode": "history_validation_yplus006_reverse",
+    "group": "history_validation_yplus006",
+    "seed": 3392718248,
+    "tick": 168
+  },
+  "worker_starts": 1,
+  "physics_steps": 2048,
+  "nominal_prefix_substeps": 0,
+  "nominal_gate_passed": true,
+  "cases_scored": 2,
+  "cases_passed": 1,
+  "combined_physics_steps": 4096,
+  "wall_s": 86.41298259998439,
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "artifacts_sha256": {
+    "admission.json": "21b2e64580c85f7b709e6708a4ab4118b2b1b8b23042e2df026d23be564579c7",
+    "comparison.json": "5b97a405c56f6d5886f5b012f44fc21091f4bef83df83248cd83e6f468c505f2",
+    "execution_plan.json": "354f60db9f959501cddedaa1b221fa270a409d633952851228612f99bf8f735d",
+    "resources.jsonl": "ad1b0f948f39ce185b88422bceeb54c6da55e17f02ed11553434007beb47bb45",
+    "worker/gradient.json": "d1487a3fb0baa7998114edd0c54c024abd2eaafe22923b8a3d06190571262d7c",
+    "worker/gradient_readback.json": "8812c696c9cc272dcc51f7337959f91737709d746337c8d5ec68f02d738359b3",
+    "worker/native_layout.json": "d50bb85ac024ac4a3d7d1902f09df24b9395e1bd1a9e2f20039ef7f5b84297af",
+    "worker/nominal_1.json": "57c3c23730aa17bb4b8474d4b74817efb83a429a36bf3f9d8786a35723d290eb",
+    "worker/nominal_1_readback.json": "8812c696c9cc272dcc51f7337959f91737709d746337c8d5ec68f02d738359b3",
+    "worker/nominal_2.json": "57c3c23730aa17bb4b8474d4b74817efb83a429a36bf3f9d8786a35723d290eb",
+    "worker/nominal_2_readback.json": "8812c696c9cc272dcc51f7337959f91737709d746337c8d5ec68f02d738359b3",
+    "worker/nominal_comparison.json": "931b631c7fc8fe401a27c506282707b251de83b796c0caf3c49bf396cabca7c5",
+    "worker/reverse.json": "c725d827b7a20b5eff1a460ac6de9367a69626f4892ff2707d18db7df4d2112a",
+    "worker/reverse_readback.json": "8812c696c9cc272dcc51f7337959f91737709d746337c8d5ec68f02d738359b3",
+    "worker/worker.log": "d1a8adadb6b2dab6fd83bd02805d6e5e3d12a684e6541ad5aec1ad82c9d8a8ec",
+    "worker/worker_result.json": "9da8f174dd0ee76f4b275768bc37b9b330657fd4368674ee4fee835e955f8861"
+  }
+}

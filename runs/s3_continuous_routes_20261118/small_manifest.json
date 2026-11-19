@@ -1,0 +1,328 @@
+{
+  "schema_version": "ball-retention-dataset-v1",
+  "transition_schema": "ball-retention-transition-v0.2",
+  "dt_s": 0.0010416666666666667,
+  "control_substeps": 16,
+  "entries": [
+    {
+      "episode_id": "continuous_72_right_feedback",
+      "group_id": "broad_train_72_right",
+      "policy": "feedback",
+      "split": "train",
+      "path": "continuous_72_right_feedback/transitions.jsonl",
+      "sha256": "477812f072cbef4471e6b553d0ea29ccd49af4ef73261dee9dfb3726d5a166f5",
+      "physical_initial_sha256": "4212ebbdafe0a4120c17e06d6442744a530d99fb07606813389ce7d98b195579",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_right_config.json",
+      "source_config_sha256": "77c3f00f1dd187be58a1c249230af8efa78441bdb3b480a920f6b60b4d0b81f8",
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        -0.12,
+        -0.12
+      ],
+      "requested_action_max": [
+        0.12,
+        0.12
+      ],
+      "requested_action_std": [
+        0.06914397601057266,
+        0.09459026138939156
+      ],
+      "nonzero_action_steps": 180,
+      "max_abs_tilt_rad": [
+        0.005491257866568839,
+        0.002247185825863144
+      ],
+      "ball_tool_position_min_m": [
+        0.2665850442287505,
+        -0.07870450541708164,
+        0.006783523274331821
+      ],
+      "ball_tool_position_max_m": [
+        0.31629432879947417,
+        -0.016126654785655788,
+        0.0337179160188541
+      ],
+      "max_ball_tool_displacement_m": 0.07611206847489665
+    },
+    {
+      "episode_id": "continuous_72_center_pulse",
+      "group_id": "broad_train_72_center",
+      "policy": "pulse",
+      "split": "train",
+      "path": "continuous_72_center_pulse/transitions.jsonl",
+      "sha256": "a17352cff6e387adef503883984eb7c0839e365545eda9772b3bc9437eaff20a",
+      "physical_initial_sha256": "7e4d7e8b49e81888231d3d1023ae50ec94aef718d624d41d0122bde8611740e9",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_center_config.json",
+      "source_config_sha256": "c0fecd0b28e663f814d8271eb10c8df7f51111194328d1f29425600e905a2c68",
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        -0.12,
+        0.0
+      ],
+      "requested_action_max": [
+        0.12,
+        0.08
+      ],
+      "requested_action_std": [
+        0.03794733192202056,
+        0.017435595774162715
+      ],
+      "nonzero_action_steps": 36,
+      "max_abs_tilt_rad": [
+        0.0006314145386360371,
+        0.00080877430852334
+      ],
+      "ball_tool_position_min_m": [
+        0.27279294693797107,
+        -0.06869490883307366,
+        0.007200973290054188
+      ],
+      "ball_tool_position_max_m": [
+        0.31287863893767187,
+        -0.03126900177287994,
+        0.028637225531757016
+      ],
+      "max_ball_tool_displacement_m": 0.05385451516755839
+    },
+    {
+      "episode_id": "continuous_168_center_nominal",
+      "group_id": "broad_train_168_center",
+      "policy": "nominal",
+      "split": "train",
+      "path": "continuous_168_center_nominal/transitions.jsonl",
+      "sha256": "0053672899cd7b8a33e177652f309fe9767e838626bed6de1fece5144554ff25",
+      "physical_initial_sha256": "96771f6e175de9602580765acd510c20ca9f03b2683a07469037ed78518e08ab",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_168_center_config.json",
+      "source_config_sha256": "6b66c68be7ca43ebe1a2dd3777c27e49ac38c502c9c2c4dcaa8b7284838fa6ac",
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        0.0,
+        0.0
+      ],
+      "requested_action_max": [
+        0.0,
+        0.0
+      ],
+      "requested_action_std": [
+        0.0,
+        0.0
+      ],
+      "nonzero_action_steps": 0,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.28354867398205885,
+        -0.06012303702257096,
+        0.010029030778639758
+      ],
+      "ball_tool_position_max_m": [
+        0.3007941136441252,
+        -0.03075705614911743,
+        0.02787105816864363
+      ],
+      "max_ball_tool_displacement_m": 0.0329550670160829
+    },
+    {
+      "episode_id": "continuous_72_left_nominal",
+      "group_id": "broad_train_72_left",
+      "policy": "nominal",
+      "split": "train",
+      "path": "continuous_72_left_nominal/transitions.jsonl",
+      "sha256": "66e5939621b73936147db63807a6272b5745f26e41942cfe69fc9e687e189c15",
+      "physical_initial_sha256": "dfb618c69b62bdba094a99459fe507596aa9ba466fad4a1320c069fc2448f87a",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_left_config.json",
+      "source_config_sha256": "4efa833e90f59a6fb8f645728779371a06e5f178d35484a35a4fab4d63c081bc",
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        0.0,
+        0.0
+      ],
+      "requested_action_max": [
+        0.0,
+        0.0
+      ],
+      "requested_action_std": [
+        0.0,
+        0.0
+      ],
+      "nonzero_action_steps": 0,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.27900084964719163,
+        -0.058759160628802314,
+        0.00927652840965909
+      ],
+      "ball_tool_position_max_m": [
+        0.30974185675856125,
+        -0.03654326224558482,
+        0.024416191592157604
+      ],
+      "max_ball_tool_displacement_m": 0.03398685815668971
+    },
+    {
+      "episode_id": "continuous_168_left_feedback",
+      "group_id": "broad_train_168_left",
+      "policy": "feedback",
+      "split": "train",
+      "path": "continuous_168_left_feedback/transitions.jsonl",
+      "sha256": "2ec534acde6dc37a17d9d818bf77474a2027b8f62ef19689d8121b3ec9996e78",
+      "physical_initial_sha256": "616ac259eefb811d73c6360bc2126b8c786a219227272a7b8c595765151c54ab",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_168_left_config.json",
+      "source_config_sha256": "cbaa24ea068016882fc401b1393babdd8fc8c969f969476ade569a11f6c24f98",
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        -0.12,
+        -0.12
+      ],
+      "requested_action_max": [
+        0.0,
+        0.04370472594032079
+      ],
+      "requested_action_std": [
+        0.05005592284445477,
+        0.04591882320052594
+      ],
+      "nonzero_action_steps": 180,
+      "max_abs_tilt_rad": [
+        0.008118880770576386,
+        0.005261061419884448
+      ],
+      "ball_tool_position_min_m": [
+        0.2864956685810832,
+        -0.058948168554841,
+        0.011102213666727895
+      ],
+      "ball_tool_position_max_m": [
+        0.2994266412968583,
+        -0.041216009691760244,
+        0.018591264167376165
+      ],
+      "max_ball_tool_displacement_m": 0.01481531420595108
+    },
+    {
+      "episode_id": "continuous_168_right_pulse",
+      "group_id": "broad_train_168_right",
+      "policy": "pulse",
+      "split": "train",
+      "path": "continuous_168_right_pulse/transitions.jsonl",
+      "sha256": "707d26deb7e281e5ea9579cff423213bad5ea8f9b72716bef0cb071cc8081a21",
+      "physical_initial_sha256": "8110ba6a7d85f94e1d89c33d4e634e8c7676ac406d9f2421bf0bdb89f42d4525",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_168_right_config.json",
+      "source_config_sha256": "9c67e2d7fb65cf2953d4d31206597ec48584eefd65826ae2c578e26f687106e9",
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        0.0,
+        -0.12
+      ],
+      "requested_action_max": [
+        0.08,
+        0.12
+      ],
+      "requested_action_std": [
+        0.019955506062794344,
+        0.04287449384216937
+      ],
+      "nonzero_action_steps": 40,
+      "max_abs_tilt_rad": [
+        0.0010748370720409708,
+        0.0009566443518086935
+      ],
+      "ball_tool_position_min_m": [
+        0.2773407712728383,
+        -0.08173913340074411,
+        0.009586956656676582
+      ],
+      "ball_tool_position_max_m": [
+        0.31197117420053677,
+        -0.015614709161893284,
+        0.03901427331135626
+      ],
+      "max_ball_tool_displacement_m": 0.07104753780160146
+    }
+  ],
+  "splits": {
+    "train": {
+      "episodes": 6,
+      "groups": 6,
+      "transitions": 1440,
+      "physics_steps": 23040,
+      "terminated": 0,
+      "truncated": 6,
+      "successes": 6
+    },
+    "validation": {
+      "episodes": 0,
+      "groups": 0,
+      "transitions": 0,
+      "physics_steps": 0,
+      "terminated": 0,
+      "truncated": 0,
+      "successes": 0
+    },
+    "test": {
+      "episodes": 0,
+      "groups": 0,
+      "transitions": 0,
+      "physics_steps": 0,
+      "terminated": 0,
+      "truncated": 0,
+      "successes": 0
+    }
+  },
+  "provenance": {
+    "frozen_plan_sha256": "819ad24200694f63f847a01f3cc63650edbbfcd338d131012e93ac95a3064b5c",
+    "tier": "small",
+    "training_updates": 0,
+    "test_episode_files_read": false,
+    "main_model_replaced": false,
+    "actor_critic_trained": false,
+    "hardware_control": false
+  }
+}

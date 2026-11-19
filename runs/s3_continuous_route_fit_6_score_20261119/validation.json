@@ -1,0 +1,38 @@
+{
+  "status": "completed",
+  "phase": "continuous_route_fit",
+  "plan_sha256": "29e479e09ff36834f5f47993117b4432771dbf401cf3b8fdf583306eb5193a9f",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_pairs": 61,
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "opening_gradient_verified": true,
+  "original_development_scores_reproduced": true,
+  "main_model_replaced": false,
+  "checkpoint_selection": false,
+  "tier": "6",
+  "replacement_gate_passed": false,
+  "checkpoint_updates": 900,
+  "score_only": true,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 16.413477900030557,
+    "available_ram_bytes": 2349346816,
+    "min_available_ram_bytes": 2347384832,
+    "rss_bytes": 122486784,
+    "peak_rss_bytes": 239648768,
+    "private_commit_bytes": 129708032,
+    "peak_private_commit_bytes": 246378496,
+    "output_bytes_before_record": 4440403
+  },
+  "artifacts_sha256": {
+    "comparison.json": "17d146aaa8f19761b23742fab6ae4c80af2ca48c1d35bb37c4cdf7080a336f51",
+    "execution_plan.json": "a3b86b1e93c4a91104523bc66c468487210d7bf1d2b3ca8dec4ceebdb54c1943",
+    "opening.json": "2205a33fface6867a533ce46788a8a0fb2143ecd37cb98038614b5de3b7b2af2",
+    "timed_rollouts.json": "bb20a788fd4169376ba8fce82bcda08d23a6b3eb72173c4201bf95b24e9c89ad",
+    "resources.jsonl": "a7f0f2b5e54acd0207fa07b66bfc44a36dcc39e67e05780bbcda02610721a540"
+  }
+}

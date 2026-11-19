@@ -1,0 +1,99 @@
+{
+  "manifest_reloaded_and_hashes_verified": true,
+  "manifest_sha256": "9ab789e9661a4d4db74249519bcdb5c8b1479c58d4bbbdb919da5b8a6086d9f0",
+  "configuration_hashes_verified": true,
+  "split_summary": {
+    "train": {
+      "episodes": 5,
+      "groups": 3,
+      "transitions": 969,
+      "physics_steps": 15501,
+      "terminated": 1,
+      "truncated": 4,
+      "successes": 4
+    },
+    "validation": {
+      "episodes": 2,
+      "groups": 2,
+      "transitions": 250,
+      "physics_steps": 3989,
+      "terminated": 1,
+      "truncated": 1,
+      "successes": 1
+    },
+    "test": {
+      "episodes": 2,
+      "groups": 2,
+      "transitions": 249,
+      "physics_steps": 3969,
+      "terminated": 1,
+      "truncated": 1,
+      "successes": 1
+    }
+  },
+  "resource_peak_gib": {
+    "peak_rss_bytes": 0.5865631103515625,
+    "peak_private_commit_bytes": 0.8762702941894531,
+    "gpu_used_bytes": 0.89453125,
+    "output_cache_bytes": 0.5798632716760039
+  },
+  "dataset_bytes": 12775893,
+  "replay_max_numeric_error": 1.862645149230957e-09,
+  "planning_rejections": 0,
+  "terminal_substeps": [
+    {
+      "episode_id": "train_edge",
+      "substeps": 13,
+      "time_s": 0.146875
+    },
+    {
+      "episode_id": "validation_edge",
+      "substeps": 5,
+      "time_s": 0.15520833333333334
+    },
+    {
+      "episode_id": "test_edge",
+      "substeps": 1,
+      "time_s": 0.134375
+    }
+  ],
+  "cpu_tests_passed": 33,
+  "diagnostic_tests_passed": 7,
+  "baseline_method": "position RMSE in rotating tool frame, complete 60Hz intervals only. Persistence uses initial position; constant relative velocity uses only the starting state. No test split performance evaluation.",
+  "baseline_position_errors": {
+    "train": {
+      "1": {
+        "windows": 968,
+        "persistence_position_rmse_mm": 1.0716792056338416,
+        "constant_relative_velocity_position_rmse_mm": 0.15913697808110996
+      },
+      "4": {
+        "windows": 953,
+        "persistence_position_rmse_mm": 3.4391665657279127,
+        "constant_relative_velocity_position_rmse_mm": 1.6476847562568777
+      },
+      "8": {
+        "windows": 933,
+        "persistence_position_rmse_mm": 5.305123142087903,
+        "constant_relative_velocity_position_rmse_mm": 3.4831465934754484
+      }
+    },
+    "validation": {
+      "1": {
+        "windows": 249,
+        "persistence_position_rmse_mm": 1.8209199961861948,
+        "constant_relative_velocity_position_rmse_mm": 0.2524928167226368
+      },
+      "4": {
+        "windows": 243,
+        "persistence_position_rmse_mm": 5.299046187314617,
+        "constant_relative_velocity_position_rmse_mm": 2.67542796045562
+      },
+      "8": {
+        "windows": 235,
+        "persistence_position_rmse_mm": 6.2516350806867385,
+        "constant_relative_velocity_position_rmse_mm": 4.971530738629041
+      }
+    }
+  }
+}

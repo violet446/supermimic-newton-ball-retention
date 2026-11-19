@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "source_momentum_sha256": "46be92e8fdfe9e9b792f949c6a340b13250c6f79877cf3be730cc3cd14dffab7",
+  "by_branch": {
+    "pitch_pulse_plus": {
+      "public_states_exact": true,
+      "archived_candidate_rows_exact": 384,
+      "peak_residual_n_s_m_s_rad_s": [
+        4.1862406054261067e-10,
+        2.7092680739952343e-08,
+        2.6549149845333054e-06
+      ],
+      "nonzero_reported_contact_count_range": [
+        1,
+        7
+      ],
+      "zero_normal_resultant_steps": 0
+    },
+    "pitch_pulse_minus": {
+      "public_states_exact": true,
+      "archived_candidate_rows_exact": 384,
+      "peak_residual_n_s_m_s_rad_s": [
+        4.838669151600719e-10,
+        3.003990400481367e-08,
+        3.058220994632958e-06
+      ],
+      "nonzero_reported_contact_count_range": [
+        1,
+        6
+      ],
+      "zero_normal_resultant_steps": 0
+    }
+  },
+  "pair": {
+    "physics_substep": {
+      "normal_impulse_projection_fraction": 1.1263975434611009,
+      "tangent_impulse_projection_fraction": -0.12639870868072584,
+      "normal_resultant_split_projection_fraction": {
+        "direction": 1.134808590323335,
+        "magnitude": -0.00841104686223429,
+        "one_or_both_zero": 0.0
+      }
+    },
+    "control_period": {
+      "normal_impulse_projection_fraction": 1.2448191460463773,
+      "tangent_impulse_projection_fraction": -0.24482397645299117,
+      "normal_resultant_split_projection_fraction": {
+        "direction": 1.2530699116329056,
+        "magnitude": -0.00825076558652838,
+        "one_or_both_zero": 0.0
+      }
+    }
+  },
+  "both_have_nonzero_normal_resultant_substeps_in_window": 272,
+  "convention": "Normal-resultant magnitude and direction use the average and half-difference product identity. Direction includes each branch projection into its own control-period start plane.",
+  "new_physics_steps": 0,
+  "training_updates": 0,
+  "test_episode_files_read": false
+}

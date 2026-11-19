@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "stage": "dual_axis_pulse",
+  "updates": 0,
+  "reason": "unexpected legacy protection rows",
+  "wall_s": 2.8658585000084713,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}

@@ -1,0 +1,13 @@
+{
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "training_pairs": 49,
+  "initial_s2_loss": 0.01640949042152734,
+  "initial_pair_loss": {
+    "absolute": 4.925720040992741,
+    "response": 0.12047361199691553,
+    "loss": 2.4869547428957537
+  },
+  "combined_loss_direction_fd_error": 1.9564145858907978e-09,
+  "same_targets_and_weights": true,
+  "initial_candidate_scoring_verified": true
+}

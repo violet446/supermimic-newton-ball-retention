@@ -1,0 +1,36 @@
+{
+  "original_probe": {
+    "s2_loss": 0.01640949042152734,
+    "pair": {
+      "absolute": 4.379219957355693,
+      "response": 0.09331865656758018,
+      "loss": 2.3436648562272455,
+      "original_pair_loss": 2.2082737099913627,
+      "auxiliary": {
+        "nominal": 0.03465772702928917,
+        "half_difference": 0.07818329718268877
+      }
+    },
+    "gradient_norm": 11.738122009870361,
+    "fd_error": 3.8701732096857455e-10
+  },
+  "candidate_probe": {
+    "s2_loss": 0.01640949042152734,
+    "pair": {
+      "absolute": 4.379219957355693,
+      "response": 0.09327976003324126,
+      "loss": 2.3436570769203775,
+      "original_pair_loss": 2.2082659306844947,
+      "auxiliary": {
+        "nominal": 0.03465772702928917,
+        "half_difference": 0.07818329718268877
+      }
+    },
+    "gradient_norm": 11.738104195473197,
+    "fd_error": 4.1873229883471197e-10
+  },
+  "spin_loss_change": -7.77930686778278e-06,
+  "delta_gradient_norm": 0.0019117924442809094,
+  "delta_gradient_fraction_of_old_total": 0.00016287038443401082,
+  "old_vs_new_total_gradient_cosine": 0.9999999867377501
+}

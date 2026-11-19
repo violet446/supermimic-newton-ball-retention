@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "phase": "world_increment_data61_preflight",
+  "plan_sha256": "2c3a1ae9e823495872a17a574d32eb8adb064a3356c08dd6262e1f325e50c7f9",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_pairs": 61,
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "matched_data_preflight_passed": true,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 5.821671799989417,
+    "available_ram_bytes": 3686486016,
+    "min_available_ram_bytes": 3641257984,
+    "rss_bytes": 111841280,
+    "peak_rss_bytes": 136142848,
+    "private_commit_bytes": 118272000,
+    "peak_private_commit_bytes": 141754368,
+    "output_bytes_before_record": 55371
+  },
+  "artifacts_sha256": {
+    "data_preflight.json": "395a08a9a129d593792121b3778b04113b290832f09af0d7b83673a1580be87b",
+    "execution_plan.json": "a9218ace342aad9481bc2543f298d29712982f8fb0a301e414f50887b9be78a6",
+    "resources.jsonl": "90d8c079fd53e863b0aa89210d1015ea459fef709efd207a3555d710dc789a75"
+  }
+}

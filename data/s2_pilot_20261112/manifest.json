@@ -1,0 +1,504 @@
+{
+  "schema_version": "ball-retention-dataset-v1",
+  "transition_schema": "ball-retention-transition-v0.2",
+  "dt_s": 0.0010416666666666667,
+  "control_substeps": 16,
+  "entries": [
+    {
+      "episode_id": "train_zero",
+      "group_id": "nominal_basin",
+      "split": "train",
+      "path": "episodes/train_zero/transitions.jsonl",
+      "sha256": "8e538095631a9aee447f5e58b9e7ae3f6de5ddd6f187cb4f4c932bfa83e19a0f",
+      "provenance": {
+        "seed": 350075456,
+        "kind": "route",
+        "source_config_sha256": "d15bf536f8cd1b602c1b367013146bf99d8fd9bf46a3e7408ea2b53c1130629a",
+        "config_sha256": "4db21b547f99bb7577c59913449300c0dac25cd2535781c4126efb8626e5dc5d",
+        "config": "episodes/train_zero/effective_config.json",
+        "replay_max_error": 1.862645149230957e-09
+      },
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        0.0,
+        0.0
+      ],
+      "requested_action_max": [
+        0.0,
+        0.0
+      ],
+      "requested_action_std": [
+        0.0,
+        0.0
+      ],
+      "nonzero_action_steps": 0,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.2857089710365714,
+        -0.03250456386533007,
+        0.009838919126974113
+      ],
+      "ball_tool_position_max_m": [
+        0.28580547114439714,
+        -0.03247902723923627,
+        0.010056250509906065
+      ],
+      "max_ball_tool_displacement_m": 0.0002189935050545547
+    },
+    {
+      "episode_id": "train_roll",
+      "group_id": "nominal_basin",
+      "split": "train",
+      "path": "episodes/train_roll/transitions.jsonl",
+      "sha256": "48d59e25245f640f70824f16bba01718a9040fc7f11a536628b4bafc73fc4d8f",
+      "provenance": {
+        "seed": 1927607585,
+        "kind": "route",
+        "source_config_sha256": "e2dac566cf91e5cc7f966295422911cddcde7cdf1720f54cf50e4f246f930389",
+        "config_sha256": "48dfab774698b1f416c8ca5d425ae4de776d38652870462e42b7cc2e83bb7287",
+        "config": "episodes/train_roll/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        -0.22,
+        0.0
+      ],
+      "requested_action_max": [
+        0.34,
+        0.0
+      ],
+      "requested_action_std": [
+        0.221575169086149,
+        0.0
+      ],
+      "nonzero_action_steps": 152,
+      "max_abs_tilt_rad": [
+        0.022790439836829136,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.2839942885379833,
+        -0.06200368945185765,
+        0.009838919126974113
+      ],
+      "ball_tool_position_max_m": [
+        0.3051927381044862,
+        -0.03247902723923627,
+        0.02182414855546351
+      ],
+      "max_ball_tool_displacement_m": 0.034175137550989346
+    },
+    {
+      "episode_id": "train_pitch",
+      "group_id": "lifted_basin",
+      "split": "train",
+      "path": "episodes/train_pitch/transitions.jsonl",
+      "sha256": "1c6092c1b40c16485b603bddb17d9a20d9b385dfbde0773933d2d04a4d0c4f65",
+      "provenance": {
+        "seed": 2048115030,
+        "kind": "route",
+        "source_config_sha256": "62e8c6a1441d9452909bfc158bb79197bd813097c92cff9ccb7a8c4124a6c838",
+        "config_sha256": "63808126615777e01d9396c1f8aaa0b895a0d79593143e72c300863b022c6aab",
+        "config": "episodes/train_pitch/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        0.0,
+        -0.35
+      ],
+      "requested_action_max": [
+        0.0,
+        0.22
+      ],
+      "requested_action_std": [
+        0.0,
+        0.23027337316522042
+      ],
+      "nonzero_action_steps": 161,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.024457514391692504
+      ],
+      "ball_tool_position_min_m": [
+        0.28127476048741934,
+        -0.05988988374380558,
+        0.009782830463600456
+      ],
+      "ball_tool_position_max_m": [
+        0.30064248391657866,
+        -0.031616675613215406,
+        0.019571383029977907
+      ],
+      "max_ball_tool_displacement_m": 0.03201850051600734
+    },
+    {
+      "episode_id": "train_combined",
+      "group_id": "lifted_basin",
+      "split": "train",
+      "path": "episodes/train_combined/transitions.jsonl",
+      "sha256": "9c1c5e7b650abf4b689a359b13a9a59f23b76d6adaa6c8b8fd410226fbadf248",
+      "provenance": {
+        "seed": 3096303515,
+        "kind": "route",
+        "source_config_sha256": "3ea8244d9bd079305bb0422f97c21e9238c80f646095cc6628ea56f2fac8f49a",
+        "config_sha256": "bcb739357bca2a28d10d4cb84d4c2813ba50db7356d38b7dd9c6dff496898cf4",
+        "config": "episodes/train_combined/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        0.0,
+        -0.2
+      ],
+      "requested_action_max": [
+        0.4,
+        0.0
+      ],
+      "requested_action_std": [
+        0.19999999999999965,
+        0.09999999999999983
+      ],
+      "nonzero_action_steps": 120,
+      "max_abs_tilt_rad": [
+        0.029067443791862907,
+        0.014533721895931453
+      ],
+      "ball_tool_position_min_m": [
+        0.28127476048741934,
+        -0.06346453298944796,
+        0.009909048950041174
+      ],
+      "ball_tool_position_max_m": [
+        0.3010339278373104,
+        -0.031616675613215406,
+        0.01979653757976771
+      ],
+      "max_ball_tool_displacement_m": 0.0347488583159857
+    },
+    {
+      "episode_id": "train_edge",
+      "group_id": "central_front_edge",
+      "split": "train",
+      "path": "episodes/train_edge/transitions.jsonl",
+      "sha256": "4c362548230fee165845845b8ca7ef6abcee965a64ba0893756417cc08bc2a8a",
+      "provenance": {
+        "seed": 2627470977,
+        "kind": "edge",
+        "source_config_sha256": "394c4b27c55e5f801ad75b20841bb9b7c8544682b55c80cb8dab8d4c4ba6d2e8",
+        "config_sha256": "d86b586cd773caa3e9df39dca68344cf14bf29f4c6df28f8201a31b04fdbcfc2",
+        "config": "episodes/train_edge/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 9,
+      "physics_steps": 141,
+      "elapsed_s": 0.146875,
+      "terminal_substeps": 13,
+      "terminated": true,
+      "truncated": false,
+      "success": false,
+      "termination_reason": "outside_projection",
+      "requested_action_min": [
+        0.0,
+        0.0
+      ],
+      "requested_action_max": [
+        0.0,
+        0.0
+      ],
+      "requested_action_std": [
+        0.0,
+        0.0
+      ],
+      "nonzero_action_steps": 0,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.5287041222045066,
+        -0.019616194192579497,
+        0.17150015068756536
+      ],
+      "ball_tool_position_max_m": [
+        0.5926952912802863,
+        -0.013490730650864403,
+        0.21021331795914405
+      ],
+      "max_ball_tool_displacement_m": 0.07254987606286763
+    },
+    {
+      "episode_id": "validation_lateral",
+      "group_id": "negative_y_basin",
+      "split": "validation",
+      "path": "episodes/validation_lateral/transitions.jsonl",
+      "sha256": "20e70876f03a3e4edb06b47b52af19a8b54d1f91a73264c758e6e067d504ea25",
+      "provenance": {
+        "seed": 536873541,
+        "kind": "route",
+        "source_config_sha256": "eaeb59e8d4238741938a722de9aff3ab5042fb3c05096c4b4961b60c7f8bce70",
+        "config_sha256": "63b8a48d38651bd9cef8c0534cc03097e279f2a8c69c954826f00c08113345a4",
+        "config": "episodes/validation_lateral/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        -0.26,
+        0.0
+      ],
+      "requested_action_max": [
+        0.16,
+        0.24
+      ],
+      "requested_action_std": [
+        0.16408075163027377,
+        0.11905880899790688
+      ],
+      "nonzero_action_steps": 148,
+      "max_abs_tilt_rad": [
+        0.017529688055624583,
+        0.01630327210071429
+      ],
+      "ball_tool_position_min_m": [
+        0.28393528228931775,
+        -0.045635982520623904,
+        0.00942368957319377
+      ],
+      "ball_tool_position_max_m": [
+        0.2995782278929252,
+        -0.03101097397455305,
+        0.017010602554541523
+      ],
+      "max_ball_tool_displacement_m": 0.016726132208676806
+    },
+    {
+      "episode_id": "validation_edge",
+      "group_id": "negative_y_front_edge",
+      "split": "validation",
+      "path": "episodes/validation_edge/transitions.jsonl",
+      "sha256": "45a8342900f46111728532eda6a097adac80d164f00eb784cfe59c7babe37ff7",
+      "provenance": {
+        "seed": 3450393933,
+        "kind": "edge",
+        "source_config_sha256": "565d88158e01ea708322e08405b706eb32609bbfe778a0e677e0077e3162484d",
+        "config_sha256": "ca4fa9e53ed128e823a2d3cbb5681ea0304ba974976397d88ba3b980d001881a",
+        "config": "episodes/validation_edge/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 10,
+      "physics_steps": 149,
+      "elapsed_s": 0.15520833333333334,
+      "terminal_substeps": 5,
+      "terminated": true,
+      "truncated": false,
+      "success": false,
+      "termination_reason": "outside_projection",
+      "requested_action_min": [
+        0.0,
+        0.0
+      ],
+      "requested_action_max": [
+        0.0,
+        0.0
+      ],
+      "requested_action_std": [
+        0.0,
+        0.0
+      ],
+      "nonzero_action_steps": 0,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.5284654128169282,
+        -0.03078161018541181,
+        0.17054514790263942
+      ],
+      "ball_tool_position_max_m": [
+        0.5921480883062828,
+        -0.02526095374713201,
+        0.20998212485310908
+      ],
+      "max_ball_tool_displacement_m": 0.07257074224740354
+    },
+    {
+      "episode_id": "test_velocity",
+      "group_id": "positive_xy_moving_basin",
+      "split": "test",
+      "path": "episodes/test_velocity/transitions.jsonl",
+      "sha256": "b18d7366a4a84d8a7b6ac16b89ef455a1c8bf82acff71f271bc3065817bc2c8a",
+      "provenance": {
+        "seed": 2306634810,
+        "kind": "route",
+        "source_config_sha256": "0d91fe01cd9541a527841c174f672bbcae2b7b18538cd898b9095dafd64896c8",
+        "config_sha256": "a8c2ea2e021b6ce0f3fd0a26fa21f9e43df4e25b75d1542ac162c9030bcfc5ae",
+        "config": "episodes/test_velocity/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 240,
+      "physics_steps": 3840,
+      "elapsed_s": 4.0,
+      "terminal_substeps": 16,
+      "terminated": false,
+      "truncated": true,
+      "success": true,
+      "termination_reason": null,
+      "requested_action_min": [
+        -0.24,
+        -0.12
+      ],
+      "requested_action_max": [
+        0.2,
+        0.32
+      ],
+      "requested_action_std": [
+        0.16117269895639555,
+        0.182441467021313
+      ],
+      "nonzero_action_steps": 147,
+      "max_abs_tilt_rad": [
+        0.013286547071741223,
+        0.021382656490338048
+      ],
+      "ball_tool_position_min_m": [
+        0.28254930307030096,
+        -0.06607147467772509,
+        0.009070264769445446
+      ],
+      "ball_tool_position_max_m": [
+        0.30246763984589775,
+        -0.029573918150838777,
+        0.02086068352839826
+      ],
+      "max_ball_tool_displacement_m": 0.03723462540588009
+    },
+    {
+      "episode_id": "test_edge",
+      "group_id": "positive_y_front_edge",
+      "split": "test",
+      "path": "episodes/test_edge/transitions.jsonl",
+      "sha256": "5667a99095645bfdc81e315e2846dcd28110092f2ea4e8e83d86001b4de3ae20",
+      "provenance": {
+        "seed": 271250103,
+        "kind": "edge",
+        "source_config_sha256": "9807d05a38f4d855be1f5a07f267391a9aad09522e7c2d157af8c1a9d576f1e5",
+        "config_sha256": "5c44c2fc5199b1128f5be602ff4fb973744d393a8c34089dae62d68be4eda118",
+        "config": "episodes/test_edge/effective_config.json",
+        "replay_max_error": 0.0
+      },
+      "transitions": 9,
+      "physics_steps": 129,
+      "elapsed_s": 0.134375,
+      "terminal_substeps": 1,
+      "terminated": true,
+      "truncated": false,
+      "success": false,
+      "termination_reason": "outside_projection",
+      "requested_action_min": [
+        0.0,
+        0.0
+      ],
+      "requested_action_max": [
+        0.0,
+        0.0
+      ],
+      "requested_action_std": [
+        0.0,
+        0.0
+      ],
+      "nonzero_action_steps": 0,
+      "max_abs_tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "ball_tool_position_min_m": [
+        0.5289595128703791,
+        -0.0063540036128937535,
+        0.17364513295204803
+      ],
+      "ball_tool_position_max_m": [
+        0.5946301179758788,
+        0.0004650382220418407,
+        0.21008141581220854
+      ],
+      "max_ball_tool_displacement_m": 0.07324944962464727
+    }
+  ],
+  "splits": {
+    "train": {
+      "episodes": 5,
+      "groups": 3,
+      "transitions": 969,
+      "physics_steps": 15501,
+      "terminated": 1,
+      "truncated": 4,
+      "successes": 4
+    },
+    "validation": {
+      "episodes": 2,
+      "groups": 2,
+      "transitions": 250,
+      "physics_steps": 3989,
+      "terminated": 1,
+      "truncated": 1,
+      "successes": 1
+    },
+    "test": {
+      "episodes": 2,
+      "groups": 2,
+      "transitions": 249,
+      "physics_steps": 3969,
+      "terminated": 1,
+      "truncated": 1,
+      "successes": 1
+    }
+  },
+  "provenance": {
+    "plan": "runs/s2_pilot_20261112/plan.json",
+    "plan_sha256": "9fc81aebe699ba349f59c6eec9b4e9403680af3591fd5acc9800697e4da503e3",
+    "cases_sha256": "4d3585a92a8a1d00fcec7edfd94373a8dc6270fc95fbd7fb3e254a4ae70bfc77",
+    "master_seed": 20261111,
+    "stage": "S2 pilot",
+    "pilot_checks_passed": true
+  }
+}

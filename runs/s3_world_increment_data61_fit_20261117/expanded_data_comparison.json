@@ -1,0 +1,80 @@
+{
+  "protections_vs_49_full_window": {
+    "passed": false,
+    "checks": {
+      "group/validation/coverage_validation_diagonal_a_initial/0.2/position": true,
+      "group/validation/coverage_validation_diagonal_a_initial/0.2/positive_cosine": true,
+      "group/validation/coverage_validation_diagonal_a_initial/0.2/cosine_ge_0_5": true,
+      "group/validation/coverage_validation_diagonal_a_initial/0.35/position": true,
+      "group/validation/coverage_validation_diagonal_a_initial/0.35/positive_cosine": true,
+      "group/validation/coverage_validation_diagonal_a_initial/0.35/cosine_ge_0_5": true,
+      "group/validation/coverage_validation_diagonal_b_initial/0.2/position": true,
+      "group/validation/coverage_validation_diagonal_b_initial/0.2/positive_cosine": true,
+      "group/validation/coverage_validation_diagonal_b_initial/0.2/cosine_ge_0_5": true,
+      "group/validation/coverage_validation_diagonal_b_initial/0.35/position": true,
+      "group/validation/coverage_validation_diagonal_b_initial/0.35/positive_cosine": true,
+      "group/validation/coverage_validation_diagonal_b_initial/0.35/cosine_ge_0_5": true,
+      "group/validation/history_validation_yminus006/0.2/position": false,
+      "group/validation/history_validation_yminus006/0.2/positive_cosine": true,
+      "group/validation/history_validation_yminus006/0.2/cosine_ge_0_5": true,
+      "group/validation/history_validation_yplus006/0.2/position": true,
+      "group/validation/history_validation_yplus006/0.2/positive_cosine": false,
+      "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5": false,
+      "group/validation/negative_y_basin/0.2/position": true,
+      "group/validation/negative_y_basin/0.2/positive_cosine": true,
+      "group/validation/negative_y_basin/0.2/cosine_ge_0_5": true,
+      "S2_route/validation_lateral": true
+    },
+    "failures": [
+      "group/validation/history_validation_yminus006/0.2/position",
+      "group/validation/history_validation_yplus006/0.2/positive_cosine",
+      "group/validation/history_validation_yplus006/0.2/cosine_ge_0_5"
+    ]
+  },
+  "development_nominal": {
+    "49_pairs": {
+      "local": {
+        "h8_h24_world_increment_rmse_m_s": 0.009165613299553607,
+        "h8_h24_world_increment_mean_error_m_s": [
+          0.007901849782317017,
+          0.0019818840418423856,
+          -4.252802188528727e-05
+        ],
+        "h32_position_error_m": 4.287155080220422e-05,
+        "h32_velocity_error_m_s": 0.00494525811487287
+      },
+      "free": {
+        "h8_h24_world_increment_rmse_m_s": 0.005907538711930655,
+        "h8_h24_world_increment_mean_error_m_s": [
+          0.0032110958490613904,
+          -0.0014017579038514709,
+          -0.0003159923797675927
+        ],
+        "h32_position_error_m": 0.051990344466088065,
+        "h32_velocity_error_m_s": 0.1120039402875269
+      }
+    },
+    "61_pairs": {
+      "local": {
+        "h8_h24_world_increment_rmse_m_s": 0.007768335177581891,
+        "h8_h24_world_increment_mean_error_m_s": [
+          0.007022497922537353,
+          0.00018508036902091957,
+          3.008103589283676e-05
+        ],
+        "h32_position_error_m": 4.690952917384437e-05,
+        "h32_velocity_error_m_s": 0.005417788402586855
+      },
+      "free": {
+        "h8_h24_world_increment_rmse_m_s": 0.004143176229359394,
+        "h8_h24_world_increment_mean_error_m_s": [
+          -0.002301810433976502,
+          -0.00027187097048871436,
+          -5.9713579862090563e-05
+        ],
+        "h32_position_error_m": 0.00431005573659293,
+        "h32_velocity_error_m_s": 0.045283999743814106
+      }
+    }
+  }
+}

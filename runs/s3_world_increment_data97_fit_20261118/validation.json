@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "phase": "world_increment_data97_fit",
+  "plan_sha256": "188a1e38b5c14a823eb917a34dc26a2a38075368378fcfc0e4fd1344d4f2a0c0",
+  "updates": 900,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_pairs": 97,
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "opening_gradient_verified": true,
+  "replacement_gate_passed": false,
+  "main_model_replaced": false,
+  "checkpoint_selection": false,
+  "resources": {
+    "stage": "complete",
+    "update": 900,
+    "wall_s": 67.84255750000011,
+    "available_ram_bytes": 2577809408,
+    "min_available_ram_bytes": 1756815360,
+    "rss_bytes": 127315968,
+    "peak_rss_bytes": 176156672,
+    "private_commit_bytes": 134537216,
+    "peak_private_commit_bytes": 181702656,
+    "output_bytes_before_record": 4534607
+  },
+  "artifacts_sha256": {
+    "comparison.json": "2f4cfc617e31f3c36138a5dd987294521da2fd8503070b400954815ea506afa9",
+    "execution_plan.json": "dabed987deb8994eec28b85f2a7ca8b1409b4b7c1ce67cf83d196dca6f1810a8",
+    "fit_preflight.json": "2ad3e75ff55c552ed9ac7a16f7bedfef238c42cceb1a6ec94c55acc9b8714674",
+    "timed_rollouts.json": "d3e7a89e502b1f4bf81d29c5978391e74edb766bea1b236e36ad54f7b6229c30",
+    "training.jsonl": "0d8fd8749409665802746c39713e5956328eeb2bb29ccc283f80bca3fad02d1f",
+    "world_increment_900.npz": "77f69d40abae5ae63eef9bd4f2cb0e5443fda120912846d79c61172d2a11090e",
+    "resources.jsonl": "a83455d5b3e82e0ea72dea74c4abdae4b9da35c4ed277d6da50c489d38af28fa"
+  }
+}

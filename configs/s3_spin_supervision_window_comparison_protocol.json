@@ -1,0 +1,378 @@
+{
+  "accepted_preflight": "runs/s3_spin_supervision_window_verified_20261117/validation.json",
+  "budget": {
+    "cpu_threads": 1,
+    "gpu_compute": false,
+    "max_new_output_mib": 32,
+    "max_private_commit_gib": 1.5,
+    "max_rss_gib": 1,
+    "max_wall_s": 120,
+    "min_running_ram_gib": 0.75,
+    "min_start_ram_gib": 2,
+    "worker_starts": 1
+  },
+  "changed_term": "paired response spin only",
+  "comparison_metrics": [
+    "small and full amplitude frozen development H32 position, finite response and local derivative separately",
+    "pure roll H9-H16 spin half difference and H32 vector error",
+    "nominal H32 position drift and the 22 legacy protections against the original 61-pair endpoint"
+  ],
+  "execution_scope": {
+    "control_accepted": false,
+    "simulation_steps": 0,
+    "test_episode_files_read": false
+  },
+  "files_sha256": {
+    "configs/s3_spin_supervision_window_verified_plan.json": "1ed9e22cc11cb9a01acb8892d14d360ee8729f1e974f25f6811cfe6418853c36",
+    "configs/s3_world_increment_data61_fit_plan.json": "bc252bfab4715fbf5ab21c7a096aad42c853a217de693d689507e3b878520ae3",
+    "runs/s3_spin_supervision_window_verified_20261117/spin_gradient_preflight.json": "5319b209489442e6514d28609c192313b245ffd467557507c24a6b020d34c318",
+    "runs/s3_spin_supervision_window_verified_20261117/validation.json": "a3f6a5b0ed43fe871fe66e75f6e3264cd318743be4f5dd9bb888d07b705aa718",
+    "runs/s3_world_increment_data61_fit_20261117/validation.json": "3d912cd296849c9c86ce2b755887ed6dfe49c82b82ee91dae9db143c4c18464b"
+  },
+  "fixed_updates": 900,
+  "matched_reference": "configs/s3_world_increment_data61_fit_plan.json",
+  "old_response_spin_weights_by_lead": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.08000000000000002,
+      0.08000000000000002,
+      0.08000000000000002
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.12,
+      0.12,
+      0.12
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.2,
+      0.2,
+      0.2
+    ]
+  ],
+  "response_mass_per_axis_after": [
+    0.399999999999997,
+    0.399999999999997,
+    0.399999999999997
+  ],
+  "response_mass_per_axis_before": [
+    0.3999999999999997,
+    0.3999999999999997,
+    0.3999999999999997
+  ],
+  "response_spin_weights_by_lead": [
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.08000000000000002,
+      0.08000000000000002,
+      0.08000000000000002
+    ],
+    [
+      0.01,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.01
+    ],
+    [
+      0.01,
+      0.01,
+      0.01
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.06,
+      0.06,
+      0.06
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.2,
+      0.2,
+      0.2
+    ]
+  ],
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "schema": "s3-spin-supervision-window-comparison-v1",
+  "scope": "Single matched training-only perturbation scored on frozen development and legacy sets at the fixed endpoint.",
+  "seed": 20261111,
+  "stop_conditions": [
+    "Any source, normalization, optimizer, anchor draw or sample weight differs from the accepted reference",
+    "Any change to absolute paired terms, linear velocity auxiliary terms, nominal spin or other loss weights",
+    "Nonfinite update, failed prelaunch gradient closure or resource cap"
+  ],
+  "training_pairs": 61
+}

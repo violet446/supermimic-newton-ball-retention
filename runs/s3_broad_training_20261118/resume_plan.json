@@ -1,0 +1,59 @@
+{
+  "schema": "s3-broad-training-resume-v1",
+  "original_preflight_sha256": "8eebb76f805e0b55071bf526fccc2760d87bc84c367323693ddaa7d0374dd5d2",
+  "accepted_audit_sha256": "0fb0255d3f217d26469393c2325ba86e71fbad24af4fe65b2b64cf95b01687c1",
+  "interrupted_run_sha256": "6c427778b4d60191291f7457844fd13a9d436bd43a59532a5bbd1602dbc1d150",
+  "continuation_runner_sha256": "449a12719055b760320cffe4deb14c57907e2aff36f74d92df6d6f5995674c7e",
+  "reused_case": "broad_train_72_left",
+  "reused_steps": 4736,
+  "possible_unrecorded_steps": 512,
+  "new_steps_budget": 49792,
+  "max_physical_substeps": 55040,
+  "completed_branches": [
+    "nominal_1",
+    "nominal_2",
+    "roll_005_plus",
+    "roll_005_minus",
+    "roll_020_plus",
+    "roll_020_minus",
+    "pitch_005_plus"
+  ],
+  "pending_branches": [
+    "pitch_005_minus",
+    "pitch_020_plus",
+    "pitch_020_minus",
+    "dual_005_plus",
+    "dual_005_minus",
+    "dual_020_plus",
+    "dual_020_minus"
+  ],
+  "limits": {
+    "max_wall_s": 2811.0572697999887,
+    "max_new_output_mib": 128
+  },
+  "retained_artifacts_sha256": {
+    "runs/s3_broad_training_20261118/broad_train_72_left/admission.json": "bc131bd9bd5e018a599d51418e4d77a9bc6be906112c10b052a8ef114d337225",
+    "runs/s3_broad_training_20261118/broad_train_72_left/resources.jsonl": "95e6a531485d1033aa8e2f6cad6625a5cbe53722a3262992a38ae0188b2b01d4",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/native_layout.json": "d50bb85ac024ac4a3d7d1902f09df24b9395e1bd1a9e2f20039ef7f5b84297af",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/nominal_1.json": "b92e425b53b71c9331193f37ef3d3556d5896fcd999d6919bdb756c53388cbce",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/nominal_1_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/nominal_2.json": "b92e425b53b71c9331193f37ef3d3556d5896fcd999d6919bdb756c53388cbce",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/nominal_2_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/nominal_comparison.json": "78e10be408373376f2e30d859db50c65c6b68d9648904712b6786ce43ea052ba",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/pitch_005_minus_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/pitch_005_plus.json": "0fe6008628eebdce128e04bde08a990bc19079bc124f30ee06a9275d075a99bb",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/pitch_005_plus_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/prefix.jsonl": "0ecf2f18683af6d9e6a93e997214b8e3001cd275abc139741e0225802864f101",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_005_minus.json": "2eecac21ee964a80471307cbcb79e42ad568b7208352e7865f497c3c65d8e417",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_005_minus_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_005_plus.json": "396fab5fffe44b04004dd6648f7d05b7d7a0973b500d174db45896aa08921156",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_005_plus_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_020_minus.json": "f929bda8d2c715e212c6b7404f53777c5093610047f6baa4dc6831661d21603a",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_020_minus_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_020_plus.json": "736fdc83f6c4be8facc570cace8e312f84b5f9419bc122b277f8e538648c3c72",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/roll_020_plus_readback.json": "9b87efa4e06b17375243a0f7c3a84c0532ff137f2c87614f60599065a636ccd8",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/snapshot.json": "ec3059bacab6399acbe86c92fe4b664f8fd5a6b77c8fd68f98141061ab645a4c",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/worker.log": "1bf52e579fd6ae6c024478b712c30c55a7315854b73e81a5bc3fc1ef51896267",
+    "runs/s3_broad_training_20261118/broad_train_72_left/worker/worker_result.json": "ba0b6cdc98d12df8e370db699ec28652986bf43a453d2ec09decd1f3d18be2a7"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "s3-native-repeatability-plan-v1",
+  "status": "planned_not_run",
+  "question": "Can native Newton snapshot replays for the same controlled single-ball scene satisfy the frozen numerical and 1 um position half-spread ceilings when contact ordering and XPBD accumulation use the installed deterministic modes?",
+  "case": {
+    "episode": "validation_lateral",
+    "group": "negative_y_basin",
+    "seed": 536873541,
+    "tick": 168,
+    "archive_config": "runs/s3_pair_refit_20261112/validation_lateral_config.json",
+    "archive_trace": "runs/s3_pair_refit_20261112/validation_lateral/action_pairs.jsonl",
+    "archive_config_sha256": "7d26f9066c8ff8d304abc3c8facfed3f9158c75f0d94159644e372dc9bcefc39",
+    "archive_trace_sha256": "58b10231993821f533dd054c99d3d21b079c33836d53d800bf1da4490aff611e"
+  },
+  "setup": {
+    "source_runtime": "Same pinned Newton 1.6.0 / Warp 1.17.0, scene, source seed, time step, materials, controller and nominal schedule.",
+    "physics_options": "In this worker only pass CollisionPipeline(deterministic=True) and SolverXPBD(deterministic=wp.DeterministicMode.RUN_TO_RUN), applied on initialization and every restore. Log actual options and compiler/cache behavior.",
+    "comparison_scope": "The two flags form one bounded backend option set. Prior native measurements are context from an earlier process. The test does not attribute an improvement to either flag individually or establish equivalence across solver configurations.",
+    "static_preflight": "Verify installed signatures, asset paths and hashes, controller/nominal plan, supported native layout, GPU budget and shared storage limits before stepping. Preserve worker isolation, record cache growth and watch initialization and first step for compile time or allocation refusal."
+  },
+  "procedure": [
+    "One environment. Run the same nominal prefix to tick 168, reproducing the tick 72 native restore boundary within this run. Save one full native snapshot at tick 168.",
+    "From that snapshot execute exactly two nominal 32-control-step branches using separate restores. Preserve full states, executed substep commands, timing and retention classes. Record contact candidate count and shape identities when available through the existing path.",
+    "Require identical executed commands, timing, and retention classes. Compare maximum tool-frame position, linear velocity and spin component differences over all leads against 1e-5 m, 1e-3 m/s and 2e-2 rad/s respectively. Report H8/H16/H32 position half-spread and require H32 <=1e-6 m for the same resolution gate as the failed pilot."
+  ],
+  "budget": {
+    "sequential_environments": 1,
+    "max_worker_starts": 1,
+    "max_physics_substeps": 3712,
+    "max_wall_s": 450,
+    "max_worker_wall_s": 270,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_total_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_new_output_mib": 64,
+    "worker_output_plus_shared_cache_and_temp_gib": 1,
+    "nominal_prefix_substeps": 2688,
+    "nominal_replays": 2
+  },
+  "stop_conditions": [
+    "Frozen input, native layout, compiler/runtime or resource failure",
+    "Invalid or incomplete nominal transition",
+    "Both nominal branches complete"
+  ],
+  "decision": "If native replay clears both ceilings, predeclare a separate import check under these settings before using archived States. Failure leaves low-amplitude physics unresolved. Keep archive import and small offsets out of this run.",
+  "training_updates": 0,
+  "control_accepted": false,
+  "test_episode_files_read": false,
+  "inputs_sha256": {
+    "configs/s3_archive_restore_pilot_plan.json": "64342978c153534038bea439b920c01e8b299c38c31709f763beb2ec558fb738",
+    "runs/s3_archive_restore_pilot_20261114/failure_analysis.json": "0ce107d1d564bc89a33ccb2f5c404d79e8a2f70f05c64609a705c2b7283326b1",
+    "runs/s3_archive_restore_pilot_20261114/worker/live_comparison.json": "d92d822dd7e2b12a71b1a03354d953ffd6390e4e3bc5f696c25df58a970a9955",
+    "requirements.lock": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+    "assets/manifest.json": "0dd7a790ff229702abba0aa5d2b2d449d4fd24021c8dfa19b7aaf315901009f3",
+    "runs/s1_reachability_20261111/joint_paths.npz": "c1dafea9b961ba0562652f7b7573d1ba5574965549a2e56a10a17cb0902d70d7"
+  }
+}

@@ -1,0 +1,660 @@
+{
+  "status": "completed",
+  "passed": true,
+  "seed": 536873541,
+  "tick": 168,
+  "physics_steps": 3072,
+  "nominal_prefix_substeps": 0,
+  "branches": [
+    "native_replay_1",
+    "native_replay_2",
+    "same_configuration_replay_1",
+    "same_configuration_replay_2",
+    "historical_replay_1",
+    "historical_replay_2"
+  ],
+  "comparisons": {
+    "native_reference_comparison": {
+      "passed": true,
+      "numerical_equivalent": true,
+      "position_resolution_passed": true,
+      "position_resolution_m": 1e-06,
+      "position_resolution_gate_leads": [
+        32
+      ],
+      "tool_relative_component_limits": {
+        "position_m": 1e-05,
+        "velocity_m_s": 0.001,
+        "spin_rad_s": 0.02
+      },
+      "pairwise": {
+        "native_1_vs_native_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_1_vs_recorded_1": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_1_vs_recorded_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_2_vs_recorded_1": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_2_vs_recorded_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "recorded_1_vs_recorded_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        }
+      },
+      "all_branch_max_half_spread_by_lead": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      },
+      "repeat_half_spread_by_source": {
+        "native": {
+          "8": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "16": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "32": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          }
+        },
+        "recorded": {
+          "8": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "16": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "32": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          }
+        }
+      },
+      "cross_source_max_half_spread_by_lead": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      },
+      "new_sha256": [
+        "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+        "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49"
+      ],
+      "recorded_sha256": [
+        "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+        "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49"
+      ],
+      "all_native_files_byte_identical": true
+    },
+    "same_configuration_comparison": {
+      "passed": true,
+      "numerical_equivalent": true,
+      "position_resolution_passed": true,
+      "position_resolution_m": 1e-06,
+      "position_resolution_gate_leads": [
+        32
+      ],
+      "tool_relative_component_limits": {
+        "position_m": 1e-05,
+        "velocity_m_s": 0.001,
+        "spin_rad_s": 0.02
+      },
+      "pairwise": {
+        "native_1_vs_native_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_1_vs_reconstructed_1": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_1_vs_reconstructed_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_2_vs_reconstructed_1": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "native_2_vs_reconstructed_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        },
+        "reconstructed_1_vs_reconstructed_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        }
+      },
+      "all_branch_max_half_spread_by_lead": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      },
+      "repeat_half_spread_by_source": {
+        "native": {
+          "8": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "16": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "32": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          }
+        },
+        "reconstructed": {
+          "8": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "16": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "32": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          }
+        }
+      },
+      "cross_source_max_half_spread_by_lead": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      }
+    },
+    "historical_repeatability": {
+      "passed": true,
+      "numerical_equivalent": true,
+      "position_resolution_passed": true,
+      "position_resolution_m": 1e-06,
+      "position_resolution_gate_leads": [
+        8,
+        16,
+        32
+      ],
+      "tool_relative_component_limits": {
+        "position_m": 1e-05,
+        "velocity_m_s": 0.001,
+        "spin_rad_s": 0.02
+      },
+      "pairwise": {
+        "historical_import_1_vs_historical_import_2": {
+          "actions_and_timing_match": true,
+          "executed_commands_match": true,
+          "retention_classification_match": true,
+          "tool_relative_max_component_errors": {
+            "position_m": 0.0,
+            "velocity_m_s": 0.0,
+            "spin_rad_s": 0.0
+          },
+          "body_world_errors": {
+            "ball": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            },
+            "tool": {
+              "max_component_position_m": 0.0,
+              "max_rotation_geodesic_rad": 0.0,
+              "max_component_origin_velocity_m_s": 0.0,
+              "max_component_angular_velocity_rad_s": 0.0
+            }
+          },
+          "numerical_equivalent": true,
+          "public_control_state_match": true,
+          "public_reference_phase_match": true
+        }
+      },
+      "all_branch_max_half_spread_by_lead": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        }
+      }
+    },
+    "historical_cross_configuration": {
+      "original_repeat_half_spread_by_lead": {
+        "8": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "16": {
+          "position_m": 0.0,
+          "velocity_m_s": 0.0,
+          "spin_rad_s": 0.0
+        },
+        "32": {
+          "position_m": 0.0,
+          "velocity_m_s": 1.3969838633343354e-09,
+          "spin_rad_s": 0.0
+        }
+      },
+      "cross_source_max_half_spread_by_lead": {
+        "8": {
+          "position_m": 2.2854010801468063e-06,
+          "velocity_m_s": 5.343620740671108e-05,
+          "spin_rad_s": 0.001683691105466215
+        },
+        "16": {
+          "position_m": 3.446199716228186e-06,
+          "velocity_m_s": 0.0001539348255350671,
+          "spin_rad_s": 0.011561383375012143
+        },
+        "32": {
+          "position_m": 9.903458421109045e-05,
+          "velocity_m_s": 0.0006786122666167878,
+          "spin_rad_s": 0.02218542707552097
+        }
+      },
+      "cross_source_max_component_difference": {
+        "position_m": 0.00017885279358644673,
+        "velocity_m_s": 0.0015032783959402552,
+        "spin_rad_s": 0.10690371344506192
+      }
+    }
+  },
+  "control_accepted": false,
+  "test_episode_files_read": false,
+  "wall_s": 139.86267509999743,
+  "artifacts_sha256": {
+    "admission.json": "4ff703cabb7d8955aad3ade4a4dc7615d9ea3a3ebbd964341e60c20097d0fc58",
+    "config.json": "e5e2fbd882fe8efbc8fa0cd473a831dc7389d5b21de93465a3938f74658999a6",
+    "execution_plan.json": "39b17df678b59a7d8d22a30ea1607e5eab3f4bb983a51030777f4bca111d04d1",
+    "launcher.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "preflight.json": "3ababdc17a67330d20079ade091faf77ce75fea2c51168c955117c36edcb2c22",
+    "worker/effective_config.json": "5989cce78626856308500e64e1a092697dfbf2276e52dd044e65dd48544fe54f",
+    "worker/historical_cross_configuration.json": "8c0450f974a84240f27cdbbff2c088055a5dedb851eb2be79df07e0e79299a48",
+    "worker/historical_import.json": "7c62f27ef9438033ff5d74879f590923456ad6189872c3f43cbbdd22c1f8efab",
+    "worker/historical_repeatability.json": "548c0c3ccb733f7b440d5132dd8bc41b3c435c8bbb2e2d52feef2f62626eecb2",
+    "worker/historical_replay_1.json": "2455de09cdeab08daaca73acc910bd9d09de3a9c67bfb81d2cea4022b71afd4b",
+    "worker/historical_replay_1_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/historical_replay_2.json": "2455de09cdeab08daaca73acc910bd9d09de3a9c67bfb81d2cea4022b71afd4b",
+    "worker/historical_replay_2_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/native_layout.json": "d50bb85ac024ac4a3d7d1902f09df24b9395e1bd1a9e2f20039ef7f5b84297af",
+    "worker/native_reference_comparison.json": "0e1224250bf30a4db1315a798b2aed7b9944c6cb171d7b485b4c47b7324e2192",
+    "worker/native_replay_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/native_replay_1_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/native_replay_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/native_replay_2_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/resources.jsonl": "20901444763c59d02692d94d6d2f183ead52f861931dfc2fdcfd56d7e89f675d",
+    "worker/result.json": "3d1899f1434e2668ac4a8a71a196321b26e3e6b18e593ae6a83e072dcc2e4eb5",
+    "worker/same_configuration_comparison.json": "2973946716891603a642c111880a21858895f921ef53af3bc9477b6d6665c0d5",
+    "worker/same_configuration_import.json": "2dce6141903695dc087d5d156e762f22679017b207de328f0281764d177e035e",
+    "worker/same_configuration_replay_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/same_configuration_replay_1_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/same_configuration_replay_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "worker/same_configuration_replay_2_readback.json": "546005db2cc223b4fe87c4901a623ef270142125c2bdd6ea014da45f3f164b38",
+    "worker/worker.log": "3132e3996a1cf76b7a44045cd3adc1be11546c17553930101bc77f891365da70",
+    "worker/worker_result.json": "cd03109e92e8cfd1b0468a82e89bd450d8b045b937a4ecf2b7b9907debe5d72e"
+  }
+}

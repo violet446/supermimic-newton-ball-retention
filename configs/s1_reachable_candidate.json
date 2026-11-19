@@ -1,0 +1,94 @@
+{
+  "schema_version": "ball-retention-s1-v0.2-candidate",
+  "seed": 20261111,
+  "physics": {
+    "dt_s": 0.0020833333333333333,
+    "control_hz": 60,
+    "iterations": 20,
+    "gravity_m_s2": 9.81,
+    "floor_z_m": -0.1
+  },
+  "ball": {
+    "radius_m": 0.02,
+    "mass_kg": 0.05,
+    "friction": 0.35,
+    "restitution": 0.0
+  },
+  "initial": {
+    "anchor_xy_tool_m": [
+      0.32,
+      0.0
+    ],
+    "anchor_world_m": [
+      0.65,
+      0,
+      0.35
+    ],
+    "gap_m": 0.0002,
+    "joint_q_rad": [
+      -0.4569243614078,
+      -0.27737759032578263,
+      -1.5804304982460915,
+      2.3616134494726726,
+      -1.9773412116347013,
+      3.0233161706469054
+    ],
+    "tool_rotation_world": [
+      [
+        0.8963132199416322,
+        0.042662087088564574,
+        0.44136442775002943
+      ],
+      [
+        0.0,
+        0.9953609477171986,
+        -0.09621114155605956
+      ],
+      [
+        -0.4434214831938832,
+        0.08623531808237192,
+        0.892155176052557
+      ]
+    ]
+  },
+  "reference": {
+    "start_s": 1.0,
+    "duration_s": 2.0,
+    "hold_end_s": 1.0,
+    "displacement_world_m": [
+      0.08,
+      0.0,
+      0.0
+    ]
+  },
+  "action": {
+    "dimension": 2,
+    "tilt_limit_deg": 5.0,
+    "tilt_rate_deg_s": 10.0,
+    "tilt_acceleration_deg_s2": 50.0
+  },
+  "robot": {
+    "joint_speed_rad_s": 0.5,
+    "joint_acceleration_rad_s2": 1.0
+  },
+  "budget": {
+    "wall_s": 1800,
+    "max_cases": 8,
+    "max_physics_steps": 23040,
+    "min_start_ram_gib": 4,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_process_rss_gib": 3,
+    "max_gpu_used_gib": 3,
+    "max_output_cache_gib": 1,
+    "max_environment_gib": 2
+  },
+  "admission": {
+    "max_initial_penetration_m": 0.0001,
+    "support_normal_min_z": 0.5,
+    "motion_position_tolerance_m": 0.005,
+    "motion_angle_tolerance_deg": 1.0,
+    "support_region_validated": false
+  },
+  "revision_reason": "v0.1 initial IK failed; anchor X moved from 0.45 to 0.65m with unchanged criteria; static candidate only"
+}

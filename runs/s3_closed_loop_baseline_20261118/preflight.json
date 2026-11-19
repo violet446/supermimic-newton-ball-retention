@@ -1,0 +1,387 @@
+{
+  "passed": true,
+  "cases": {
+    "broad_train_72_center_nominal": {
+      "group": "broad_train_72_center",
+      "arm": "nominal",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_center_config.json",
+      "sha256": "c0fecd0b28e663f814d8271eb10c8df7f51111194328d1f29425600e905a2c68"
+    },
+    "broad_train_72_center_feedback": {
+      "group": "broad_train_72_center",
+      "arm": "feedback",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_center_config.json",
+      "sha256": "c0fecd0b28e663f814d8271eb10c8df7f51111194328d1f29425600e905a2c68"
+    },
+    "broad_train_72_right_nominal": {
+      "group": "broad_train_72_right",
+      "arm": "nominal",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_right_config.json",
+      "sha256": "77c3f00f1dd187be58a1c249230af8efa78441bdb3b480a920f6b60b4d0b81f8"
+    },
+    "broad_train_72_right_feedback": {
+      "group": "broad_train_72_right",
+      "arm": "feedback",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_right_config.json",
+      "sha256": "77c3f00f1dd187be58a1c249230af8efa78441bdb3b480a920f6b60b4d0b81f8"
+    }
+  },
+  "initial_geometry": {
+    "broad_train_72_center": {
+      "physical_initial_sha256": "7e4d7e8b49e81888231d3d1023ae50ec94aef718d624d41d0122bde8611740e9",
+      "seed": 2822306410,
+      "center_in_tool_m": [
+        0.27279290794133115,
+        -0.031269056119727405,
+        0.022574877809380486
+      ],
+      "clearance_m": 0.005623517877071556,
+      "center_world_m": [
+        0.6037384691238403,
+        -0.030553923919796944,
+        0.3629499146461487
+      ],
+      "feedback_target_supported": true
+    },
+    "broad_train_72_right": {
+      "physical_initial_sha256": "4212ebbdafe0a4120c17e06d6442744a530d99fb07606813389ce7d98b195579",
+      "seed": 2822306410,
+      "center_in_tool_m": [
+        0.26658500717661676,
+        -0.01612670839853341,
+        0.033718094292331455
+      ],
+      "clearance_m": 0.004716596943429852,
+      "center_world_m": [
+        0.6037384691238403,
+        -0.016553923919796945,
+        0.3769499146461487
+      ],
+      "feedback_target_supported": true
+    }
+  },
+  "feedback": {
+    "target_xy_m": [
+      0.28574578846838633,
+      -0.0324954414973409
+    ],
+    "position_gain_per_m": 8.0,
+    "velocity_gain_s_per_m": 3.0,
+    "correction_cap": 0.12
+  },
+  "warmup_steps": 60,
+  "route_time_s": 4.0,
+  "physical_substeps_reserved": 15360,
+  "trajectories_reserved": 4,
+  "backend": {
+    "packages": {
+      "newton": "1.6.0",
+      "warp-lang": "1.17.0",
+      "numpy": "2.2.4",
+      "scipy": "1.15.2",
+      "trimesh": "5.1.0"
+    },
+    "backend_options_available": {
+      "CollisionPipeline.deterministic": true,
+      "SolverXPBD.deterministic": true,
+      "DeterministicMode.RUN_TO_RUN": true
+    },
+    "backend_sources_sha256": {
+      "newton/_src/sim/collide.py": "dcc29f631d22dbf4c689e7424e1be67a22b5cc147e4b728a0845c92db760a44b",
+      "newton/_src/solvers/xpbd/solver_xpbd.py": "e00f36bb590e33d76efa03ca9690d09ea63a2590d11372fda9ebf982dafa76c9",
+      "warp/config.py": "50b2b70450687d2005d627d339e2af14230f2498021dcd7f517d572773aac4fb"
+    },
+    "device": {
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "cuda_compute_capability": "8.9",
+      "native_sm": "89"
+    }
+  },
+  "kinematics": {
+    "nominal": {
+      "steps": 240,
+      "max_joint_speed_rad_s": 0.21321951757971588,
+      "max_joint_acceleration_rad_s2": 0.3397783516081706
+    },
+    "corner_1": {
+      "steps": 240,
+      "max_joint_speed_rad_s": 0.2148347526462492,
+      "max_joint_acceleration_rad_s2": 0.340624544566733
+    },
+    "corner_2": {
+      "steps": 240,
+      "max_joint_speed_rad_s": 0.21265359877622855,
+      "max_joint_acceleration_rad_s2": 0.3382352592478215
+    },
+    "corner_3": {
+      "steps": 240,
+      "max_joint_speed_rad_s": 0.21388782722453387,
+      "max_joint_acceleration_rad_s2": 0.3400947315543428
+    },
+    "corner_4": {
+      "steps": 240,
+      "max_joint_speed_rad_s": 0.21168119521864076,
+      "max_joint_acceleration_rad_s2": 0.33768895276592903
+    },
+    "switching_corners": {
+      "steps": 240,
+      "max_joint_speed_rad_s": 0.21360378222316972,
+      "max_joint_acceleration_rad_s2": 0.33616228325692454
+    }
+  },
+  "feedback_signs": {
+    "zero_at_target": true,
+    "gravity_jacobian_per_radian": [
+      [
+        0.0,
+        0.8963132199502066
+      ],
+      [
+        -0.9953609477197922,
+        0.04266208708525454
+      ]
+    ],
+    "position_and_velocity_trials": [
+      {
+        "kind": "position",
+        "direction_xy": [
+          1.0,
+          0.0
+        ],
+        "request_roll_pitch": [
+          0.0,
+          -0.008000000000000007
+        ],
+        "gravity_projection_change_per_g_xy": [
+          -0.007170505759601659,
+          -0.00034129669668203665
+        ]
+      },
+      {
+        "kind": "velocity",
+        "direction_xy": [
+          1.0,
+          0.0
+        ],
+        "request_roll_pitch": [
+          0.0,
+          -0.003
+        ],
+        "gravity_projection_change_per_g_xy": [
+          -0.00268893965985062,
+          -0.00012798626125576362
+        ]
+      },
+      {
+        "kind": "position",
+        "direction_xy": [
+          0.0,
+          1.0
+        ],
+        "request_roll_pitch": [
+          0.008000000000000007,
+          -0.0
+        ],
+        "gravity_projection_change_per_g_xy": [
+          0.0,
+          -0.007962887581758345
+        ]
+      },
+      {
+        "kind": "velocity",
+        "direction_xy": [
+          0.0,
+          1.0
+        ],
+        "request_roll_pitch": [
+          0.003,
+          -0.0
+        ],
+        "gravity_projection_change_per_g_xy": [
+          0.0,
+          -0.0029860828431593767
+        ]
+      },
+      {
+        "kind": "position",
+        "direction_xy": [
+          -1.0,
+          -0.0
+        ],
+        "request_roll_pitch": [
+          0.0,
+          0.008000000000000007
+        ],
+        "gravity_projection_change_per_g_xy": [
+          0.007170505759601659,
+          0.00034129669668203665
+        ]
+      },
+      {
+        "kind": "velocity",
+        "direction_xy": [
+          -1.0,
+          -0.0
+        ],
+        "request_roll_pitch": [
+          0.0,
+          0.003
+        ],
+        "gravity_projection_change_per_g_xy": [
+          0.00268893965985062,
+          0.00012798626125576362
+        ]
+      },
+      {
+        "kind": "position",
+        "direction_xy": [
+          -0.0,
+          -1.0
+        ],
+        "request_roll_pitch": [
+          -0.008000000000000007,
+          -0.0
+        ],
+        "gravity_projection_change_per_g_xy": [
+          0.0,
+          0.007962887581758345
+        ]
+      },
+      {
+        "kind": "velocity",
+        "direction_xy": [
+          -0.0,
+          -1.0
+        ],
+        "request_roll_pitch": [
+          -0.003,
+          -0.0
+        ],
+        "gravity_projection_change_per_g_xy": [
+          0.0,
+          0.0029860828431593767
+        ]
+      }
+    ],
+    "saturation_trials": [
+      [
+        0.12,
+        -0.12
+      ],
+      [
+        -0.12,
+        -0.12
+      ],
+      [
+        0.12,
+        0.12
+      ],
+      [
+        -0.12,
+        0.12
+      ]
+    ],
+    "correction_cap": 0.12,
+    "simulation_steps": 0
+  },
+  "static_budget": {
+    "wall_s": 120,
+    "max_process_rss_gib": 1.0,
+    "max_process_commit_gib": 1.5,
+    "max_new_output_mib": 32.0
+  },
+  "limits": {
+    "max_wall_s": 900,
+    "max_new_output_mib": 128
+  },
+  "input_sha256": {
+    "runs/s3_broad_training_20261118/validation.json": "6696d6a2b3193444f0791693488f10f93e1f4bd515151ccee0ac30dcbc6b87ca",
+    "runs/s3_broad_training_20261118/capture_manifest.json": "aeab35aef5944f849d46b5246498144d92193ebda735999ab7212ba2a8dc8559",
+    "runs/s1_episode_20261112/summary.json": "6a0ebec48fce92d8924a53cd4c925419a60c3d81d3032fd67b0901bbf4e80e99",
+    "scripts/run_s3_closed_loop_baseline.py": "c56bf3ff0ec450cfa6308ae71bedfa04b64b4919f49d071d4ba96d2af6605f13",
+    "requirements.lock": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+    "src/ball_retention/__init__.py": "97a55feafec71acbd1b02dc95e8bb6076cdaa7c1f1224b18002459efe26a84f3",
+    "src/ball_retention/action_eval.py": "705f162ada3bba65c5566ca87ad485a0417d1d512eb2fc2f2f48e4d986db7a76",
+    "src/ball_retention/action_grad.py": "5774721c7eb92584e6f285034d895436ed24efed8e2495a03d461330bb1287a2",
+    "src/ball_retention/archive_restore_plan.py": "41cbc063e8d25746eea13d014d38e3ba0dd44bd7b37a08ca942bd5e9df016118",
+    "src/ball_retention/archive_state_import.py": "c3ab7d47161e13885a8fd1f9a7d0a57d2f98d19d406ed8f1be8259a825409bdf",
+    "src/ball_retention/clearance.py": "a6efd1e349c79a22fbead38b24e2fbb494778f186089b283a9930edc8c0a55dc",
+    "src/ball_retention/collection.py": "afa30cdb3945a568babda36038fd5ff872adad548a49e49419bac0191c40071e",
+    "src/ball_retention/contracts.py": "5102f989764cb9a990d901de6bf001ed03ecd0f21aedd093154cb654622ae8f3",
+    "src/ball_retention/controller.py": "0f4f8fb0155e9f45c63cd859febf197545c6d8c1548ea2ee78104180d0ea471a",
+    "src/ball_retention/dataset.py": "ab0b5513f010b7c277fd183970b31d18eba1e35a49c8d6fb81314dd7632c1848",
+    "src/ball_retention/deterministic_archive_import_plan.py": "efa6e497d1bcc64bd34725c51443a539393694e86ec832ed99ade2fa2f5ec9a2",
+    "src/ball_retention/deterministic_response_model.py": "719e71b792ba5e9e0a1d17e8409f79f00ed4e51aeb542555a101a0e3c15341e9",
+    "src/ball_retention/deterministic_response_plan.py": "d7db96a3f99ab4830177ac8464ebd72e9f2a8eacf387d45430ad7c6a45659d81",
+    "src/ball_retention/env.py": "508dea206bd99b3ff1b9d80b6f34b7965730b60ebce9a22ce4433a6ad24bc3a6",
+    "src/ball_retention/episode.py": "92260cb218c38cfc9b8ecffa2942cd4b922e983be62a03dc70bc7b3eb2186395",
+    "src/ball_retention/frame_grad.py": "48ac36264a5445ba07e4fec548a5e2397a0fa10ac98dd05398cc779fe4a92266",
+    "src/ball_retention/frame_model.py": "7fb4d83a925b01e77a6d35d33bb25bd7de220bd1278c4a16a65330eb670ac2cf",
+    "src/ball_retention/geometry.py": "c099ede2dd5846d73350743b0e21ac6b662488742d2d0ff15a2766dadb163dcb",
+    "src/ball_retention/group_fold.py": "0319fa16d100a3d6d30857a1541621deba56fbfa7575c4d30c342714f560af39",
+    "src/ball_retention/guard.py": "c4fbfcdd2876b3aa0274b138d1ecf8d91c40ef18884b51daf7ec4e3a2616c5c0",
+    "src/ball_retention/guarded_loss.py": "2d0a22e70db16cb35040c10dbfb2e2dcacca27003efbd3fbd77a3b19eabacc74",
+    "src/ball_retention/history_capture.py": "ac6d54713c659c79579f71058918f5f7c53434dcb136b362ba2d3e266ef84c03",
+    "src/ball_retention/local_surface.py": "10fa4d1a8bb0b7b491665a986bb191f51bcf8ab73c327189ab84ea87f4572788",
+    "src/ball_retention/local_surface_model.py": "334fcd66994dde34c695b4840fb8549c4be748ff182fb01999caf5a971954f84",
+    "src/ball_retention/local_velocity_response_loss.py": "c7eb80fbae40793adf2ba6b154ef8a1ec76fa002820537d3f9aff4e77b130c3b",
+    "src/ball_retention/model_data.py": "993066d08ffb34825a889d73aa8d4b02fda0775e6c78fc49151692782ab0f247",
+    "src/ball_retention/model_eval.py": "b4b2b9e33f015fafa8ea6359d2e6d3f0a55f5911837247f408af07471efe2211",
+    "src/ball_retention/native_repeatability_plan.py": "1496cde131605e4524e416199bf5a80b63a341ccf23782233e1b12257ef06368",
+    "src/ball_retention/pair_collection.py": "6a40e5f9396fcb9cbaaaf240e9902a1916dcce48e3f988f552180f3fe26d9ab9",
+    "src/ball_retention/pair_data.py": "e82a0299db8233af18367a0ff4d88c284dd6159a24e82ea36ff13f430056c880",
+    "src/ball_retention/pair_loss.py": "037f369cd2adead985b67f85e33963402221fe65cd83b393cf9ee00b3357cbf1",
+    "src/ball_retention/position_integral_model.py": "5cfb58a7faaf54cc7a22d99b5a9d0062ea42b32a65611f4a5f79e0ce86fda5c4",
+    "src/ball_retention/prescribed.py": "607f34e65cc095f4437a85f665d7c150583505cad50e99cad31a3062d584595d",
+    "src/ball_retention/request_masked_model.py": "9c98ed3a620ef5bfdf9adcfbeecec7ff2c35e30a857f578ff6dd1f3c63fc946d",
+    "src/ball_retention/resources.py": "716b25c45575a7f11aa1ecca53ca9466097b4f42d3b3cdaf14e953b4b5df831f",
+    "src/ball_retention/response_error_diagnosis.py": "a2964f1ff291f5e85fc41b94cff821f452072905ad7def765102c6d9f31d21f7",
+    "src/ball_retention/retention.py": "804d9d1c571d501aa8eb82fcc13c932a14ed31c1903b9ec1668176acaf257797",
+    "src/ball_retention/robot.py": "34b188d630b2914433ccf7f668d5335492ad8571f79e0fab5400558b8ca0bff8",
+    "src/ball_retention/small_offset_probe.py": "ec5e50f8e8ddf2c1170997681584e9c113e3f26024496d8f4e30a3692b133ab3",
+    "src/ball_retention/support.py": "e991242dc8e572afe0108fd5f34264e6aa9686605be45dea7d0240b450db8165",
+    "src/ball_retention/surface_diagnostic.py": "b8e4f0a4e6c3b794e8f9844393ca0a345567f8f55452ed176eceb122df0b57cb",
+    "src/ball_retention/task.py": "9b39d7d2704da339672aca331d65b0a13e2e9d8a61db34d941622f1b249ef9da",
+    "src/ball_retention/timed_pair_data.py": "2834064e5858bdb474e7fb1d42e87e1dbf2d43224a86adbac93144ea90668ec5",
+    "src/ball_retention/timing_coverage_fit.py": "cb7e13a3c388480151cd2c3e67639ef3f174012cf69191e2612acb4a480abb46",
+    "src/ball_retention/training_timing_capture_plan.py": "5dfc67c2227b5457db89a8566c5dd0ba0040354d4e9c347b713773c7d503aeb2",
+    "src/ball_retention/velocity_response_loss.py": "ab51a7bc4d124837fc9789defeb7922c5f13cd41bb9f7f9cc2687a9474879d2d",
+    "src/ball_retention/world_increment_common_loss.py": "df903bd539a868e7c4b7d13dd4662e172a26da97949f1b647bccb5dee0f36e13",
+    "src/ball_retention/world_increment_loss.py": "1fc71375ed659b308a2842359de5bfb52511e36503e7f499fe2aefcd4c72d35e",
+    "src/ball_retention/world_increment_model.py": "6a0a9b7f551861f52d5fd437dca100c9e999e278504d3f5f3561caedf08caedc",
+    "src/ball_retention/world_model.py": "b4bc34bc546359aa45b0145f4fa45b7d1518c8354425c1adde8d89b3abf307a8",
+    "scripts/s3_closed_loop_feedback.py": "5acdd8ca01b577fd56fe0c2153f83ee3650003a7f9baaa118758c226b74eecc2",
+    "scripts/s3_closed_loop_episode.py": "72cb3205802326edfdc8f0c069288d8e4e43ea904f3e15fab9fb9cece7a18e38",
+    "scripts/check_s3_actions.py": "381566f8c52cb52560643acd6df05b56116d7ae19d90a92e5bc59dbab8907d33",
+    "scripts/check_s3_deterministic_archive_import.py": "f06e61155c75af493c34e7631a14f6ae0135f9144d013e54dd4ec181d2e09327",
+    "scripts/collect_s3_small_action_response.py": "c184f3f352cd10b6462a636bbf9d625d477dfd589aafceb330e81c195a318567",
+    "diagnostics/resource_probe/native_repeatability.py": "9c9bf50c51b39ce3262736ce6f9b41bf901df97dfe7caf70c8d76805e33cedd5",
+    "diagnostics/resource_probe/runner.py": "c93603a2e6b32408c360698e0bde948ec62095b055a08f9b1fc97b03026010b9",
+    "assets/manifest.json": "0dd7a790ff229702abba0aa5d2b2d449d4fd24021c8dfa19b7aaf315901009f3",
+    "assets\\ec66_description.urdf": "cedd8d294d5884547757b322f547f53b820b5ea527319a78dc2871c86c1ea0dd",
+    "assets\\shovel.STL": "ab51ce9f029bb4517c6bbfbd3c807ae5ee944f8ac6dbfc5b329ba9550276c5b5",
+    "assets\\ec66\\base_link.STL": "61fcad61f58200fa35736e9df442c3bec76c9565451dfbb090c721b0a07aacca",
+    "assets\\ec66\\link1.STL": "2f981a971b80d9f5f7d794059b31a0c1ade747119e553019f2807a606748b447",
+    "assets\\ec66\\link2.STL": "05f68c43341b16ca295167d37c84ab10361f9018af1b9c462e8a9f23a95835e7",
+    "assets\\ec66\\link3.STL": "6c1b5906a7d96c45543cf588f8a2dbda0402c6acbf663565e8f812759c3a3d0d",
+    "assets\\ec66\\link4.STL": "ce9667629f7f591e3b85baf1b9626f9f03a8fb68c9edece328f505bc0927bc94",
+    "assets\\ec66\\link5.STL": "f9d1170b2683012b10056cd648ba03ed8c679e17f39adba0ae0968a0221d3a8f",
+    "assets\\ec66\\link6.STL": "ddc6b367f1c888a8f6fd7a784e2d836645c23ef9ef83e62055b0cd769c7a1712",
+    "runs/s3_broad_training_20261118/broad_train_72_center_config.json": "c0fecd0b28e663f814d8271eb10c8df7f51111194328d1f29425600e905a2c68",
+    "runs/s3_broad_training_20261118/broad_train_72_right_config.json": "77c3f00f1dd187be58a1c249230af8efa78441bdb3b480a920f6b60b4d0b81f8",
+    "runs/s1_reachability_20261111/joint_paths.npz": "c1dafea9b961ba0562652f7b7573d1ba5574965549a2e56a10a17cb0902d70d7"
+  },
+  "physics_steps": 0,
+  "wall_s": 15.292755299946293,
+  "memory": {
+    "rss_bytes": 107941888,
+    "peak_rss_bytes": 330174464,
+    "private_commit_bytes": 114708480,
+    "peak_private_commit_bytes": 336338944
+  },
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "main_model_replaced": false,
+  "actor_critic_trained": false,
+  "hardware_control": false
+}

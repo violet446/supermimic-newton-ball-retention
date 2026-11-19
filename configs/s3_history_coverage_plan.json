@@ -1,0 +1,220 @@
+{
+  "schema": "s3-history-coverage-design-v1",
+  "status": "planned_not_preflighted_not_run",
+  "master_seed": 20261113,
+  "rationale": "Cross each new physical initial group with both control histories; target velocity/spin/tool-state coverage instead of only nearest position. No causal claim that geometry is irrelevant.",
+  "groups": [
+    {
+      "group_id": "history_train_yminus004",
+      "split": "train",
+      "ball_offset_world_m": [
+        0.0,
+        -0.004,
+        0.02
+      ]
+    },
+    {
+      "group_id": "history_train_yplus004",
+      "split": "train",
+      "ball_offset_world_m": [
+        0.0,
+        0.004,
+        0.02
+      ]
+    },
+    {
+      "group_id": "history_validation_yminus006",
+      "split": "validation",
+      "ball_offset_world_m": [
+        0.0,
+        -0.006,
+        0.02
+      ]
+    },
+    {
+      "group_id": "history_validation_yplus006",
+      "split": "validation",
+      "ball_offset_world_m": [
+        0.0,
+        0.006,
+        0.02
+      ]
+    }
+  ],
+  "histories": {
+    "advance": [
+      {
+        "start_step": 0,
+        "action": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "start_step": 32,
+        "action": [
+          0.18,
+          0.16
+        ]
+      },
+      {
+        "start_step": 104,
+        "action": [
+          -0.14,
+          -0.12
+        ]
+      },
+      {
+        "start_step": 184,
+        "action": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "reverse": [
+      {
+        "start_step": 0,
+        "action": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "start_step": 32,
+        "action": [
+          -0.18,
+          -0.16
+        ]
+      },
+      {
+        "start_step": 104,
+        "action": [
+          0.14,
+          0.12
+        ]
+      },
+      {
+        "start_step": 184,
+        "action": [
+          0.0,
+          0.0
+        ]
+      }
+    ]
+  },
+  "episodes": [
+    {
+      "episode_id": "history_train_yminus004_advance",
+      "group_id": "history_train_yminus004",
+      "split": "train",
+      "history_id": "advance",
+      "seed": 3474952655
+    },
+    {
+      "episode_id": "history_train_yminus004_reverse",
+      "group_id": "history_train_yminus004",
+      "split": "train",
+      "history_id": "reverse",
+      "seed": 2800128709
+    },
+    {
+      "episode_id": "history_train_yplus004_advance",
+      "group_id": "history_train_yplus004",
+      "split": "train",
+      "history_id": "advance",
+      "seed": 2822306410
+    },
+    {
+      "episode_id": "history_train_yplus004_reverse",
+      "group_id": "history_train_yplus004",
+      "split": "train",
+      "history_id": "reverse",
+      "seed": 2732760663
+    },
+    {
+      "episode_id": "history_validation_yminus006_advance",
+      "group_id": "history_validation_yminus006",
+      "split": "validation",
+      "history_id": "advance",
+      "seed": 2168577077
+    },
+    {
+      "episode_id": "history_validation_yminus006_reverse",
+      "group_id": "history_validation_yminus006",
+      "split": "validation",
+      "history_id": "reverse",
+      "seed": 2606165370
+    },
+    {
+      "episode_id": "history_validation_yplus006_advance",
+      "group_id": "history_validation_yplus006",
+      "split": "validation",
+      "history_id": "advance",
+      "seed": 3844247054
+    },
+    {
+      "episode_id": "history_validation_yplus006_reverse",
+      "group_id": "history_validation_yplus006",
+      "split": "validation",
+      "history_id": "reverse",
+      "seed": 3392718248
+    }
+  ],
+  "snapshot_ticks": [
+    72,
+    168
+  ],
+  "horizon": 32,
+  "amplitudes": [
+    0.2
+  ],
+  "zero_replays_per_snapshot": 2,
+  "branches_per_snapshot": 6,
+  "snapshot_count": 16,
+  "branch_count": 96,
+  "reserved_substeps_per_episode": 8832,
+  "reserved_substeps_total": 70656,
+  "base_initial_velocity_world_m_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "physics_changes": false,
+  "normalization_or_network_changes": false,
+  "split_policy": "Same physical initial group and all histories/snapshots/axes stay in one split; retain old splits, never reassign original test. New train 2 groups, new development validation 2 groups.",
+  "required_preflight": [
+    "Verify source/config hashes and all previous initial-group identities.",
+    "Check sphere geometry against pinned mesh for each new initial state.",
+    "Check prescribed-controller FK/IK, joint speed/acceleration and clearance for both histories and every snapshot/perturbation branch.",
+    "Extend collector/collection identity handling only if needed; reject same physical initial state under different groups or splits.",
+    "Verify resources immediately before simulation; no simulation until all static checks pass."
+  ],
+  "next_capture_budget": {
+    "environments": 1,
+    "max_worker_starts": 8,
+    "max_wall_s": 1800,
+    "max_worker_wall_s": 225,
+    "max_physics_substeps": 72000,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_output_mib": 512
+  },
+  "stop_conditions": [
+    "Any preflight/config/hash/identity rejection",
+    "Resource or time cap",
+    "Nominal premature termination",
+    "Replay divergence or incomplete/invalid branch; no silent replacement of seeds/groups"
+  ],
+  "evaluation_after_capture": "Frozen full_training.npz from fixed physical scales, report separate state RMSE, noise/response direction, magnitude and per-group/per-history results. No fitting or checkpoint selection during capture. No control acceptance.",
+  "inputs_sha256": {
+    "configs/s1_online_episode.json": "25bfeaef2ea3c1c876a5f17c6c25e46295aded0ffd5b0d030e1d3411a227f89d",
+    "configs/s3_pair_collection.json": "62f6b5c4aa965bf53ac3a936b0a88b125fb13bf117812cf7b2640783696de61c",
+    "runs/s3_coverage_geometry_20261113/findings.json": "f13a5e720c129dd7dec7b0cf217c702bd1dbfa5a82020f7b68d99bccea5b9cdf",
+    "runs/s3_physical_scales_20261113/full_training.npz": "15a70656a6154102f702a1d8c9e39a1fa35573b26d30b3107b3be0b0cb37924b"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "budget": {
+    "cpu_threads": 1,
+    "gpu_compute": false,
+    "max_new_output_mib": 32,
+    "max_private_commit_gib": 1.5,
+    "max_rss_gib": 1,
+    "max_wall_s": 120,
+    "min_running_ram_gib": 0.75,
+    "min_start_ram_gib": 2,
+    "worker_starts": 1
+  },
+  "capture_plan": "configs/s3_small_action_response_capture_plan.json",
+  "capture_validation": "runs/s3_small_action_response_capture_20261117/validation.json",
+  "files_sha256": {
+    "configs/s3_small_action_response_capture_plan.json": "9b0108583f37e914ec0b973ca084d34023221312269bb0d8a3e393502a7ee523",
+    "runs/s3_small_action_response_capture_20261117/same_amplitude_scores.json": "7c469cbcb322b251d14b791f2ae08025ee000679619bd388fe7773d8bf2692a6",
+    "runs/s3_small_action_response_capture_20261117/validation.json": "178de459baf89bad4827e1ea69d1ad8cb53e79f37f33669f0af0d782db98ee54",
+    "runs/s3_small_action_response_capture_20261117/worker/nominal_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "runs/s3_small_action_response_capture_20261117/worker/nominal_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_component_minus.json": "782a2fc217b2b5b51ceb39aa114b1b0a424170c266eb174a0e86360eb425a69e",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_component_plus.json": "5bed248d59a4078524b3c85b6a441a31b28a5779fd04be4beb3320c36c501840",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_pulse_half_minus.json": "54bfad54ea65037260d49e0fddd3460830be75d8f2d8e774384acdf0f9d3545a",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_pulse_half_plus.json": "2246471f5b078f041fcbf5e39a417848436f44609a299eaf015d5fb0d0a2c988",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_pulse_quarter_minus.json": "18c7a5d7abad98fec44c581e7ae199f888d26778e818b3aea5f2b782e2d62be8",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_pulse_quarter_plus.json": "862e8a9ec4c1951387c763f3276efa38041bbfd7b7dd941486b8a72acb89c4aa",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_reversal_half_minus.json": "3f9cd04bc093e5e47d6c12a169277c2349695ebdcb7d5780953351a35124a7d0",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_reversal_half_plus.json": "a4ae20b91d4ab3e8404501c7901658d8fd03a94711e7f091140c8451bfb04a67",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_reversal_quarter_minus.json": "655ad771dd7afecf4a185501f6a192e04706819f392c2290b80ca1252c6585c5",
+    "runs/s3_small_action_response_capture_20261117/worker/pitch_reversal_quarter_plus.json": "0d0985666f4e7096dcfafdb9170c5b82085b0d89d604131e58130ea06222f834",
+    "runs/s3_small_action_response_capture_20261117/worker/roll_component_minus.json": "1b896b871aa63837120d7745fee57a004402c2aa70346f7dbd6719a936f86f69",
+    "runs/s3_small_action_response_capture_20261117/worker/roll_component_plus.json": "e94f6ecf7b5e5ff1fe347998400875001d01ed7551615c5c40a02d3b5c477253",
+    "scripts/audit_s3_small_action_response.py": "d47336cd53e45604cec2e855eaa8b406db498c05d60e49d1f806fc1d44eb9b50"
+  },
+  "output": "runs/s3_small_action_response_audit_20261117",
+  "phase": "small_action_response_audit",
+  "schema": "s3-small-action-response-audit-v1",
+  "scope": {
+    "control_accepted": false,
+    "simulation_steps": 0,
+    "test_episode_files_read": false
+  },
+  "seed": 20261111,
+  "updates": 0
+}

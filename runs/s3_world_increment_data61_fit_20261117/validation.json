@@ -1,0 +1,38 @@
+{
+  "status": "completed",
+  "phase": "world_increment_data61_fit",
+  "plan_sha256": "bc252bfab4715fbf5ab21c7a096aad42c853a217de693d689507e3b878520ae3",
+  "updates": 900,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_pairs": 61,
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "replacement_gate_passed": false,
+  "main_model_replaced": false,
+  "checkpoint_selection": false,
+  "matched_data_preflight_passed": true,
+  "resources": {
+    "stage": "complete",
+    "update": 900,
+    "wall_s": 40.86440069996752,
+    "available_ram_bytes": 3336241152,
+    "min_available_ram_bytes": 3336241152,
+    "rss_bytes": 122392576,
+    "peak_rss_bytes": 154345472,
+    "private_commit_bytes": 128688128,
+    "peak_private_commit_bytes": 159854592,
+    "output_bytes_before_record": 1023511
+  },
+  "artifacts_sha256": {
+    "comparison.json": "20cf3ce69d4d4a452c10befae1f40262dcde88dc7b5259038b0736cfd156fd57",
+    "data_preflight.json": "395a08a9a129d593792121b3778b04113b290832f09af0d7b83673a1580be87b",
+    "execution_plan.json": "d02b2fdab3d7124c4feba3cb8bade3e64fc18d7df1de5f0e0ddb7a82371adcb1",
+    "expanded_data_comparison.json": "7a27686e6039691b4cd5ea694a622e52c994e84eaa16fa682f3659fbf79d80ad",
+    "fit_preflight.json": "b4c7336c29e92d3d0055539380a130964495f92e5f94e664542a3e1a34470186",
+    "timed_rollouts.json": "fd0d334653a3c2f49afe8195c85c3d0babd58e61abf561cfabcb12612415493a",
+    "training.jsonl": "d775e737de7ad402f3aa062fa823f802f6e0c186192f7a4be656e0648b79de5a",
+    "world_increment_900.npz": "e3f614e29716fda4e392731842ce3a156468f644403da8378144e9c293b81e2b",
+    "resources.jsonl": "11f3a3f113a39de30424d6a165e900f8675263a3911b51dda95bc27662360624"
+  }
+}

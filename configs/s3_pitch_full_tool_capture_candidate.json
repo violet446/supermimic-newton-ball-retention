@@ -1,0 +1,182 @@
+{
+  "action": {
+    "dimension": 2,
+    "tilt_acceleration_deg_s2": 50.0,
+    "tilt_filter_time_constant_s": 0.6324555320336759,
+    "tilt_limit_deg": 5.0,
+    "tilt_rate_deg_s": 10.0
+  },
+  "action_pairs": {
+    "amplitudes": [
+      0.2,
+      0.35
+    ],
+    "horizon": 32,
+    "master_seed": 20261111,
+    "replay_as_noise": true,
+    "scenario": "route",
+    "schedule": [
+      {
+        "action": [
+          0,
+          0
+        ],
+        "start_step": 0
+      },
+      {
+        "action": [
+          -0.26,
+          0.24
+        ],
+        "start_step": 37
+      },
+      {
+        "action": [
+          0.16,
+          0
+        ],
+        "start_step": 142
+      },
+      {
+        "action": [
+          0,
+          0
+        ],
+        "start_step": 185
+      }
+    ],
+    "snapshot_ticks": [
+      72,
+      168
+    ]
+  },
+  "admission": {
+    "max_initial_penetration_m": 0.0001,
+    "motion_angle_tolerance_deg": 1.0,
+    "motion_position_tolerance_m": 0.005,
+    "support_normal_min_z": 0.5,
+    "support_region_validated": true
+  },
+  "ball": {
+    "friction": 0.35,
+    "mass_kg": 0.05,
+    "radius_m": 0.02,
+    "restitution": 0.0
+  },
+  "budget": {
+    "critical_ram_gib": 0.25,
+    "low_ram_grace_s": 2,
+    "max_cases": 4,
+    "max_environment_gib": 2,
+    "max_gpu_used_gib": 3,
+    "max_output_cache_gib": 1,
+    "max_physics_steps": 52000,
+    "max_process_commit_gib": 3,
+    "max_process_rss_gib": 2,
+    "max_trace_steps": 12928,
+    "min_disk_free_gib": 10,
+    "min_running_ram_gib": 0.75,
+    "min_start_gpu_free_gib": 4,
+    "min_start_ram_gib": 2,
+    "wall_s": 300.0
+  },
+  "episode": {
+    "departure_margin_m": 0.002,
+    "final_surface_gap_m": 0.001,
+    "horizon_s": 4.0,
+    "outside_grace_s": 0.05
+  },
+  "history_capture": {
+    "episode_id": "coverage_train_yplus_matched_full_tool",
+    "group_id": "coverage_train_yplus_initial",
+    "history_id": "matched_full_tool",
+    "split": "train"
+  },
+  "initial": {
+    "anchor_world_m": [
+      0.65,
+      0,
+      0.35
+    ],
+    "anchor_xy_tool_m": [
+      0.32,
+      0.0
+    ],
+    "ball_center_world_m": [
+      0.6097384691238403,
+      -0.022553923919796943,
+      0.3659499146461487
+    ],
+    "ball_velocity_world_m_s": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "gap_m": 0.0002,
+    "joint_q_rad": [
+      -0.4569243614078,
+      -0.27737759032578263,
+      -1.5804304982460915,
+      2.3616134494726726,
+      -1.9773412116347013,
+      3.0233161706469054
+    ],
+    "tool_rotation_world": [
+      [
+        0.8963132199416322,
+        0.042662087088564574,
+        0.44136442775002943
+      ],
+      [
+        0.0,
+        0.9953609477171986,
+        -0.09621114155605956
+      ],
+      [
+        -0.4434214831938832,
+        0.08623531808237192,
+        0.892155176052557
+      ]
+    ]
+  },
+  "physics": {
+    "control_hz": 60,
+    "dt_s": 0.0010416666666666667,
+    "floor_z_m": -0.1,
+    "gravity_m_s2": 9.81,
+    "iterations": 20
+  },
+  "prescribed": {
+    "contact_timing": "endpoint tool pose and velocity; start-of-substep ball state",
+    "joint_path": "runs/s1_reachability_20261111/joint_paths.npz",
+    "online_action_interface": true,
+    "path_name": "zero"
+  },
+  "reference": {
+    "displacement_world_m": [
+      0.08,
+      0.0,
+      0.0
+    ],
+    "duration_s": 2.0,
+    "hold_end_s": 1.0,
+    "start_s": 1.0
+  },
+  "revision_reason": "S3 new predeclared initial group and two-scale paired capture; dynamics unchanged",
+  "robot": {
+    "joint_acceleration_rad_s2": 1.0,
+    "joint_speed_rad_s": 0.5
+  },
+  "schema_version": "s1-online-episode-v1",
+  "seed": 4084527128,
+  "validation": {
+    "arbitrary_action_admission_verified": false,
+    "control_substeps": 16,
+    "evidence": "runs/s1_episode_20261112/summary.json",
+    "full_s1_complete": true,
+    "general_contact_convergence": false,
+    "prescribed_zero_tilt_path_checked": true,
+    "transition_schema": "ball-retention-transition-v0.2",
+    "validation_scope": "pinned bowl, one route, zero/combined tilt and edge departure cases"
+  }
+}

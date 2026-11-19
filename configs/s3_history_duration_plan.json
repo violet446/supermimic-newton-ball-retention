@@ -1,0 +1,192 @@
+{
+  "schema": "s3-history-duration-plan-v1",
+  "question": "Does a fixed extension from 900 to 1800 updates improve same-set development performance for old and expanded initial-group coverage?",
+  "seed": 20261111,
+  "updates_per_fit": 1800,
+  "verification_update": 900,
+  "total_updates": 3600,
+  "network": [
+    29,
+    32,
+    32,
+    9
+  ],
+  "initialization": "fresh zero-output ResidualMLP; do not warm start baseline",
+  "normalization": "retained_training_v2",
+  "physical_scales": "configs/s3_physical_scales.json",
+  "s2_manifest": "data/s2_pilot_20261112/manifest.json",
+  "history_plan": "configs/s3_history_coverage_plan.json",
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.0003,
+    "max_grad_norm": 5.0
+  },
+  "anchors": {
+    "source": "original S2 training windows only",
+    "horizons": [
+      1,
+      4,
+      8
+    ],
+    "batch_size": 64,
+    "selection": "cycle horizon, identical seed"
+  },
+  "pairs": {
+    "weighting": "equal initial groups, snapshots per group, axis/amplitude rows per snapshot",
+    "lead_steps": [
+      8,
+      16,
+      32
+    ],
+    "lead_weights": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "absolute_weight": 0.5,
+    "response_weight": 0.2
+  },
+  "components": [
+    1.5,
+    1.5,
+    1.5,
+    0.7,
+    0.7,
+    0.7,
+    0.4,
+    0.4,
+    0.4
+  ],
+  "response_scales_si": [
+    0.0005,
+    0.0005,
+    0.0005,
+    0.025,
+    0.025,
+    0.025,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "fits": {
+    "old": {
+      "collection": "configs/s3_pair_collection.json",
+      "reference_900": "runs/s3_physical_scales_20261113/full_training.npz",
+      "expected_train": {
+        "groups": 4,
+        "snapshots": 8,
+        "axis_amplitude_pairs": 24
+      }
+    },
+    "expanded": {
+      "collection": "runs/s3_history_coverage_20261114/merged_collection.json",
+      "reference_900": "runs/s3_history_refit_20261114/candidate_900.npz",
+      "expected_train": {
+        "groups": 6,
+        "snapshots": 16,
+        "axis_amplitude_pairs": 40
+      }
+    }
+  },
+  "evaluation_collection": "expanded",
+  "expected_validation": {
+    "groups": 5,
+    "snapshots": 14,
+    "axis_amplitude_pairs": 36
+  },
+  "comparisons": [
+    [
+      "old_900",
+      "old_1800"
+    ],
+    [
+      "expanded_900",
+      "expanded_1800"
+    ],
+    [
+      "old_1800",
+      "expanded_1800"
+    ],
+    [
+      "old_900",
+      "expanded_900"
+    ],
+    [
+      "old_900",
+      "expanded_1800"
+    ]
+  ],
+  "selection": "At update 900 compare model and normalization arrays only. After both fixed endpoints, score all four checkpoints on identical development inputs. Never select an update using development metrics.",
+  "evaluation": [
+    "Separate SI state RMSE, strong response direction/cosine/magnitude, and noise-unresolved counts.",
+    "S2 complete-route validation H8 position protection.",
+    "Record per-group/amp H32 position <=1.1x baseline, no reduction of strong positive or cosine>=0.5 counts; S2 route H8 position <=1.1x baseline. These are regression diagnostics, not control admission."
+  ],
+  "budget": {
+    "cpu_threads": 1,
+    "wall_s": 600,
+    "rss_gib": 1,
+    "commit_gib": 1.5,
+    "output_mib": 64,
+    "min_available_ram_gib": 0.75,
+    "gpu_compute": false
+  },
+  "stop_conditions": [
+    "nonfinite loss or gradient",
+    "data/source hash or split identity mismatch",
+    "update 900 checkpoint reproduction mismatch",
+    "resource or wall cap"
+  ],
+  "test_episode_files_read": false,
+  "test_metrics_used": false,
+  "simulation_steps": 0,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "configs/s3_pair_collection.json": "62f6b5c4aa965bf53ac3a936b0a88b125fb13bf117812cf7b2640783696de61c",
+    "runs/s3_history_coverage_20261114/merged_collection.json": "d33310719ece2af89efb479796af347cfc6993812514eb27b1c596e5c3083470",
+    "runs/s3_physical_scales_20261113/full_training.npz": "15a70656a6154102f702a1d8c9e39a1fa35573b26d30b3107b3be0b0cb37924b",
+    "runs/s3_history_refit_20261114/candidate_900.npz": "06b369d67f02bb7f7c49df467cb5bfb2452cc2525ed2ce40d8b9ee9cb19e8415",
+    "configs/s3_physical_scales.json": "ba13b57ddb8a52d46db15d453026c8a86df5ced53db6cb3c531f9fcd528985c9",
+    "data/s2_pilot_20261112/manifest.json": "9ab789e9661a4d4db74249519bcdb5c8b1479c58d4bbbdb919da5b8a6086d9f0",
+    "configs/s3_history_coverage_plan.json": "627ee244c59820414384a6a979b0aaaf81cf1c00e0134413f5ce15270734c381",
+    "runs/s3_physical_scales_20261113/plan.json": "cfdb673b3c71a7da328d9745a523612233de12324a8eb6659df241eeb9dd4583",
+    "runs/s3_history_refit_20261114/plan.json": "bebbf8af22676d28920a37f63325782f6f85cfbd76be49a999acd609f9aa8a13"
+  },
+  "source_sha256": {
+    "scripts/train_s3_history_duration.py": "0ccdb2a810f8f1138927359ab5749e25ac5957d80322cf2fedabc1fffe463652",
+    "scripts/train_s3_history.py": "6d7ff62c8426b9827ad1b7d5fecd6b24d701192dd4c3469140ded2d204724252",
+    "scripts/check_s3_group_generalization.py": "931b8a9328f2a630cbeb6f0e3e5656f1faa0a5b35ae46bfe553ceb5c0e3f19bc",
+    "scripts/evaluate_s3_history.py": "5deb70da175185b9e4bd2e0a2079069ba0c45b621706b8f1176dd640653abff8",
+    "scripts/evaluate_s3_coverage.py": "c05f39825d23f6b28e33602e5be2fdecaf98fd3e7b613dc7446b0d0997fcea45",
+    "src/ball_retention/__init__.py": "97a55feafec71acbd1b02dc95e8bb6076cdaa7c1f1224b18002459efe26a84f3",
+    "src/ball_retention/action_eval.py": "705f162ada3bba65c5566ca87ad485a0417d1d512eb2fc2f2f48e4d986db7a76",
+    "src/ball_retention/action_grad.py": "5774721c7eb92584e6f285034d895436ed24efed8e2495a03d461330bb1287a2",
+    "src/ball_retention/clearance.py": "a6efd1e349c79a22fbead38b24e2fbb494778f186089b283a9930edc8c0a55dc",
+    "src/ball_retention/collection.py": "afa30cdb3945a568babda36038fd5ff872adad548a49e49419bac0191c40071e",
+    "src/ball_retention/contracts.py": "5102f989764cb9a990d901de6bf001ed03ecd0f21aedd093154cb654622ae8f3",
+    "src/ball_retention/controller.py": "0f4f8fb0155e9f45c63cd859febf197545c6d8c1548ea2ee78104180d0ea471a",
+    "src/ball_retention/dataset.py": "ab0b5513f010b7c277fd183970b31d18eba1e35a49c8d6fb81314dd7632c1848",
+    "src/ball_retention/env.py": "508dea206bd99b3ff1b9d80b6f34b7965730b60ebce9a22ce4433a6ad24bc3a6",
+    "src/ball_retention/episode.py": "92260cb218c38cfc9b8ecffa2942cd4b922e983be62a03dc70bc7b3eb2186395",
+    "src/ball_retention/frame_grad.py": "48ac36264a5445ba07e4fec548a5e2397a0fa10ac98dd05398cc779fe4a92266",
+    "src/ball_retention/frame_model.py": "7fb4d83a925b01e77a6d35d33bb25bd7de220bd1278c4a16a65330eb670ac2cf",
+    "src/ball_retention/geometry.py": "c099ede2dd5846d73350743b0e21ac6b662488742d2d0ff15a2766dadb163dcb",
+    "src/ball_retention/group_fold.py": "0319fa16d100a3d6d30857a1541621deba56fbfa7575c4d30c342714f560af39",
+    "src/ball_retention/guard.py": "c4fbfcdd2876b3aa0274b138d1ecf8d91c40ef18884b51daf7ec4e3a2616c5c0",
+    "src/ball_retention/guarded_loss.py": "2d0a22e70db16cb35040c10dbfb2e2dcacca27003efbd3fbd77a3b19eabacc74",
+    "src/ball_retention/history_capture.py": "ac6d54713c659c79579f71058918f5f7c53434dcb136b362ba2d3e266ef84c03",
+    "src/ball_retention/model_data.py": "993066d08ffb34825a889d73aa8d4b02fda0775e6c78fc49151692782ab0f247",
+    "src/ball_retention/model_eval.py": "b4b2b9e33f015fafa8ea6359d2e6d3f0a55f5911837247f408af07471efe2211",
+    "src/ball_retention/pair_collection.py": "6a40e5f9396fcb9cbaaaf240e9902a1916dcce48e3f988f552180f3fe26d9ab9",
+    "src/ball_retention/pair_data.py": "e82a0299db8233af18367a0ff4d88c284dd6159a24e82ea36ff13f430056c880",
+    "src/ball_retention/pair_loss.py": "037f369cd2adead985b67f85e33963402221fe65cd83b393cf9ee00b3357cbf1",
+    "src/ball_retention/prescribed.py": "607f34e65cc095f4437a85f665d7c150583505cad50e99cad31a3062d584595d",
+    "src/ball_retention/resources.py": "716b25c45575a7f11aa1ecca53ca9466097b4f42d3b3cdaf14e953b4b5df831f",
+    "src/ball_retention/retention.py": "804d9d1c571d501aa8eb82fcc13c932a14ed31c1903b9ec1668176acaf257797",
+    "src/ball_retention/robot.py": "34b188d630b2914433ccf7f668d5335492ad8571f79e0fab5400558b8ca0bff8",
+    "src/ball_retention/support.py": "e991242dc8e572afe0108fd5f34264e6aa9686605be45dea7d0240b450db8165",
+    "src/ball_retention/surface_diagnostic.py": "b8e4f0a4e6c3b794e8f9844393ca0a345567f8f55452ed176eceb122df0b57cb",
+    "src/ball_retention/task.py": "9b39d7d2704da339672aca331d65b0a13e2e9d8a61db34d941622f1b249ef9da",
+    "src/ball_retention/world_model.py": "b4bc34bc546359aa45b0145f4fa45b7d1518c8354425c1adde8d89b3abf307a8"
+  }
+}

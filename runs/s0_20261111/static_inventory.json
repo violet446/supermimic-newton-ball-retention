@@ -1,0 +1,432 @@
+{
+  "audit_kind": "static only; no physics or package imports",
+  "python": "C:\\python\\python.exe",
+  "python_version": "3.13.0",
+  "source_head": "866019f3d00a3400e76bca9162f0c084483e0786",
+  "asset_commit": "484e981a76f68b4bb5ce7b334bfa92c581f4139f",
+  "selected_source_diff": "",
+  "packages": {
+    "newton": {
+      "version": "1.6.0",
+      "location": "C:\\python\\Lib\\site-packages",
+      "direct_url": null
+    },
+    "warp-lang": {
+      "version": "1.17.0",
+      "location": "C:\\python\\Lib\\site-packages",
+      "direct_url": null
+    },
+    "numpy": {
+      "version": "2.2.4",
+      "location": "C:\\python\\Lib\\site-packages",
+      "direct_url": null
+    },
+    "scipy": {
+      "version": "1.15.2",
+      "location": "C:\\python\\Lib\\site-packages",
+      "direct_url": null
+    },
+    "trimesh": {
+      "version": "5.1.0",
+      "location": "C:\\python\\Lib\\site-packages",
+      "direct_url": null
+    },
+    "python-fcl": null
+  },
+  "assets": [
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66_description.urdf",
+      "bytes": 7106,
+      "sha256": "cedd8d294d5884547757b322f547f53b820b5ea527319a78dc2871c86c1ea0dd",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\shovel.STL",
+      "bytes": 1068884,
+      "sha256": "ab51ce9f029bb4517c6bbfbd3c807ae5ee944f8ac6dbfc5b329ba9550276c5b5",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 21376,
+        "bounds": [
+          [
+            -2.26806624154495e-16,
+            -0.13608533489704133,
+            -0.029674975872039794
+          ],
+          [
+            0.54387939453125,
+            0.134969970703125,
+            0.20106353759765624
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": [
+          -0.017556960741678874,
+          0.10518005625406901
+        ]
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\base_link.STL",
+      "bytes": 135384,
+      "sha256": "61fcad61f58200fa35736e9df442c3bec76c9565451dfbb090c721b0a07aacca",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 2706,
+        "bounds": [
+          [
+            -0.07500000298023224,
+            -0.07500000298023224,
+            -5.699392645113974e-14
+          ],
+          [
+            0.07500000298023224,
+            0.07500000298023224,
+            0.02800000086426735
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link1.STL",
+      "bytes": 905284,
+      "sha256": "2f981a971b80d9f5f7d794059b31a0c1ade747119e553019f2807a606748b447",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 18104,
+        "bounds": [
+          [
+            -0.05900003761053085,
+            -0.05900000035762787,
+            -0.06800000369548798
+          ],
+          [
+            0.05900003761053085,
+            0.07000000029802322,
+            0.08171633630990982
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link2.STL",
+      "bytes": 2030184,
+      "sha256": "05f68c43341b16ca295167d37c84ab10361f9018af1b9c462e8a9f23a95835e7",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 40602,
+        "bounds": [
+          [
+            -0.05900003761053085,
+            -0.052000001072883606,
+            -0.05900000035762787
+          ],
+          [
+            0.05900003761053085,
+            0.0977163314819336,
+            0.46650001406669617
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link3.STL",
+      "bytes": 1142084,
+      "sha256": "6c1b5906a7d96c45543cf588f8a2dbda0402c6acbf663565e8f812759c3a3d0d",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 22840,
+        "bounds": [
+          [
+            -0.04849341884255409,
+            -0.03095179796218872,
+            -0.048500001430511475
+          ],
+          [
+            0.0484393909573555,
+            0.07800000160932541,
+            0.4359999895095825
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link4.STL",
+      "bytes": 851784,
+      "sha256": "ce9667629f7f591e3b85baf1b9626f9f03a8fb68c9edece328f505bc0927bc94",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 17034,
+        "bounds": [
+          [
+            -0.03799999877810478,
+            0.07349999994039536,
+            -0.05495179817080498
+          ],
+          [
+            0.03799999877810478,
+            0.1599999964237213,
+            0.0494999997317791
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link5.STL",
+      "bytes": 851784,
+      "sha256": "f9d1170b2683012b10056cd648ba03ed8c679e17f39adba0ae0968a0221d3a8f",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 17034,
+        "bounds": [
+          [
+            -0.03799999877810478,
+            -0.0494999997317791,
+            0.0494999997317791
+          ],
+          [
+            0.03799999877810478,
+            0.05495179817080498,
+            0.13599999248981476
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\assets\\ec66\\link6.STL",
+      "bytes": 359484,
+      "sha256": "ddc6b367f1c888a8f6fd7a784e2d836645c23ef9ef83e62055b0cd769c7a1712",
+      "license": "unknown: no asset-specific license verified",
+      "copied": false,
+      "geometry": {
+        "triangles": 7188,
+        "bounds": [
+          [
+            -0.038100000470876694,
+            -0.08900000154972076,
+            -0.03800000250339508
+          ],
+          [
+            0.038100000470876694,
+            -0.0494999997317791,
+            0.03800000250339508
+          ]
+        ],
+        "units": "m (loader interpretation)",
+        "central_upward_centroid_z_range": null
+      }
+    }
+  ],
+  "total_asset_bytes": 7351978,
+  "source_files": [
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\robot.py",
+      "bytes": 6046,
+      "sha256": "26efbe9eda0c4b1765027df150b8db1382a8ff1209a4cc2dd14367392a56f798"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\runtime.py",
+      "bytes": 2382,
+      "sha256": "358c4be1d9bc1f55e24f1b950db0e3743a569d55afeb84e62880b4f08843f49d"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\geometry.py",
+      "bytes": 2663,
+      "sha256": "0ed78e5ca58bc9ba6a341f291c53098ff02e4bf7e690c85aba78a281501169db"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\motion.py",
+      "bytes": 1509,
+      "sha256": "bf459c09e459fef54120eb3e19a55adbe5961619019691f9aa340d244c8679a2"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\collect.py",
+      "bytes": 16689,
+      "sha256": "071f5e6bda5efccb31172d7bb0d21e81d77cb3aeb595fd02c75bea804f41fef9"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\protocol.py",
+      "bytes": 4741,
+      "sha256": "d9a2cffd373d1498c1281ee21fb76e3323354646438aa77a0f0c39ac060d06f0"
+    },
+    {
+      "path": "C:\\newton\\New\\Particle_Spreading\\experiments\\release_distribution_ec66_v2\\requirements.txt",
+      "bytes": 182,
+      "sha256": "9a97ec12d2fc38acf9d8400fb88876ea3eedab7bfbe4aab4d60aa9f9ecfe5da2"
+    }
+  ],
+  "newton_api_files": [
+    {
+      "path": "C:\\python\\Lib\\site-packages\\newton\\_src\\sim\\builder.py",
+      "bytes": 711102,
+      "sha256": "b95ff38f5a0752758ffc3ce8902ad1d7dc38bd73d81dc0e74f11a07c942e8038"
+    },
+    {
+      "path": "C:\\python\\Lib\\site-packages\\newton\\_src\\solvers\\xpbd\\solver_xpbd.py",
+      "bytes": 54984,
+      "sha256": "e00f36bb590e33d76efa03ca9690d09ea63a2590d11372fda9ebf982dafa76c9"
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_joint",
+      "type": "fixed",
+      "parent": "world",
+      "child": "base_link",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "axis": null,
+      "limit": null
+    },
+    {
+      "name": "joint1",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "link1",
+      "origin": {
+        "xyz": "0 0 0.096",
+        "rpy": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 0 1"
+      },
+      "limit": {
+        "lower": "-6.2832",
+        "upper": "6.2832",
+        "effort": "150",
+        "velocity": "4.6199"
+      }
+    },
+    {
+      "name": "joint2",
+      "type": "revolute",
+      "parent": "link1",
+      "child": "link2",
+      "origin": {
+        "xyz": "0 0.122 0",
+        "rpy": "0 1.5708 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limit": {
+        "lower": "-6.2832",
+        "upper": "6.2832",
+        "effort": "150",
+        "velocity": "4.6199"
+      }
+    },
+    {
+      "name": "joint3",
+      "type": "revolute",
+      "parent": "link2",
+      "child": "link3",
+      "origin": {
+        "xyz": "0 -0.122 0.418",
+        "rpy": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limit": {
+        "lower": "-2.7925",
+        "upper": "2.7925",
+        "effort": "150",
+        "velocity": "6.3161"
+      }
+    },
+    {
+      "name": "joint4",
+      "type": "revolute",
+      "parent": "link3",
+      "child": "link4",
+      "origin": {
+        "xyz": "0 0 0.398",
+        "rpy": "0 1.5708 0"
+      },
+      "axis": {
+        "xyz": "0 1 0"
+      },
+      "limit": {
+        "lower": "-6.2832",
+        "upper": "6.2832",
+        "effort": "28",
+        "velocity": "8.5379"
+      }
+    },
+    {
+      "name": "joint5",
+      "type": "revolute",
+      "parent": "link4",
+      "child": "link5",
+      "origin": {
+        "xyz": "0 0.122 0",
+        "rpy": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 0 1"
+      },
+      "limit": {
+        "lower": "-6.2832",
+        "upper": "6.2832",
+        "effort": "28",
+        "velocity": "8.5379"
+      }
+    },
+    {
+      "name": "joint6",
+      "type": "revolute",
+      "parent": "link5",
+      "child": "link6",
+      "origin": {
+        "xyz": "0 0 0.098",
+        "rpy": "0 0 0"
+      },
+      "axis": {
+        "xyz": "0 -1 0"
+      },
+      "limit": {
+        "lower": "-6.2832",
+        "upper": "6.2832",
+        "effort": "28",
+        "velocity": "8.5379"
+      }
+    },
+    {
+      "name": "flan_joint",
+      "type": "fixed",
+      "parent": "link6",
+      "child": "flan",
+      "origin": {
+        "xyz": "0 -0.089 -0.00047661",
+        "rpy": "-1.5708 0 3.1416"
+      },
+      "axis": {
+        "xyz": "0 0 0"
+      },
+      "limit": null
+    }
+  ]
+}

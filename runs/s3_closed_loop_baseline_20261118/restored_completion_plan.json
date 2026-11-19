@@ -1,0 +1,32 @@
+{
+  "schema": "s3-closed-loop-restore-tail-v1",
+  "input_sha256": {
+    "scripts/finish_s3_closed_loop_baseline.py": "62a38432e51c5a74757fd3aec5977096244134ea275f4c6a223c3b6b71428fff",
+    "scripts/s3_closed_loop_tail.py": "75a8831459e446f1dc2f05cd8a6bcb00807972f8bc171dbfb5896bb58749e70e",
+    "runs/s3_closed_loop_baseline_20261118/continuation/broad_train_72_center_feedback/worker/transitions.jsonl": "b9a64950779f02654dc3dacd7f9fe660428ed85fd04b1767b1a96fa7cf41b736",
+    "runs/s3_closed_loop_baseline_20261118/continuation/stopped.json": "33b790fcd80596bdc59970a096edce627fc93f7a81c3fbc4e2f9472b289766a8",
+    "runs/s3_closed_loop_baseline_20261118/continuation_prelaunch_attempt1/stopped.json": "300478b39e13c1f70bca24d78c5eb7d961a05e40a797f481ccc26507d1712ea6"
+  },
+  "resume_sha256": "eb50871656ad99a1ead4955b9e7a6895c40b1f17db2be4657bd167db2e1b2da0",
+  "preflight_sha256": "7857c1f7a34fe79b4678a2838f1dcff257e7b7190bb0b29bffd10d8f9df05e12",
+  "original_case_ids": [
+    "broad_train_72_center_nominal",
+    "broad_train_72_center_feedback",
+    "broad_train_72_right_nominal",
+    "broad_train_72_right_feedback"
+  ],
+  "reconstructed_tick": 75,
+  "verified_tick": 76,
+  "old_physics_upper_bound": 5248,
+  "remaining_physics_cap": 10320,
+  "cumulative_physics_cap": 15568,
+  "limits": {
+    "max_wall_s": 647.0232581999735,
+    "max_new_output_mib": 128
+  },
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "main_model_replaced": false,
+  "actor_critic_trained": false,
+  "hardware_control": false
+}

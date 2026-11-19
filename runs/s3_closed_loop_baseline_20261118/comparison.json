@@ -1,0 +1,429 @@
+{
+  "status": "completed",
+  "preflight_sha256": "7857c1f7a34fe79b4678a2838f1dcff257e7b7190bb0b29bffd10d8f9df05e12",
+  "restored_completion_plan_sha256": "7f3e1a0b47c97dad7d17112da4030bfac82d3d7f4d054fba56f059ad2e924c51",
+  "trajectories": 4,
+  "physics_steps": 15360,
+  "new_physics_steps": 10320,
+  "archived_replay_verification_steps": 16,
+  "total_physics_steps_upper_bound": 15568,
+  "approved_physics_steps_cap": 15568,
+  "case_directories": {
+    "broad_train_72_center_nominal": "runs/s3_closed_loop_baseline_20261118/broad_train_72_center_nominal",
+    "broad_train_72_center_feedback": "runs/s3_closed_loop_baseline_20261118/restored_completion/broad_train_72_center_feedback",
+    "broad_train_72_right_nominal": "runs/s3_closed_loop_baseline_20261118/restored_completion/broad_train_72_right_nominal",
+    "broad_train_72_right_feedback": "runs/s3_closed_loop_baseline_20261118/restored_completion/broad_train_72_right_feedback"
+  },
+  "worker_process_launches": 7,
+  "wall_s": 421.9665604000329,
+  "paired": {
+    "broad_train_72_center": {
+      "shared_prefix_verified_controls": 60,
+      "nominal": {
+        "episode_id": "broad_train_72_center_nominal",
+        "sha256": "9d6b0ab87cb9f93afc6b4c674752f0e8735187675287219eb8509c20c1436907",
+        "transitions": 240,
+        "physics_steps": 3840,
+        "elapsed_s": 4.0,
+        "terminal_substeps": 16,
+        "terminated": false,
+        "truncated": true,
+        "success": true,
+        "termination_reason": null,
+        "requested_action_min": [
+          0.0,
+          0.0
+        ],
+        "requested_action_max": [
+          0.0,
+          0.0
+        ],
+        "requested_action_std": [
+          0.0,
+          0.0
+        ],
+        "nonzero_action_steps": 0,
+        "max_abs_tilt_rad": [
+          0.0,
+          0.0
+        ],
+        "ball_tool_position_min_m": [
+          0.27279294693797107,
+          -0.06869490883307366,
+          0.007200973290054188
+        ],
+        "ball_tool_position_max_m": [
+          0.31287863893767187,
+          -0.03126900177287994,
+          0.028637225531757016
+        ],
+        "max_ball_tool_displacement_m": 0.05385451516755839,
+        "motion_complete": true,
+        "departure_time_s": null,
+        "final_carrying": {
+          "carrying_candidate": true,
+          "within_bowl": true,
+          "reason": "above_near_bowl_face",
+          "surface_height_m": -0.14075786647111282,
+          "bottom_clearance_m": 4.456725354548899e-05,
+          "bowl_margin_m": 0.09010262933261712,
+          "nearest_support_clearance_m": -1.6549906240587164e-08
+        },
+        "final_surface_clearance_m": -1.6549906240587164e-08,
+        "initial_anchor_world_m": [
+          0.6500000638883222,
+          -8.016986310921403e-08,
+          0.3500001616133601
+        ],
+        "final_anchor_world_m": [
+          0.730000122078472,
+          4.769605461453497e-10,
+          0.3500001107578792
+        ],
+        "anchor_displacement_world_m": [
+          0.08000005819014977,
+          8.064682365535938e-08,
+          -5.085548093752834e-08
+        ],
+        "final_anchor_reference_error_m": 1.648353379039942e-07,
+        "max_anchor_reference_error_m": 5.856223513116084e-07,
+        "max_tool_rotation_tracking_error_rad": 5.673793829181793e-07,
+        "initial_ball_xy_tool_m": [
+          0.27279294693797107,
+          -0.03126900177287994
+        ],
+        "final_ball_xy_tool_m": [
+          0.30121443759107047,
+          -0.055490378181517114
+        ],
+        "final_ball_velocity_tool_m_s": [
+          0.03279417846765394,
+          -0.03586658042889277,
+          0.023840647603143344
+        ],
+        "max_ball_xy_speed_tool_m_s": 0.22157301411678496,
+        "max_ball_xy_displacement_tool_m": 0.053525435472965,
+        "throughput": {
+          "setup_wall_s": 5.399645999947097,
+          "loop_wall_s": 148.77647139999317,
+          "episode_step_wall_s": 148.4021190001513,
+          "action_evaluation_wall_s": 0.005599900090601295,
+          "json_encoding_wall_s": 0.06475860014325008,
+          "trajectory_write_flush_wall_s": 0.012666400405578315,
+          "trajectory_bytes": 1969996,
+          "control_rows_per_s": 1.6131583021266023,
+          "physics_steps_per_s": 25.810532834025636,
+          "trajectory_bytes_per_row": 8208.316666666668,
+          "worker_elapsed_s_including_validation": 154.25499459996354
+        }
+      },
+      "feedback": {
+        "episode_id": "broad_train_72_center_feedback",
+        "sha256": "4ecfc7af08a2e0ddd704c11834996f0d392426ce1e655f95164eed6afffb36d8",
+        "transitions": 240,
+        "physics_steps": 3840,
+        "elapsed_s": 4.0,
+        "terminal_substeps": 16,
+        "terminated": false,
+        "truncated": true,
+        "success": true,
+        "termination_reason": null,
+        "requested_action_min": [
+          -0.12,
+          -0.12
+        ],
+        "requested_action_max": [
+          0.12,
+          0.12
+        ],
+        "requested_action_std": [
+          0.06586193132981026,
+          0.08504960708693678
+        ],
+        "nonzero_action_steps": 180,
+        "max_abs_tilt_rad": [
+          0.0050380874218251,
+          0.003470461977877497
+        ],
+        "ball_tool_position_min_m": [
+          0.27279294693797107,
+          -0.06869490883307366,
+          0.007200973290054188
+        ],
+        "ball_tool_position_max_m": [
+          0.31287863893767187,
+          -0.03126900177287994,
+          0.028637225531757016
+        ],
+        "max_ball_tool_displacement_m": 0.05385451516755839,
+        "motion_complete": true,
+        "departure_time_s": null,
+        "final_carrying": {
+          "carrying_candidate": true,
+          "within_bowl": true,
+          "reason": "above_near_bowl_face",
+          "surface_height_m": -0.1407649122936229,
+          "bottom_clearance_m": 3.65600123085931e-05,
+          "bowl_margin_m": 0.08828713302405258,
+          "nearest_support_clearance_m": -4.480511872975712e-08
+        },
+        "final_surface_clearance_m": -4.480511872975712e-08,
+        "initial_anchor_world_m": [
+          0.6500000638883222,
+          -8.016986310921403e-08,
+          0.3500001616133601
+        ],
+        "final_anchor_world_m": [
+          0.7299999680862972,
+          -1.788362900519494e-08,
+          0.35000008314273623
+        ],
+        "anchor_displacement_world_m": [
+          0.07999990419797498,
+          6.22862341040191e-08,
+          -7.84706238876609e-08
+        ],
+        "final_anchor_reference_error_m": 9.08351429988337e-08,
+        "max_anchor_reference_error_m": 5.697465821570967e-07,
+        "max_tool_rotation_tracking_error_rad": 6.503106323808119e-07,
+        "initial_ball_xy_tool_m": [
+          0.27279294693797107,
+          -0.03126900177287994
+        ],
+        "final_ball_xy_tool_m": [
+          0.29940249186789225,
+          -0.044256650815363154
+        ],
+        "final_ball_velocity_tool_m_s": [
+          0.04383308566043786,
+          -0.022790432637496884,
+          0.026354415546519867
+        ],
+        "max_ball_xy_speed_tool_m_s": 0.22157301411678496,
+        "max_ball_xy_displacement_tool_m": 0.053525435472965,
+        "throughput": {
+          "scope": "new tail rows only, excludes public restore, period 76 verification and copied prefix",
+          "setup_wall_s": 6.339707599952817,
+          "verification_cycle_wall_s": 1.0678060000063851,
+          "loop_wall_s": 103.69020050001564,
+          "episode_step_wall_s": 103.42375620012172,
+          "action_evaluation_wall_s": 0.02041280025150627,
+          "json_encoding_wall_s": 0.0427913996973075,
+          "trajectory_write_flush_wall_s": 0.007612500223331153,
+          "trajectory_bytes": 1371704,
+          "merged_trajectory_bytes": 2002705,
+          "recorded_control_rows": 164,
+          "recorded_physics_steps": 2624,
+          "control_rows_per_s": 1.5816345152112545,
+          "physics_steps_per_s": 25.306152243380073,
+          "trajectory_bytes_per_row": 8364.048780487805,
+          "worker_elapsed_s_including_validation": 111.17952149995835
+        }
+      }
+    },
+    "broad_train_72_right": {
+      "shared_prefix_verified_controls": 60,
+      "nominal": {
+        "episode_id": "broad_train_72_right_nominal",
+        "sha256": "7867cbcda9d43b045189fc55e02001c78485a542a9132c953c1ce308445f7e79",
+        "transitions": 240,
+        "physics_steps": 3840,
+        "elapsed_s": 4.0,
+        "terminal_substeps": 16,
+        "terminated": false,
+        "truncated": true,
+        "success": true,
+        "termination_reason": null,
+        "requested_action_min": [
+          0.0,
+          0.0
+        ],
+        "requested_action_max": [
+          0.0,
+          0.0
+        ],
+        "requested_action_std": [
+          0.0,
+          0.0
+        ],
+        "nonzero_action_steps": 0,
+        "max_abs_tilt_rad": [
+          0.0,
+          0.0
+        ],
+        "ball_tool_position_min_m": [
+          0.2665850442287505,
+          -0.07870450541708164,
+          0.00684120863900059
+        ],
+        "ball_tool_position_max_m": [
+          0.31629432879947417,
+          -0.016126654785655788,
+          0.0337179160188541
+        ],
+        "max_ball_tool_displacement_m": 0.07611206847489665,
+        "motion_complete": true,
+        "departure_time_s": null,
+        "final_carrying": {
+          "carrying_candidate": true,
+          "within_bowl": true,
+          "reason": "above_near_bowl_face",
+          "surface_height_m": -0.14047917369020205,
+          "bottom_clearance_m": 4.339359431406245e-05,
+          "bowl_margin_m": 0.09178485068509187,
+          "nearest_support_clearance_m": -1.9893085890371198e-08
+        },
+        "final_surface_clearance_m": -1.9893085890371198e-08,
+        "initial_anchor_world_m": [
+          0.6500000638883222,
+          -8.016986310921403e-08,
+          0.3500001616133601
+        ],
+        "final_anchor_world_m": [
+          0.730000122078472,
+          4.769605461453497e-10,
+          0.3500001107578792
+        ],
+        "anchor_displacement_world_m": [
+          0.08000005819014977,
+          8.064682365535938e-08,
+          -5.085548093752834e-08
+        ],
+        "final_anchor_reference_error_m": 1.648353379039942e-07,
+        "max_anchor_reference_error_m": 5.856223513116084e-07,
+        "max_tool_rotation_tracking_error_rad": 5.673793829181793e-07,
+        "initial_ball_xy_tool_m": [
+          0.2665850442287505,
+          -0.016126654785655788
+        ],
+        "final_ball_xy_tool_m": [
+          0.30289717936926236,
+          -0.06005694610715889
+        ],
+        "final_ball_velocity_tool_m_s": [
+          0.0785615801998562,
+          -0.007567027948609428,
+          0.04604409167410461
+        ],
+        "max_ball_xy_speed_tool_m_s": 0.4087220632513001,
+        "max_ball_xy_displacement_tool_m": 0.07609357203686513,
+        "throughput": {
+          "setup_wall_s": 4.441339600016363,
+          "loop_wall_s": 146.46746170002734,
+          "episode_step_wall_s": 146.11496149969753,
+          "action_evaluation_wall_s": 0.004892500001005828,
+          "json_encoding_wall_s": 0.0590454998309724,
+          "trajectory_write_flush_wall_s": 0.009630000160541385,
+          "trajectory_bytes": 1970353,
+          "control_rows_per_s": 1.6385891939025472,
+          "physics_steps_per_s": 26.217427102440755,
+          "trajectory_bytes_per_row": 8209.804166666667,
+          "worker_elapsed_s_including_validation": 151.00831580004888
+        }
+      },
+      "feedback": {
+        "episode_id": "broad_train_72_right_feedback",
+        "sha256": "81d3f1019ae887b66476c895de06b4f85e580d6b7232ec1bd490f223ca38108a",
+        "transitions": 240,
+        "physics_steps": 3840,
+        "elapsed_s": 4.0,
+        "terminal_substeps": 16,
+        "terminated": false,
+        "truncated": true,
+        "success": true,
+        "termination_reason": null,
+        "requested_action_min": [
+          -0.12,
+          -0.12
+        ],
+        "requested_action_max": [
+          0.12,
+          0.12
+        ],
+        "requested_action_std": [
+          0.06914397601057266,
+          0.09459026138939156
+        ],
+        "nonzero_action_steps": 180,
+        "max_abs_tilt_rad": [
+          0.005491257866568839,
+          0.002247185825863144
+        ],
+        "ball_tool_position_min_m": [
+          0.2665850442287505,
+          -0.07870450541708164,
+          0.006783523274331821
+        ],
+        "ball_tool_position_max_m": [
+          0.31629432879947417,
+          -0.016126654785655788,
+          0.0337179160188541
+        ],
+        "max_ball_tool_displacement_m": 0.07611206847489665,
+        "motion_complete": true,
+        "departure_time_s": null,
+        "final_carrying": {
+          "carrying_candidate": true,
+          "within_bowl": true,
+          "reason": "above_near_bowl_face",
+          "surface_height_m": -0.14065336132760548,
+          "bottom_clearance_m": 4.412186675442978e-05,
+          "bowl_margin_m": 0.09149303332253336,
+          "nearest_support_clearance_m": -6.600152814909e-08
+        },
+        "final_surface_clearance_m": -6.600152814909e-08,
+        "initial_anchor_world_m": [
+          0.6500000638883222,
+          -8.016986310921403e-08,
+          0.3500001616133601
+        ],
+        "final_anchor_world_m": [
+          0.7300000251437346,
+          -3.0580885513990796e-08,
+          0.35000008590666987
+        ],
+        "anchor_displacement_world_m": [
+          0.07999996125541242,
+          4.958897759522324e-08,
+          -7.570669025014354e-08
+        ],
+        "final_anchor_reference_error_m": 9.459045344195071e-08,
+        "max_anchor_reference_error_m": 5.835826138382573e-07,
+        "max_tool_rotation_tracking_error_rad": 5.709696147577951e-07,
+        "initial_ball_xy_tool_m": [
+          0.2665850442287505,
+          -0.016126654785655788
+        ],
+        "final_ball_xy_tool_m": [
+          0.3026050390761921,
+          -0.05578891725272643
+        ],
+        "final_ball_velocity_tool_m_s": [
+          0.09222249013843496,
+          0.009439850750565137,
+          0.05114195294559715
+        ],
+        "max_ball_xy_speed_tool_m_s": 0.4087220632513001,
+        "max_ball_xy_displacement_tool_m": 0.07609357203686513,
+        "throughput": {
+          "setup_wall_s": 4.396951299975626,
+          "loop_wall_s": 146.3173135999823,
+          "episode_step_wall_s": 145.94261440029368,
+          "action_evaluation_wall_s": 0.02324250020319596,
+          "json_encoding_wall_s": 0.05999630008591339,
+          "trajectory_write_flush_wall_s": 0.011626499763224274,
+          "trajectory_bytes": 1999853,
+          "control_rows_per_s": 1.640270683592082,
+          "physics_steps_per_s": 26.24433093747331,
+          "trajectory_bytes_per_row": 8332.720833333333,
+          "worker_elapsed_s_including_validation": 150.78251219994854
+        }
+      }
+    }
+  },
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "main_model_replaced": false,
+  "actor_critic_trained": false,
+  "hardware_control": false
+}

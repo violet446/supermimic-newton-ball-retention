@@ -1,0 +1,121 @@
+{
+  "schema_version": "s1-physics-baseline-v1",
+  "seed": 20261111,
+  "physics": {
+    "dt_s": 0.0010416666666666667,
+    "control_hz": 60,
+    "iterations": 20,
+    "gravity_m_s2": 9.81,
+    "floor_z_m": -0.1
+  },
+  "ball": {
+    "radius_m": 0.02,
+    "mass_kg": 0.05,
+    "friction": 0.35,
+    "restitution": 0.0
+  },
+  "initial": {
+    "anchor_xy_tool_m": [
+      0.32,
+      0.0
+    ],
+    "anchor_world_m": [
+      0.65,
+      0,
+      0.35
+    ],
+    "gap_m": 0.0002,
+    "joint_q_rad": [
+      -0.4569243614078,
+      -0.27737759032578263,
+      -1.5804304982460915,
+      2.3616134494726726,
+      -1.9773412116347013,
+      3.0233161706469054
+    ],
+    "tool_rotation_world": [
+      [
+        0.8963132199416322,
+        0.042662087088564574,
+        0.44136442775002943
+      ],
+      [
+        0.0,
+        0.9953609477171986,
+        -0.09621114155605956
+      ],
+      [
+        -0.4434214831938832,
+        0.08623531808237192,
+        0.892155176052557
+      ]
+    ]
+  },
+  "reference": {
+    "start_s": 1.0,
+    "duration_s": 2.0,
+    "hold_end_s": 1.0,
+    "displacement_world_m": [
+      0.08,
+      0.0,
+      0.0
+    ]
+  },
+  "action": {
+    "dimension": 2,
+    "tilt_limit_deg": 5.0,
+    "tilt_rate_deg_s": 10.0,
+    "tilt_acceleration_deg_s2": 50.0
+  },
+  "robot": {
+    "joint_speed_rad_s": 0.5,
+    "joint_acceleration_rad_s2": 1.0
+  },
+  "budget": {
+    "wall_s": 1200,
+    "max_cases": 8,
+    "max_physics_steps": 7000,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_process_rss_gib": 2,
+    "max_gpu_used_gib": 3,
+    "max_output_cache_gib": 1,
+    "max_environment_gib": 2,
+    "max_process_commit_gib": 3,
+    "min_running_ram_gib": 0.75,
+    "critical_ram_gib": 0.25,
+    "low_ram_grace_s": 2,
+    "max_trace_steps": 3840
+  },
+  "admission": {
+    "max_initial_penetration_m": 0.0001,
+    "support_normal_min_z": 0.5,
+    "motion_position_tolerance_m": 0.005,
+    "motion_angle_tolerance_deg": 1.0,
+    "support_region_validated": false
+  },
+  "revision_reason": "Lower-basin initial state passed preregistered 2s static checks at 480/960/1920Hz; select 960Hz for next physical checks, not general dynamics convergence.",
+  "diagnostic": {
+    "ball_center_world_m": [
+      0.6097384691238403,
+      -0.030553923919796944,
+      0.34594991464614866
+    ]
+  },
+  "candidate_provenance": {
+    "source_trace": "runs/s1_contact_20261111/static4s/trace.jsonl",
+    "source_time_s": 4,
+    "offset_world_z_m": 0.0002,
+    "initial_velocity": "zero",
+    "verified_only": "static nonpenetration",
+    "clearance_m": 6.706018253546664e-05,
+    "dynamics_validated": "fixed-tool, zero initial velocity, 2 seconds only"
+  },
+  "validation": {
+    "evidence": "runs/s1_basin_20261112/summary.json",
+    "control_substeps": 16,
+    "general_contact_convergence": false,
+    "full_s1_complete": false
+  }
+}

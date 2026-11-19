@@ -1,0 +1,30 @@
+{
+  "hardware": {
+    "passed": false,
+    "checks": {
+      "ram": false,
+      "gpu_free": true,
+      "gpu_used": true,
+      "disk": true
+    }
+  },
+  "sample": {
+    "available_ram_bytes": 1167843328,
+    "total_ram_bytes": 16779862016,
+    "gpu_total_bytes": 8585740288,
+    "gpu_used_bytes": 429916160,
+    "disk_free_bytes": 37814542336
+  },
+  "storage": {
+    "passed": true,
+    "total_bytes": 616945940,
+    "limit_bytes": 1073741824,
+    "output_bytes": 1629945,
+    "cache_bytes": 615315995,
+    "temp_bytes": 0
+  },
+  "environment_bytes": 597306385,
+  "original_run_elapsed_s_upper_bound": 339.3599459932302,
+  "completed_physics_steps": 2048,
+  "remaining_physics_steps": 2048
+}

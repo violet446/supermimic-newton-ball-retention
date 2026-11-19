@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "phase": "world_increment_fit",
+  "plan_sha256": "7161bae80776770e768ce0f8510cac606c829578bc363cddd70ab499aa7455b0",
+  "updates": 900,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_pairs": 49,
+  "sampler_sha256": "e06e22a6d9979c90b66fc9da48cacefbab4f23ed45892c0cd0e003fb09945f5c",
+  "replacement_gate_passed": false,
+  "main_model_replaced": false,
+  "checkpoint_selection": false,
+  "resources": {
+    "stage": "complete",
+    "update": 900,
+    "wall_s": 31.711223399965093,
+    "available_ram_bytes": 2868232192,
+    "min_available_ram_bytes": 2843258880,
+    "rss_bytes": 117493760,
+    "peak_rss_bytes": 140144640,
+    "private_commit_bytes": 126287872,
+    "peak_private_commit_bytes": 147406848,
+    "output_bytes_before_record": 966184
+  },
+  "artifacts_sha256": {
+    "comparison.json": "8f7e9efc9dc8bcd36b12616e90cbb680ff4cac6a38c9e39b5fa6d82bcd4ab528",
+    "execution_plan.json": "01c0244c538832fd6f43b7e0d815017f82da8596c783ee0bd1136f45235956d5",
+    "fit_preflight.json": "601bdb9568b350e3d258f76d0242c2da12c179f355c4c014cef4bcd04c4d1740",
+    "timed_rollouts.json": "19d47c45452708c3b4e76ccf0a9dea898adf360fb57f975dd379e658f3e0454e",
+    "training.jsonl": "c6ad04eb7622079320da1e595ca40b5de83ad4726273c8415727bbef6e0da82c",
+    "world_increment_900.npz": "df2bb23da4c42aa5728283806e9e765129b1e43c7c08320e51ae4bbb640f6255",
+    "resources.jsonl": "28c72d15284e9c4c3992ee2cfb221a87cf77ad30f3012b6027f443177261903c"
+  }
+}

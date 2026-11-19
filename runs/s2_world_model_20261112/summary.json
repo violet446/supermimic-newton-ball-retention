@@ -1,0 +1,889 @@
+{
+  "status": "completed",
+  "updates": 1600,
+  "best_update": 1520,
+  "validation_score_before_training": 0.39210450936451285,
+  "best_validation_score": 0.17447774272388059,
+  "checkpoint": "world_model.npz",
+  "checkpoint_sha256": "d603d95941ca397c9ca3014247cb2875304478f9cfe245f44aae6f0f2d5c887d",
+  "checkpoint_reload_exact": true,
+  "known_features": [
+    "midpoint_time_s",
+    "midpoint_reference_phase",
+    "roll_request",
+    "pitch_request",
+    "midpoint_roll_rad",
+    "midpoint_pitch_rad",
+    "midpoint_roll_rate_rad_s",
+    "midpoint_pitch_rate_rad_s",
+    "midpoint_gravity_tool_x_m_s2",
+    "midpoint_gravity_tool_y_m_s2",
+    "midpoint_gravity_tool_z_m_s2",
+    "midpoint_tool_omega_x_rad_s",
+    "midpoint_tool_omega_y_rad_s",
+    "midpoint_tool_omega_z_rad_s",
+    "midpoint_tool_alpha_x_rad_s2",
+    "midpoint_tool_alpha_y_rad_s2",
+    "midpoint_tool_alpha_z_rad_s2",
+    "midpoint_anchor_accel_tool_x_m_s2",
+    "midpoint_anchor_accel_tool_y_m_s2",
+    "midpoint_anchor_accel_tool_z_m_s2"
+  ],
+  "horizon_selection": "equal mean of weighted final-state normalized MSE at 1/4/8 steps",
+  "data": {
+    "window_counts": {
+      "train": {
+        "1": 968,
+        "4": 953,
+        "8": 933
+      },
+      "validation": {
+        "1": 249,
+        "4": 243,
+        "8": 235
+      }
+    },
+    "ending_counts": {
+      "train": {
+        "rows": 969,
+        "positive": 1,
+        "shortened": 1
+      },
+      "validation": {
+        "rows": 250,
+        "positive": 1,
+        "shortened": 1
+      }
+    },
+    "normalization_source": "complete train 1-step windows, initial/target state and midpoint features",
+    "state_names": [
+      "position_x_m",
+      "position_y_m",
+      "position_z_m",
+      "relative_velocity_x_m_s",
+      "relative_velocity_y_m_s",
+      "relative_velocity_z_m_s",
+      "ball_omega_x_rad_s",
+      "ball_omega_y_rad_s",
+      "ball_omega_z_rad_s"
+    ],
+    "state_scale_floor": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.001,
+      0.001,
+      0.001,
+      0.01,
+      0.01,
+      0.01
+    ],
+    "known_scale_floor": [
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001
+    ],
+    "tool_prediction_equivalence": {
+      "max_endpoint_tilt_error_rad": 8.673617379884035e-19,
+      "max_endpoint_tilt_rate_error_rad_s": 1.0408340855860843e-17,
+      "max_endpoint_tool_rotation_error_rad": 5.594283097625284e-07,
+      "full_steps_checked": 1217
+    }
+  },
+  "predictions": {
+    "train": {
+      "1": {
+        "by_lead": {
+          "1": {
+            "windows": 968,
+            "model": {
+              "position_rmse_mm": 0.13355107425631765,
+              "relative_velocity_rmse_m_s": 0.017116937378599522,
+              "angular_velocity_rmse_rad_s": 0.30577253101354085
+            },
+            "persistence": {
+              "position_rmse_mm": 1.0716792056338416,
+              "relative_velocity_rmse_m_s": 0.02260055585582154,
+              "angular_velocity_rmse_rad_s": 0.4111322653925457
+            },
+            "constant_relative_velocity": {
+              "position_rmse_mm": 0.15913697808110996,
+              "relative_velocity_rmse_m_s": 0.02260055585582154,
+              "angular_velocity_rmse_rad_s": 0.4111322653925457
+            }
+          }
+        },
+        "by_episode": {
+          "train_zero": {
+            "1": {
+              "windows": 240,
+              "model": {
+                "position_rmse_mm": 0.032310920911452636,
+                "relative_velocity_rmse_m_s": 0.0013504699039127304,
+                "angular_velocity_rmse_rad_s": 0.040457954852850926
+              },
+              "persistence": {
+                "position_rmse_mm": 0.015009881635764586,
+                "relative_velocity_rmse_m_s": 0.0006248549540359785,
+                "angular_velocity_rmse_rad_s": 0.03031618009544575
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.014233887228092792,
+                "relative_velocity_rmse_m_s": 0.0006248549540359785,
+                "angular_velocity_rmse_rad_s": 0.03031618009544575
+              }
+            }
+          },
+          "train_roll": {
+            "1": {
+              "windows": 240,
+              "model": {
+                "position_rmse_mm": 0.063616789187494,
+                "relative_velocity_rmse_m_s": 0.0029595454927331803,
+                "angular_velocity_rmse_rad_s": 0.12858726292879183
+              },
+              "persistence": {
+                "position_rmse_mm": 0.7051662459956328,
+                "relative_velocity_rmse_m_s": 0.0055930151105353055,
+                "angular_velocity_rmse_rad_s": 0.2731264008974034
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.0521051946067992,
+                "relative_velocity_rmse_m_s": 0.0055930151105353055,
+                "angular_velocity_rmse_rad_s": 0.2731264008974034
+              }
+            }
+          },
+          "train_pitch": {
+            "1": {
+              "windows": 240,
+              "model": {
+                "position_rmse_mm": 0.1505360134445685,
+                "relative_velocity_rmse_m_s": 0.02246484869060506,
+                "angular_velocity_rmse_rad_s": 0.202548316394297
+              },
+              "persistence": {
+                "position_rmse_mm": 0.8112900980020731,
+                "relative_velocity_rmse_m_s": 0.026522148748040684,
+                "angular_velocity_rmse_rad_s": 0.28976161884909485
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.1521851810005884,
+                "relative_velocity_rmse_m_s": 0.026522148748040684,
+                "angular_velocity_rmse_rad_s": 0.28976161884909485
+              }
+            }
+          },
+          "train_combined": {
+            "1": {
+              "windows": 240,
+              "model": {
+                "position_rmse_mm": 0.15002374610306288,
+                "relative_velocity_rmse_m_s": 0.022555330711648496,
+                "angular_velocity_rmse_rad_s": 0.22552134005938934
+              },
+              "persistence": {
+                "position_rmse_mm": 0.8908421832597619,
+                "relative_velocity_rmse_m_s": 0.02678922842642768,
+                "angular_velocity_rmse_rad_s": 0.3440430067323016
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.1559613882236983,
+                "relative_velocity_rmse_m_s": 0.02678922842642768,
+                "angular_velocity_rmse_rad_s": 0.3440430067323016
+              }
+            }
+          },
+          "train_edge": {
+            "1": {
+              "windows": 8,
+              "model": {
+                "position_rmse_mm": 0.8064511176627132,
+                "relative_velocity_rmse_m_s": 0.06878868737891597,
+                "angular_velocity_rmse_rad_s": 2.8304418311584203
+              },
+              "persistence": {
+                "position_rmse_mm": 8.97160912018909,
+                "relative_velocity_rmse_m_s": 0.1349896968473591,
+                "angular_velocity_rmse_rad_s": 3.480986047199503
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 1.2458807123568953,
+                "relative_velocity_rmse_m_s": 0.1349896968473591,
+                "angular_velocity_rmse_rad_s": 3.480986047199503
+              }
+            }
+          }
+        }
+      },
+      "4": {
+        "by_lead": {
+          "4": {
+            "windows": 953,
+            "model": {
+              "position_rmse_mm": 0.7664059331217803,
+              "relative_velocity_rmse_m_s": 0.013999414659494948,
+              "angular_velocity_rmse_rad_s": 0.5940675329625136
+            },
+            "persistence": {
+              "position_rmse_mm": 3.439166565727913,
+              "relative_velocity_rmse_m_s": 0.045760775657074905,
+              "angular_velocity_rmse_rad_s": 1.1481377037780298
+            },
+            "constant_relative_velocity": {
+              "position_rmse_mm": 1.6476847562568784,
+              "relative_velocity_rmse_m_s": 0.045760775657074905,
+              "angular_velocity_rmse_rad_s": 1.1481377037780298
+            }
+          }
+        },
+        "by_episode": {
+          "train_zero": {
+            "4": {
+              "windows": 237,
+              "model": {
+                "position_rmse_mm": 0.13668131450714457,
+                "relative_velocity_rmse_m_s": 0.0024080814760009165,
+                "angular_velocity_rmse_rad_s": 0.08001958544472548
+              },
+              "persistence": {
+                "position_rmse_mm": 0.016232759581359873,
+                "relative_velocity_rmse_m_s": 0.0005705394134407346,
+                "angular_velocity_rmse_rad_s": 0.02710623791475727
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.04117388658314553,
+                "relative_velocity_rmse_m_s": 0.0005705394134407346,
+                "angular_velocity_rmse_rad_s": 0.02710623791475727
+              }
+            }
+          },
+          "train_roll": {
+            "4": {
+              "windows": 237,
+              "model": {
+                "position_rmse_mm": 0.3555501608918264,
+                "relative_velocity_rmse_m_s": 0.006377740172762854,
+                "angular_velocity_rmse_rad_s": 0.3110765877613732
+              },
+              "persistence": {
+                "position_rmse_mm": 2.7939347971902144,
+                "relative_velocity_rmse_m_s": 0.020332371160218538,
+                "angular_velocity_rmse_rad_s": 1.013909687042216
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.7038084380941346,
+                "relative_velocity_rmse_m_s": 0.020332371160218538,
+                "angular_velocity_rmse_rad_s": 1.013909687042216
+              }
+            }
+          },
+          "train_pitch": {
+            "4": {
+              "windows": 237,
+              "model": {
+                "position_rmse_mm": 0.7724872191214665,
+                "relative_velocity_rmse_m_s": 0.00852923260248553,
+                "angular_velocity_rmse_rad_s": 0.46457199999552345
+              },
+              "persistence": {
+                "position_rmse_mm": 2.9269297662812566,
+                "relative_velocity_rmse_m_s": 0.031428948693667816,
+                "angular_velocity_rmse_rad_s": 1.0265345167152389
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 1.4896230975089784,
+                "relative_velocity_rmse_m_s": 0.031428948693667816,
+                "angular_velocity_rmse_rad_s": 1.0265345167152389
+              }
+            }
+          },
+          "train_combined": {
+            "4": {
+              "windows": 237,
+              "model": {
+                "position_rmse_mm": 0.799837755361176,
+                "relative_velocity_rmse_m_s": 0.010352332299080478,
+                "angular_velocity_rmse_rad_s": 0.5480358888725437
+              },
+              "persistence": {
+                "position_rmse_mm": 3.2655780470298224,
+                "relative_velocity_rmse_m_s": 0.034471673059949616,
+                "angular_velocity_rmse_rad_s": 1.2452539906756168
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 1.5679099776629288,
+                "relative_velocity_rmse_m_s": 0.034471673059949616,
+                "angular_velocity_rmse_rad_s": 1.2452539906756168
+              }
+            }
+          },
+          "train_edge": {
+            "4": {
+              "windows": 5,
+              "model": {
+                "position_rmse_mm": 6.8167161704460915,
+                "relative_velocity_rmse_m_s": 0.1631669302373759,
+                "angular_velocity_rmse_rad_s": 6.157029413940138
+              },
+              "persistence": {
+                "position_rmse_mm": 31.190152210316445,
+                "relative_velocity_rmse_m_s": 0.5257079624124541,
+                "angular_velocity_rmse_rad_s": 8.890451064450184
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 16.498139365899636,
+                "relative_velocity_rmse_m_s": 0.5257079624124541,
+                "angular_velocity_rmse_rad_s": 8.890451064450184
+              }
+            }
+          }
+        }
+      },
+      "8": {
+        "by_lead": {
+          "8": {
+            "windows": 933,
+            "model": {
+              "position_rmse_mm": 1.025606324112527,
+              "relative_velocity_rmse_m_s": 0.00898534327650164,
+              "angular_velocity_rmse_rad_s": 0.46836644631179164
+            },
+            "persistence": {
+              "position_rmse_mm": 5.305123142087906,
+              "relative_velocity_rmse_m_s": 0.049139526364843436,
+              "angular_velocity_rmse_rad_s": 1.813678955561924
+            },
+            "constant_relative_velocity": {
+              "position_rmse_mm": 3.4831465934754484,
+              "relative_velocity_rmse_m_s": 0.049139526364843436,
+              "angular_velocity_rmse_rad_s": 1.813678955561924
+            }
+          }
+        },
+        "by_episode": {
+          "train_zero": {
+            "8": {
+              "windows": 233,
+              "model": {
+                "position_rmse_mm": 0.2820335053864706,
+                "relative_velocity_rmse_m_s": 0.0030355268501464153,
+                "angular_velocity_rmse_rad_s": 0.13492132486520117
+              },
+              "persistence": {
+                "position_rmse_mm": 0.017180532433174987,
+                "relative_velocity_rmse_m_s": 0.000718096205996654,
+                "angular_velocity_rmse_rad_s": 0.035148107301761496
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.07341627162133738,
+                "relative_velocity_rmse_m_s": 0.000718096205996654,
+                "angular_velocity_rmse_rad_s": 0.035148107301761496
+              }
+            }
+          },
+          "train_roll": {
+            "8": {
+              "windows": 233,
+              "model": {
+                "position_rmse_mm": 0.7515541002014026,
+                "relative_velocity_rmse_m_s": 0.007285479327211412,
+                "angular_velocity_rmse_rad_s": 0.37236220026710876
+              },
+              "persistence": {
+                "position_rmse_mm": 5.440401756844273,
+                "relative_velocity_rmse_m_s": 0.03759276869159489,
+                "angular_velocity_rmse_rad_s": 1.8780927287610263
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 2.60756057367595,
+                "relative_velocity_rmse_m_s": 0.03759276869159489,
+                "angular_velocity_rmse_rad_s": 1.8780927287610263
+              }
+            }
+          },
+          "train_pitch": {
+            "8": {
+              "windows": 233,
+              "model": {
+                "position_rmse_mm": 1.0743301089104171,
+                "relative_velocity_rmse_m_s": 0.009999730838748689,
+                "angular_velocity_rmse_rad_s": 0.5081898364987039
+              },
+              "persistence": {
+                "position_rmse_mm": 5.501289095384678,
+                "relative_velocity_rmse_m_s": 0.04391143993170039,
+                "angular_velocity_rmse_rad_s": 1.8387816130919048
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 3.7867420910884935,
+                "relative_velocity_rmse_m_s": 0.04391143993170039,
+                "angular_velocity_rmse_rad_s": 1.8387816130919048
+              }
+            }
+          },
+          "train_combined": {
+            "8": {
+              "windows": 233,
+              "model": {
+                "position_rmse_mm": 1.2033100975888475,
+                "relative_velocity_rmse_m_s": 0.0114599443080367,
+                "angular_velocity_rmse_rad_s": 0.5828345224689051
+              },
+              "persistence": {
+                "position_rmse_mm": 6.1349404072382,
+                "relative_velocity_rmse_m_s": 0.05084052867813205,
+                "angular_velocity_rmse_rad_s": 2.240792249164742
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 4.195874483119225,
+                "relative_velocity_rmse_m_s": 0.05084052867813205,
+                "angular_velocity_rmse_rad_s": 2.240792249164742
+              }
+            }
+          },
+          "train_edge": {
+            "8": {
+              "windows": 1,
+              "model": {
+                "position_rmse_mm": 14.99849094608965,
+                "relative_velocity_rmse_m_s": 0.08315143401479057,
+                "angular_velocity_rmse_rad_s": 5.366443512089075
+              },
+              "persistence": {
+                "position_rmse_mm": 59.50777144614489,
+                "relative_velocity_rmse_m_s": 0.9338019906717128,
+                "angular_velocity_rmse_rad_s": 17.005237492700267
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 47.862328474657104,
+                "relative_velocity_rmse_m_s": 0.9338019906717128,
+                "angular_velocity_rmse_rad_s": 17.005237492700267
+              }
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "1": {
+        "by_lead": {
+          "1": {
+            "windows": 249,
+            "model": {
+              "position_rmse_mm": 0.21743348685646424,
+              "relative_velocity_rmse_m_s": 0.02065617167054326,
+              "angular_velocity_rmse_rad_s": 0.6255511823818504
+            },
+            "persistence": {
+              "position_rmse_mm": 1.8209199961861948,
+              "relative_velocity_rmse_m_s": 0.02954632169699938,
+              "angular_velocity_rmse_rad_s": 0.6503516396696598
+            },
+            "constant_relative_velocity": {
+              "position_rmse_mm": 0.2524928167226368,
+              "relative_velocity_rmse_m_s": 0.02954632169699938,
+              "angular_velocity_rmse_rad_s": 0.6503516396696598
+            }
+          }
+        },
+        "by_episode": {
+          "validation_lateral": {
+            "1": {
+              "windows": 240,
+              "model": {
+                "position_rmse_mm": 0.15814483058664403,
+                "relative_velocity_rmse_m_s": 0.015819898344020117,
+                "angular_velocity_rmse_rad_s": 0.36502156141915215
+              },
+              "persistence": {
+                "position_rmse_mm": 0.46267682565337287,
+                "relative_velocity_rmse_m_s": 0.015498532891253167,
+                "angular_velocity_rmse_rad_s": 0.20586893107295545
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.10038119873841023,
+                "relative_velocity_rmse_m_s": 0.015498532891253167,
+                "angular_velocity_rmse_rad_s": 0.20586893107295545
+              }
+            }
+          },
+          "validation_edge": {
+            "1": {
+              "windows": 9,
+              "model": {
+                "position_rmse_mm": 0.8006736049190559,
+                "relative_velocity_rmse_m_s": 0.07163028186848247,
+                "angular_velocity_rmse_rad_s": 2.6969010712058883
+              },
+              "persistence": {
+                "position_rmse_mm": 9.275085478467862,
+                "relative_velocity_rmse_m_s": 0.13321837173199663,
+                "angular_velocity_rmse_rad_s": 3.2514043550879435
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 1.2227505690585823,
+                "relative_velocity_rmse_m_s": 0.13321837173199663,
+                "angular_velocity_rmse_rad_s": 3.2514043550879435
+              }
+            }
+          }
+        }
+      },
+      "4": {
+        "by_lead": {
+          "4": {
+            "windows": 243,
+            "model": {
+              "position_rmse_mm": 1.6446517220073757,
+              "relative_velocity_rmse_m_s": 0.03900505861331344,
+              "angular_velocity_rmse_rad_s": 1.4396773858060425
+            },
+            "persistence": {
+              "position_rmse_mm": 5.299046187314616,
+              "relative_velocity_rmse_m_s": 0.08282234090856139,
+              "angular_velocity_rmse_rad_s": 1.3784036657196703
+            },
+            "constant_relative_velocity": {
+              "position_rmse_mm": 2.67542796045562,
+              "relative_velocity_rmse_m_s": 0.08282234090856139,
+              "angular_velocity_rmse_rad_s": 1.3784036657196703
+            }
+          }
+        },
+        "by_episode": {
+          "validation_lateral": {
+            "4": {
+              "windows": 237,
+              "model": {
+                "position_rmse_mm": 1.1762708546457283,
+                "relative_velocity_rmse_m_s": 0.027271154354068697,
+                "angular_velocity_rmse_rad_s": 1.1520205011733
+              },
+              "persistence": {
+                "position_rmse_mm": 1.649902575386153,
+                "relative_velocity_rmse_m_s": 0.016974675744046822,
+                "angular_velocity_rmse_rad_s": 0.6636604200576471
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 0.7591073505700067,
+                "relative_velocity_rmse_m_s": 0.016974675744046822,
+                "angular_velocity_rmse_rad_s": 0.6636604200576471
+              }
+            }
+          },
+          "validation_edge": {
+            "4": {
+              "windows": 6,
+              "model": {
+                "position_rmse_mm": 7.409108767834954,
+                "relative_velocity_rmse_m_s": 0.17955418328069886,
+                "angular_velocity_rmse_rad_s": 5.614329942947067
+              },
+              "persistence": {
+                "position_rmse_mm": 32.089087147858976,
+                "relative_velocity_rmse_m_s": 0.5161684428202019,
+                "angular_velocity_rmse_rad_s": 7.717012466631341
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 16.344231748435615,
+                "relative_velocity_rmse_m_s": 0.5161684428202019,
+                "angular_velocity_rmse_rad_s": 7.717012466631341
+              }
+            }
+          }
+        }
+      },
+      "8": {
+        "by_lead": {
+          "8": {
+            "windows": 235,
+            "model": {
+              "position_rmse_mm": 3.672298172271706,
+              "relative_velocity_rmse_m_s": 0.04456641145724239,
+              "angular_velocity_rmse_rad_s": 2.0960381976609743
+            },
+            "persistence": {
+              "position_rmse_mm": 6.2516350806867385,
+              "relative_velocity_rmse_m_s": 0.09029999084289973,
+              "angular_velocity_rmse_rad_s": 1.6472830772163183
+            },
+            "constant_relative_velocity": {
+              "position_rmse_mm": 4.971530738629041,
+              "relative_velocity_rmse_m_s": 0.09029999084289973,
+              "angular_velocity_rmse_rad_s": 1.6472830772163183
+            }
+          }
+        },
+        "by_episode": {
+          "validation_lateral": {
+            "8": {
+              "windows": 233,
+              "model": {
+                "position_rmse_mm": 3.4152501632097465,
+                "relative_velocity_rmse_m_s": 0.04314440676969338,
+                "angular_velocity_rmse_rad_s": 2.06717763765169
+              },
+              "persistence": {
+                "position_rmse_mm": 3.073696671626082,
+                "relative_velocity_rmse_m_s": 0.024900146746223692,
+                "angular_velocity_rmse_rad_s": 1.127698479447572
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 2.0525424971128423,
+                "relative_velocity_rmse_m_s": 0.024900146746223692,
+                "angular_velocity_rmse_rad_s": 1.127698479447572
+              }
+            }
+          },
+          "validation_edge": {
+            "8": {
+              "windows": 2,
+              "model": {
+                "position_rmse_mm": 15.0243188150844,
+                "relative_velocity_rmse_m_s": 0.12851712029506218,
+                "angular_velocity_rmse_rad_s": 4.288492787458986
+              },
+              "persistence": {
+                "position_rmse_mm": 59.08975275541299,
+                "relative_velocity_rmse_m_s": 0.9412084595357656,
+                "angular_velocity_rmse_rad_s": 13.064747635637618
+              },
+              "constant_relative_velocity": {
+                "position_rmse_mm": 49.12573077998189,
+                "relative_velocity_rmse_m_s": 0.9412084595357656,
+                "angular_velocity_rmse_rad_s": 13.064747635637618
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ending_probe": {
+    "input": "current outside timer / 0.05s",
+    "coefficients": [
+      -7.000083271764754,
+      6.675086787729537
+    ],
+    "training_prior": 0.0010319917440660474,
+    "scope": "one training and one validation event",
+    "train": {
+      "transitions": 969,
+      "positive_count": 1,
+      "negative_count": 968,
+      "model": {
+        "log_loss": 0.0032397654032317053,
+        "brier": 0.0008258981294947686,
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 968,
+        "false_negative": 1
+      },
+      "prior": {
+        "log_loss": 0.00812770736679667,
+        "brier": 0.001030926737106227,
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 968,
+        "false_negative": 1
+      },
+      "threshold": 0.5,
+      "prior_probability": 0.0010319917440660474,
+      "by_episode": {
+        "train_zero": {
+          "transitions": 240,
+          "positive_count": 0,
+          "negative_count": 240,
+          "model": {
+            "log_loss": 0.0009113905920892037,
+            "brier": 8.298761827332172e-07,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          },
+          "prior": {
+            "log_loss": 0.001032524614189264,
+            "brier": 1.0650069598204824e-06,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          }
+        },
+        "train_roll": {
+          "transitions": 240,
+          "positive_count": 0,
+          "negative_count": 240,
+          "model": {
+            "log_loss": 0.0009113905920892037,
+            "brier": 8.298761827332172e-07,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          },
+          "prior": {
+            "log_loss": 0.001032524614189264,
+            "brier": 1.0650069598204824e-06,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          }
+        },
+        "train_pitch": {
+          "transitions": 240,
+          "positive_count": 0,
+          "negative_count": 240,
+          "model": {
+            "log_loss": 0.0009113905920892037,
+            "brier": 8.298761827332172e-07,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          },
+          "prior": {
+            "log_loss": 0.001032524614189264,
+            "brier": 1.0650069598204824e-06,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          }
+        },
+        "train_combined": {
+          "transitions": 240,
+          "positive_count": 0,
+          "negative_count": 240,
+          "model": {
+            "log_loss": 0.0009113905920892037,
+            "brier": 8.298761827332172e-07,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          },
+          "prior": {
+            "log_loss": 0.001032524614189264,
+            "brier": 1.0650069598204824e-06,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          }
+        },
+        "train_edge": {
+          "transitions": 9,
+          "positive_count": 1,
+          "negative_count": 8,
+          "model": {
+            "log_loss": 0.2515997452584319,
+            "brier": 0.08883317848277855,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 8,
+            "false_negative": 1
+          },
+          "prior": {
+            "log_loss": 0.7649472009782534,
+            "brier": 0.11088284461938958,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 8,
+            "false_negative": 1
+          }
+        }
+      },
+      "scope": "Descriptive transition metrics. Report positive counts and compare by episode; rare events and within-episode dependence limit interpretation."
+    },
+    "validation": {
+      "transitions": 250,
+      "positive_count": 1,
+      "negative_count": 249,
+      "model": {
+        "log_loss": 0.006382742176612367,
+        "brier": 0.0021676166564222545,
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 249,
+        "false_negative": 1
+      },
+      "prior": {
+        "log_loss": 0.028533452963295573,
+        "brier": 0.003992809073007292,
+        "true_positive": 0,
+        "false_positive": 0,
+        "true_negative": 249,
+        "false_negative": 1
+      },
+      "threshold": 0.5,
+      "prior_probability": 0.0010319917440660474,
+      "by_episode": {
+        "validation_lateral": {
+          "transitions": 240,
+          "positive_count": 0,
+          "negative_count": 240,
+          "model": {
+            "log_loss": 0.0009113905920892037,
+            "brier": 8.298761827332172e-07,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          },
+          "prior": {
+            "log_loss": 0.001032524614189264,
+            "brier": 1.0650069598204824e-06,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 240,
+            "false_negative": 0
+          }
+        },
+        "validation_edge": {
+          "transitions": 10,
+          "positive_count": 1,
+          "negative_count": 9,
+          "model": {
+            "log_loss": 0.1376951802051683,
+            "brier": 0.054170499382170764,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 9,
+            "false_negative": 1
+          },
+          "prior": {
+            "log_loss": 0.688555733341847,
+            "brier": 0.0997946666581466,
+            "true_positive": 0,
+            "false_positive": 0,
+            "true_negative": 9,
+            "false_negative": 1
+          }
+        }
+      },
+      "scope": "Descriptive transition metrics. Report positive counts and compare by episode; rare events and within-episode dependence limit interpretation."
+    }
+  },
+  "wall_s": 5.064635599992471
+}

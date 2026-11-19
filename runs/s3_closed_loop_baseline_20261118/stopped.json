@@ -1,0 +1,130 @@
+{
+  "status": "stopped",
+  "reason": "system_available_ram_floor",
+  "worker_starts": 2,
+  "completed_cases": [
+    "broad_train_72_center_nominal"
+  ],
+  "completed_physics_steps": 3840,
+  "active_case": "broad_train_72_center_feedback",
+  "active_last_checkpoint": {
+    "status": "starting",
+    "physics_steps": 160,
+    "worker_pid": 225884,
+    "case": {
+      "group": "broad_train_72_center",
+      "arm": "feedback",
+      "source_config": "runs/s3_broad_training_20261118/broad_train_72_center_config.json",
+      "sha256": "c0fecd0b28e663f814d8271eb10c8df7f51111194328d1f29425600e905a2c68"
+    },
+    "stage": "control_tick_010",
+    "wall_s": 12.14475770003628,
+    "episode_id": "broad_train_72_center_feedback",
+    "control_rows": 10,
+    "trajectory_file": "transitions.jsonl",
+    "physics_versions": {
+      "newton": "1.6.0",
+      "warp-lang": "1.17.0"
+    },
+    "physics_device": {
+      "alias": "cuda:0",
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "architecture": "sm_89"
+    },
+    "backend_options": {
+      "collision_pipeline_deterministic": true,
+      "xpbd_deterministic_mode": "RUN_TO_RUN",
+      "warp_process_default_mode": "NOT_GUARANTEED"
+    },
+    "verified_solver_builds": 2,
+    "warp_kernel_cache_dir": "\\\\?\\C:\\newton\\New\\Supermimic\\tasks\\ball_retention\\.cache\\warp\\1.17.0",
+    "initial_state": {
+      "time_s": 0.0,
+      "ball": {
+        "position": [
+          0.6037384867668152,
+          -0.030553923919796944,
+          0.3629499077796936
+        ],
+        "quaternion_xyzw": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "linear_velocity_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "tool": {
+        "position": [
+          0.3506008982658386,
+          0.0027420090045779943,
+          0.4664685130119324
+        ],
+        "quaternion_xyzw": [
+          0.046896402256928225,
+          0.22742720714042877,
+          -0.010966045139837479,
+          0.9726033820430875
+        ],
+        "linear_velocity_origin": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "joint_q": [
+        -0.4569243614078,
+        -0.27737759032578263,
+        -1.5804304982460915,
+        2.3616134494726726,
+        -1.9773412116347013,
+        3.0233161706469054
+      ],
+      "joint_qd": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "tilt_rad": [
+        0.0,
+        0.0
+      ],
+      "tilt_rate_rad_s": [
+        0.0,
+        0.0
+      ],
+      "previous_action": [
+        0.0,
+        0.0
+      ],
+      "reference_phase": 0.0,
+      "departure_outside_s": 0
+    },
+    "initial_surface_clearance_m": 0.005623365919357592,
+    "setup_wall_s": 5.456314700015355,
+    "physical_time_s": 0.16666666666666666
+  },
+  "wall_s": 195.1403615999734,
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "main_model_replaced": false,
+  "actor_critic_trained": false,
+  "hardware_control": false
+}

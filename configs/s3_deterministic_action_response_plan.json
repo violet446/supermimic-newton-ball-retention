@@ -1,0 +1,81 @@
+{
+  "schema": "s3-deterministic-action-response-plan-v1",
+  "scope": "One development validation snapshot. Compare fixed model responses to deterministic Newton responses for signed action sequences. The current stage freezes and checks this plan offline.",
+  "case": {"episode": "validation_lateral", "group": "negative_y_basin", "seed": 536873541, "tick": 168},
+  "checkpoint_source": "configs/s3_deterministic_archive_import_plan.json",
+  "nominal_validation": "runs/s3_deterministic_archive_import_20261115_resume/validation.json",
+  "nominal_replays": [
+    "runs/s3_deterministic_archive_import_20261115_resume/worker/native_replay_1.json",
+    "runs/s3_deterministic_archive_import_20261115_resume/worker/native_replay_2.json"
+  ],
+  "runtime": {"newton": "1.6.0", "warp": "1.17.0", "device": "cuda:0", "cuda_arch": 89, "collision_pipeline_deterministic": true, "xpbd_deterministic_mode": "RUN_TO_RUN"},
+  "initialization": "Restore the same saved native snapshot independently for every branch. Replay the nominal branches and compare with both saved same-configuration references before any perturbation.",
+  "horizon": 32,
+  "control_substeps": 16,
+  "leads": [8, 16, 32],
+  "primary_lead": 32,
+  "amplitude": 0.2,
+  "sequence_rule": "Add sign * amplitude * direction to the frozen nominal actions. Segments use zero-based half-open control-lead indices, outside segments the offset is zero. Axis order is roll then pitch.",
+  "directions": {
+    "pitch_pulse": [{"start": 0, "stop": 8, "axes": [0.0, 1.0]}],
+    "pitch_reversal": [{"start": 0, "stop": 8, "axes": [0.0, 1.0]}, {"start": 8, "stop": 16, "axes": [0.0, -1.0]}],
+    "dual_axis_pulse": [{"start": 0, "stop": 8, "axes": [0.7071067811865476, 0.7071067811865476]}]
+  },
+  "branch_order": ["nominal_1", "nominal_2", "pitch_pulse_plus", "pitch_pulse_minus", "pitch_reversal_plus", "pitch_reversal_minus", "dual_axis_pulse_plus", "dual_axis_pulse_minus"],
+  "model": {
+    "id": "old_900",
+    "checkpoint": "runs/s3_physical_scales_20261113/full_training.npz",
+    "selection": "Use the existing comparison baseline. Later expanded or surface candidates did not clear the replacement gates.",
+    "fd_step": 0.0001,
+    "fd_rtol": 0.00002,
+    "fd_atol_si": 3e-8
+  },
+  "gates": {
+    "nominal": "Require identical control, timing and retention classification versus both saved replays. Use archive-import numerical ceilings and require H8/H16/H32 position half spread <= 1 um over all combinations of new and saved native branches.",
+    "causality": "Check exact common first eight control commands for pulse and reversal at each sign. In physics compare their shared first-eight-step trajectories within the nominal numerical and position-resolution ceilings. The model rolls its own prior predictions and uses only causal analytic tool inputs.",
+    "position_floor_m": 1e-6,
+    "velocity_floor_m_s": 1e-5,
+    "spin_floor_rad_s": 1e-4,
+    "noise_multiplier": 5.0,
+    "strong_multiplier": 10.0,
+    "min_cosine": 0.8,
+    "max_relative_error": 0.5,
+    "comparison": "For each direction, lead and vector family use the larger of the SI floor, 5x each lead's same-session nominal half spread and a float roundoff floor. A Newton half-distance below the floor is unresolved; at least 10x is strong. At H32 report whether both model JVP and finite secant meet cosine >= 0.8 and relative vector error <= 0.5 against a strong Newton position secant. Report eligibility losses, norm ratios, even shifts, and nominal prediction error. H8/H16, velocity and spin are diagnostics. A single finite amplitude establishes no near-zero Newton derivative or control acceptance."
+  },
+  "static_budget": {"wall_s": 60, "cpu_threads": 1, "max_process_rss_gib": 1, "max_process_commit_gib": 1.5, "max_new_output_mib": 8},
+  "budget": {
+    "sequential_environments": 1,
+    "max_worker_starts": 1,
+    "baseline_replays": 2,
+    "nominal_prefix_substeps": 0,
+    "max_physics_substeps": 4096,
+    "max_wall_s": 450,
+    "max_worker_wall_s": 270,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_total_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_new_output_mib": 64,
+    "worker_output_plus_shared_cache_and_temp_gib": 1
+  },
+  "stop_conditions": [
+    "Frozen hashes, snapshot layout/readback or runtime mismatch",
+    "Static controller, action derivative, or nominal replay gate fails",
+    "Invalid, constrained or incomplete transition, or shared action prefix check fails",
+    "Resource cap or eight complete branches; no automatic amplitude, seed, or snapshot changes"
+  ],
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "inputs_sha256": {
+    "configs/s3_deterministic_archive_import_plan.json": "818022cda3948577c3c0869b5c99277cea90d1ba4bd15ea3d137d5b3062027c1",
+    "runs/s3_deterministic_archive_import_20261115_resume/validation.json": "dc2652452506b95306c060cdfe3da1f20f8e323e923799359e0dbb49a1bbed2e",
+    "runs/s3_deterministic_archive_import_20261115_resume/worker/native_replay_1.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "runs/s3_deterministic_archive_import_20261115_resume/worker/native_replay_2.json": "8877fc7eeecbb4ca85c9198979cb07249ed9c308c505b024f146255550846a49",
+    "runs/s3_physical_scales_20261113/full_training.npz": "15a70656a6154102f702a1d8c9e39a1fa35573b26d30b3107b3be0b0cb37924b",
+    "runs/s3_history_duration_20261114/validation.json": "588a1b9305c7caead0e73e31a463f8ac2ee5e36f7d6ea1212a89f38903283492",
+    "runs/s3_action_response_diagnosis_20261114/findings.json": "60d9a9d9a6b26c5b00a91869edb93f42ef5773736c2fffc0e00645d30bd4b9d9"
+  }
+}

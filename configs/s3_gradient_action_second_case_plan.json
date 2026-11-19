@@ -1,0 +1,31 @@
+{
+  "episode": "history_validation_yplus006_reverse",
+  "frozen_plan": "configs/s3_gradient_action_capture_plan.json",
+  "limits": {
+    "baseline_replays": 2,
+    "max_new_output_mib": 64,
+    "max_physics_substeps": 2048,
+    "max_process_commit_gib": 3,
+    "max_process_rss_gib": 2,
+    "max_total_gpu_used_gib": 3,
+    "max_wall_s": 480,
+    "max_worker_starts": 1,
+    "max_worker_wall_s": 400,
+    "min_disk_free_gib": 10,
+    "min_start_gpu_free_gib": 4,
+    "min_start_ram_gib": 2,
+    "nominal_prefix_substeps": 0,
+    "sequential_environments": 1,
+    "worker_output_plus_shared_cache_and_temp_gib": 1
+  },
+  "output": "runs/s3_gradient_action_second_case_20261118_verified",
+  "partial_validation": "runs/s3_gradient_action_capture_20261118/partial_validation.json",
+  "partial_validation_sha256": "198146860e945e66c88c5fe0211bc05c95df9bb90d063653d63d4f722b0688e8",
+  "runner_sha256": "a727030f9d086cfebbd5e60da570d7279a54a125ca8f3201bd1b760e8734c68d",
+  "schema": "s3-gradient-action-second-case-v1",
+  "scope": {
+    "control_accepted": false,
+    "test_episode_files_read": false,
+    "training_updates": 0
+  }
+}

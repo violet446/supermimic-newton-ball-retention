@@ -1,0 +1,71 @@
+{
+  "schema": "s3-archive-restore-pilot-v1",
+  "status": "planned_not_run",
+  "question": "Does restoring the serialized State into a new native solver reproduce the observable trajectory of a true native snapshot exported from the same run, and does the validated import admit the historical target State?",
+  "cases": [
+    {
+      "episode": "validation_lateral",
+      "group": "negative_y_basin",
+      "seed": 536873541,
+      "tick": 168,
+      "archive_config": "runs/s3_pair_refit_20261112/validation_lateral_config.json",
+      "archive_trace": "runs/s3_pair_refit_20261112/validation_lateral/action_pairs.jsonl",
+      "archive_config_sha256": "7d26f9066c8ff8d304abc3c8facfed3f9158c75f0d94159644e372dc9bcefc39",
+      "archive_trace_sha256": "58b10231993821f533dd054c99d3d21b079c33836d53d800bf1da4490aff611e"
+    }
+  ],
+  "restoration_contract": [
+    "Stay in the pinned scene and nominal controller history. Compute terminal qdd and the filter first stage from static replay of the archived commands. Verify saved q, qd, tilt, tilt rate, phase and previous request first.",
+    "Populate the ball native rigid pose and COM twist, including v_com = v_origin + cross(omega, R @ COM_local). Regenerate the prescribed link model poses and twists with the normal FK assembly. Validate tool pose, twist, anchor and independent FK against the serialized State.",
+    "Rebuild existing fresh XPBD solver, collision pipeline and contacts, and keep both ping-pong buffers consistent. Record actual layout and all Warp arrays on the pinned build. Refuse unknown or unvalidated state arrays; allow fresh force defaults only where cleared before integration or overwritten by an exercised code path.",
+    "Require geometric interior, nonterminal status, zero outside duration and clean current surface clearance. Set last monitor time to archived time and initialize the counter to zero for this limited scope. Historical contact counter, full solver arrays and contact cache are absent. Record the initialization assumption and explicitly check live native counter and monitor equivalence during the pilot."
+  ],
+  "procedure": [
+    "In one new environment, run the pinned nominal prefix to tick 168 (2688 physical substeps). Preserve the source tick 72 restore boundary as a same-run native self-restore. Retain its diagnostic metadata. Do not require cross-run state identity along the prefix.",
+    "After successful static checks, save both a full native snapshot and a JSON-round-tripped public State at the same live tick 168. Reconstruct a native snapshot only from that public State plus scene and nominal controller schedule, with no reuse of live ball or hidden history.",
+    "Compare native and imported observable states before stepping. Starting from each path, run two nominal 32-step branches of 16 substeps each (2048 total). Compare every executed command, lead, retention status and physical state. Log within-source repeats as well as cross-source deltas.",
+    "Only after the same-run test passes, import the frozen historical tick 168 State and check pre-step observable equivalence. Make two nominal restored 32-step replay branches (1024 substeps). Report same-session nominal noise by lead and archival replay divergence using separate noise evidence. Stop after this control experiment."
+  ],
+  "comparison": {
+    "required_before_step": "Match discrete fields and lead clock; position <= 1e-6 m, quaternion geodesic <= 1e-5 rad, linear velocity <= 1e-5 m/s, angular velocity <= 1e-5 rad/s; controller q/qd and tilt/rate match archived state. Report native and derived arrays or explicit use and derivation.",
+    "same_run_branch_equivalence": "Require identical request sequence, step counts, ending and retention classification. Across all four nominal continuations require componentwise pairwise max position <= 1e-5 m, linear velocity <= 1e-3 m/s, spin <= 2e-2 rad/s. These are numerical reproducibility ceilings reflecting old repeated state deltas, not a physical gradient acceptance rule.",
+    "same_run_physical_resolution": "In addition, for the later 1 um base position response noise floor, report the maximum half spread over all nominal continuations at H8/16/32. Label archive equivalence verified only if the maximum same-run cross-source H32 half spread is <= 1e-6 m and the cross-source archived comparison under the same position scale is reported. Differential slope validation is a later independent experiment.",
+    "historical_import_gate": "Require the historical State to pass the same pre-step checks. Report the two newly imported nominal replays and the original two nominal trajectories under separate noise estimates. H8/16/32 position half spread >1e-6 m in the new archived pair leaves the small-perturbation readiness unverified."
+  },
+  "budget": {
+    "sequential_environments": 1,
+    "max_worker_starts": 1,
+    "max_physics_substeps": 5760,
+    "max_wall_s": 450,
+    "max_worker_wall_s": 270,
+    "max_process_rss_gib": 2,
+    "max_process_commit_gib": 3,
+    "max_total_gpu_used_gib": 3,
+    "min_start_ram_gib": 2,
+    "min_start_gpu_free_gib": 4,
+    "min_disk_free_gib": 10,
+    "max_new_output_mib": 64,
+    "worker_output_plus_shared_cache_and_temp_gib": 1,
+    "nominal_prefix_substeps": 2688,
+    "live_native_branches": 2,
+    "live_reconstructed_branches": 2,
+    "historical_reconstructed_branches": 2
+  },
+  "stop_conditions": [
+    "Failed asset, layout, control, retention, state or initialized solver equivalence check",
+    "Resource or step cap",
+    "Fixed nominal reconstruction checks complete"
+  ],
+  "scope": "validation_lateral development snapshot only; six nominal branches, no action perturbations, no adjustment to prior capture failure criteria.",
+  "training_updates": 0,
+  "control_accepted": false,
+  "test_episode_files_read": false,
+  "inputs_sha256": {
+    "runs/s3_small_offset_20261114/failure_analysis.json": "f6733837d0e030bf68c2df56e6af1976a5279e5170b4bb7e0a4199d935fdfbbc",
+    "runs/s3_archived_snapshot_audit_20261114/audit.json": "129980c7f287dd177936e47bc24e74dd24e45fcdbe5ef8611b2ae1c567d1b91b",
+    "configs/s3_small_offset_probe_plan.json": "464aa0f1babebc1fdfb5bbe7ac9fe9b6037854628401c7ebb99a0b421461278b",
+    "assets/manifest.json": "0dd7a790ff229702abba0aa5d2b2d449d4fd24021c8dfa19b7aaf315901009f3",
+    "requirements.lock": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+    "runs/s1_reachability_20261111/joint_paths.npz": "c1dafea9b961ba0562652f7b7573d1ba5574965549a2e56a10a17cb0902d70d7"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "source": "runs/s3_position_integral_diagnosis_20261115/velocity_contributions.json",
+  "sha256": "75699394aca58752e71063a0a4b3befa38eae1fced965372460670a29cf86526",
+  "model": "position_integral",
+  "calculation": "1000 * Euclidean norm of archived local_error/free_error/propagated_error velocity half-difference vectors",
+  "rows": 96,
+  "simulation_steps": 0,
+  "training_updates": 0,
+  "model_inference": false,
+  "note": "Local predictions independently start from measured pre-step states. Not a deployable trajectory. Propagated error is a vector difference before taking its norm."
+}

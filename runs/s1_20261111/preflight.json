@@ -1,0 +1,285 @@
+{
+  "kind": "static CPU geometry and initialization IK; no Newton import/simulation",
+  "seed": 20261111,
+  "effective_config": {
+    "schema_version": "ball-retention-s1-v0.1",
+    "seed": 20261111,
+    "physics": {
+      "dt_s": 0.0020833333333333333,
+      "control_hz": 60,
+      "iterations": 20,
+      "gravity_m_s2": 9.81,
+      "floor_z_m": -0.1
+    },
+    "ball": {
+      "radius_m": 0.02,
+      "mass_kg": 0.05,
+      "friction": 0.35,
+      "restitution": 0.0
+    },
+    "initial": {
+      "anchor_xy_tool_m": [
+        0.32,
+        0.0
+      ],
+      "anchor_world_m": [
+        0.45,
+        0.0,
+        0.35
+      ],
+      "gap_m": 0.0002
+    },
+    "reference": {
+      "start_s": 1.0,
+      "duration_s": 2.0,
+      "hold_end_s": 1.0,
+      "displacement_world_m": [
+        0.08,
+        0.0,
+        0.0
+      ]
+    },
+    "action": {
+      "dimension": 2,
+      "tilt_limit_deg": 5.0,
+      "tilt_rate_deg_s": 10.0,
+      "tilt_acceleration_deg_s2": 50.0
+    },
+    "robot": {
+      "joint_speed_rad_s": 0.5,
+      "joint_acceleration_rad_s2": 1.0
+    },
+    "budget": {
+      "wall_s": 1800,
+      "max_cases": 8,
+      "max_physics_steps": 23040,
+      "min_start_ram_gib": 4,
+      "min_start_gpu_free_gib": 4,
+      "min_disk_free_gib": 10,
+      "max_process_rss_gib": 3,
+      "max_gpu_used_gib": 3,
+      "max_output_cache_gib": 1,
+      "max_environment_gib": 2
+    },
+    "admission": {
+      "max_initial_penetration_m": 0.0001,
+      "support_normal_min_z": 0.5,
+      "motion_position_tolerance_m": 0.005,
+      "motion_angle_tolerance_deg": 1.0,
+      "support_region_validated": false
+    }
+  },
+  "resources": {
+    "available_ram_bytes": 830468096,
+    "total_ram_bytes": 16779862016,
+    "gpu_total_bytes": 8585740288,
+    "gpu_used_bytes": 549453824,
+    "disk_free_bytes": 29448785920
+  },
+  "physics_resource_admission": {
+    "passed": false,
+    "checks": {
+      "ram": false,
+      "gpu_free": true,
+      "gpu_used": true,
+      "disk": true
+    }
+  },
+  "python": "C:\\newton\\New\\Supermimic\\tasks\\ball_retention\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "newton": "1.6.0",
+    "warp-lang": "1.17.0",
+    "numpy": "2.2.4",
+    "scipy": "1.15.2",
+    "trimesh": "5.1.0"
+  },
+  "config_sha256": "df85c88b791a597a0c05a3b18a188f4def003072ceee618a12edeece007610f9",
+  "lock_sha256": "6b2a9edbe6221a69b45e8640d68807c72f68a6fe6756e80934b2db7a56102cf0",
+  "tool": {
+    "watertight": true,
+    "winding_consistent": true,
+    "anchor_local_m": [
+      0.32,
+      0.0,
+      0.02850011063103641
+    ],
+    "normal_local": [
+      -0.4434214831938832,
+      0.08623531808237192,
+      0.892155176052557
+    ],
+    "vertical_hits": [
+      {
+        "triangle": 11022,
+        "z": 0.02850011063103641,
+        "normal": [
+          -0.4434214831938832,
+          0.08623531808237192,
+          0.892155176052557
+        ]
+      },
+      {
+        "triangle": 13647,
+        "z": 0.025923515276946796,
+        "normal": [
+          0.42691989738155883,
+          -0.04891783251340153,
+          -0.9029653630576923
+        ]
+      }
+    ],
+    "ball_center_local_m": [
+      0.31104288603948355,
+      0.0017419534252639127,
+      0.04652164518729806
+    ],
+    "sphere_clearance_m": 0.00020000000000001614,
+    "initial_clearance_passed": true
+  },
+  "initial_ik": {
+    "target_tool_transform": [
+      [
+        0.8963132199416322,
+        0.042662087088564574,
+        0.44136442775002943,
+        0.15060083459919776
+      ],
+      [
+        0.0,
+        0.9953609477171986,
+        -0.09621114155605956,
+        0.002742028178286002
+      ],
+      [
+        -0.4434214831938832,
+        0.08623531808237192,
+        0.892155176052557,
+        0.46646835340449294
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "candidates": [
+      {
+        "q": [
+          -1.5278738644600047,
+          -0.3727045343065564,
+          -2.0205768489594154,
+          3.877756647206993,
+          -2.6265152342338705,
+          1.7634774891577976
+        ],
+        "position_error_m": 0.04864243836462649,
+        "rotation_error_rad": 0.05380913801711471,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          -1.5278528839462244,
+          3.967968135694016,
+          2.0205634876971326,
+          1.7790819406811038,
+          -2.6265130544391013,
+          1.763529201914379
+        ],
+        "position_error_m": 0.04864242237419284,
+        "rotation_error_rad": 0.05380949923776794,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          -1.5278494392885031,
+          -0.3727109647862027,
+          -2.020562189604624,
+          -2.4054867701041247,
+          -2.626512859690015,
+          1.763533236677829
+        ],
+        "position_error_m": 0.04864242677280586,
+        "rotation_error_rad": 0.05380939983958572,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          4.298785071234851,
+          3.6153397204181466,
+          1.8522992723906608,
+          -6.283198999999999,
+          2.460188652372826,
+          3.970308459409335
+        ],
+        "position_error_m": 0.05421845503621925,
+        "rotation_error_rad": 0.08539773238403416,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          -1.527848602796182,
+          -0.37271237054244005,
+          -2.020561206470484,
+          3.87769467629695,
+          -2.626512723560938,
+          -4.519647739630213
+        ],
+        "position_error_m": 0.04864242406072575,
+        "rotation_error_rad": 0.05380946113158898,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          -1.5278547428576426,
+          -0.8139475710905008,
+          -2.0678996720873313,
+          1.2246885152278406,
+          2.626513310515044,
+          -1.3780693942516378
+        ],
+        "position_error_m": 0.04864242651147309,
+        "rotation_error_rad": 0.053809405695999395,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          -1.527855858224067,
+          3.4836558303525154,
+          2.0678994780948172,
+          -0.9255286074699267,
+          2.6265134086205157,
+          -1.3780699625726152
+        ],
+        "position_error_m": 0.04864242667236784,
+        "rotation_error_rad": 0.05380940208692269,
+        "pose_passed": false
+      },
+      {
+        "q": [
+          -1.5278528753430063,
+          -2.3152165819656436,
+          2.0205637466886093,
+          -4.5041026462692715,
+          -2.6265131040035006,
+          1.7635277867614
+        ],
+        "position_error_m": 0.04864242453496355,
+        "rotation_error_rad": 0.053809450375066695,
+        "pose_passed": false
+      }
+    ],
+    "pose_solution_found": false,
+    "self_collision_checked": false,
+    "trajectory_checked": false,
+    "admitted_for_physics": false
+  },
+  "sizes_bytes": {
+    ".venv": 597306385,
+    ".cache": 599056206,
+    ".tmp": 0,
+    "assets": 7359566
+  },
+  "wall_s": 1.020063999807462,
+  "s1_complete": false
+}

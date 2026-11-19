@@ -1,0 +1,24 @@
+{
+  "schema": "s3-pair-collection-v1",
+  "sources": [
+    {
+      "cohort": "original",
+      "manifest": "runs/s3_pair_refit_20261112/capture_manifest.json",
+      "sha256": "b29ec44f9dae7ca39b13e82263912dfd444e7c7bda22dd7cd508aaeae87b1cc3"
+    },
+    {
+      "cohort": "coverage",
+      "manifest": "runs/s3_coverage_20261113/capture_manifest_0.20.json",
+      "sha256": "a96bd85a40b7f230d554c53c66cda9a77b39976f463500bb48c4b027ab138e99"
+    },
+    {
+      "cohort": "coverage",
+      "manifest": "runs/s3_coverage_20261113/capture_manifest_0.35.json",
+      "sha256": "c72a770230cac41091139fd0dc51a31a255d4d4312e2705a7334dda43f454de0"
+    }
+  ],
+  "anchor_dataset": {
+    "manifest": "data/s2_pilot_20261112/manifest.json",
+    "sha256": "9ab789e9661a4d4db74249519bcdb5c8b1479c58d4bbbdb919da5b8a6086d9f0"
+  }
+}

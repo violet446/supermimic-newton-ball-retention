@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "phase": "world_increment_pitch_transfer",
+  "plan_sha256": "8eb6253d754a0919df5058949faaa9a69fc18fc1817644a695b71ad05a28fcde",
+  "updates": 0,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "training_snapshots": 3,
+  "training_groups": 2,
+  "fixed_endpoints": 2,
+  "verified_development_reproduction": true,
+  "resources": {
+    "stage": "complete",
+    "update": 0,
+    "wall_s": 1.8943057999713346,
+    "available_ram_bytes": 2434650112,
+    "min_available_ram_bytes": 2434650112,
+    "rss_bytes": 106221568,
+    "peak_rss_bytes": 111693824,
+    "private_commit_bytes": 112005120,
+    "peak_private_commit_bytes": 116047872,
+    "output_bytes_before_record": 48323
+  },
+  "artifacts_sha256": {
+    "execution_plan.json": "30e8e38996814daff115efaa60da889f202aef8ab5e12264badb5e48e3141856",
+    "pitch_transfer.json": "95b62a28569eba552baefafe391c9d912234b5ca3089570a586b25c8020abb01",
+    "resources.jsonl": "0f282d5c9db1d19aa2d39db3e5a8b7496e22483803e19a6de29f63686e004d4b"
+  }
+}

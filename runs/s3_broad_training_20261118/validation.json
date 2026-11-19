@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "preflight_sha256": "8eebb76f805e0b55071bf526fccc2760d87bc84c367323693ddaa7d0374dd5d2",
+  "resume_plan_sha256": "f5c94188d0e0c7ca90a5ec06cfd7101be557bfaf4807b7301f666e5cddb269a4",
+  "physics_steps": 54528,
+  "previously_recorded_physics_steps": 4736,
+  "new_physics_steps": 49792,
+  "unrecorded_physics_steps_upper_bound": 512,
+  "approved_physics_steps_upper_bound": 55040,
+  "pairs": 36,
+  "worker_starts": 7,
+  "cases": [
+    "broad_train_72_left",
+    "broad_train_72_center",
+    "broad_train_72_right",
+    "broad_train_168_left",
+    "broad_train_168_center",
+    "broad_train_168_right"
+  ],
+  "wall_s": 1826.3781207999564,
+  "training_updates": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false,
+  "artifacts_sha256": {
+    "capture_manifest.json": "aeab35aef5944f849d46b5246498144d92193ebda735999ab7212ba2a8dc8559"
+  }
+}

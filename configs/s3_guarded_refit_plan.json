@@ -1,0 +1,52 @@
+{
+  "schema": "s3-guarded-refit-plan-v1",
+  "status": "planned_not_run",
+  "motivation": "position/response direction regressions can be hidden by lower aggregate loss",
+  "starting_checkpoint": "runs/s3_pair_refit_20261112/fit/raw_request.npz",
+  "starting_checkpoint_sha256": "bdb6ad0fbc398aed4bd0b6ad8556a970d3751a49f30b0b080ea29bd9cad278a3",
+  "collection": "configs/s3_pair_collection.json",
+  "seed": 20261111,
+  "variants": [
+    "existing_objective_control",
+    "center_and_direction"
+  ],
+  "updates_per_variant": 1500,
+  "total_updates": 3000,
+  "wall_s": 600,
+  "cpu_threads": 1,
+  "rss_gib": 1,
+  "commit_gib": 1.5,
+  "output_mib": 64,
+  "simulation_steps": 0,
+  "test_used": false,
+  "existing_loss": "preserve merged-refit S2 anchor and paired absolute/response losses and group weights",
+  "additional_loss": {
+    "center_position_weight": 0.5,
+    "center_position_scale_m": 0.005,
+    "direction_weight": 0.2,
+    "direction_target_cosine": 0.5,
+    "direction_penalty": "squared hinge max(0.5-soft_cosine,0)^2 on strong training responses only",
+    "strong_signal": "measured position half-difference norm >=10*max(1um,5*zero-replay half-difference norm)",
+    "soft_cosine": "dot(predicted,measured)/(sqrt(predicted_norm^2+signal_floor^2)*measured_norm)",
+    "leads": [
+      8,
+      16,
+      32
+    ],
+    "lead_weights": [
+      0.2,
+      0.3,
+      0.5
+    ]
+  },
+  "checkpoint_guard": {
+    "reference": "starting checkpoint; per group and amplitude",
+    "H32_position_rmse_max_ratio": 1.1,
+    "H32_strong_positive_cosine_count_must_not_decrease": true,
+    "H32_strong_cosine_ge_half_count_must_not_decrease": true,
+    "S2_complete_route_H8_position_rmse_max_ratio": 1.1,
+    "rank_after_guard": "existing aggregate validation score",
+    "no_eligible_update": "retain starting checkpoint and report failure to improve"
+  },
+  "boundary": "retrospectively designed for next development experiment; regression guards are not control admission criteria; validation is repeatedly used development data"
+}

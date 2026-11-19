@@ -1,0 +1,105 @@
+{
+  "schema": "s3-history-refit-plan-v1",
+  "status": "planned_not_run",
+  "question": "Does adding crossed initial-state/tilt-history training data improve unseen initial-group predictions, especially reverse tilt history, without regressing old groups?",
+  "baseline_checkpoint": "runs/s3_physical_scales_20261113/full_training.npz",
+  "collection": "runs/s3_history_coverage_20261114/merged_collection.json",
+  "physical_scales": "configs/s3_physical_scales.json",
+  "seed": 20261111,
+  "initialization": "fresh zero-output ResidualMLP; do not warm start baseline",
+  "updates": 900,
+  "fits": 1,
+  "network": [
+    29,
+    32,
+    32,
+    9
+  ],
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.0003,
+    "max_grad_norm": 5.0
+  },
+  "anchors": {
+    "source": "original S2 training windows only",
+    "horizons": [
+      1,
+      4,
+      8
+    ],
+    "batch_size": 64,
+    "selection": "cycle horizon, identical seed"
+  },
+  "pairs": {
+    "source": "merged training split only",
+    "groups": 6,
+    "snapshots": 16,
+    "axis_amplitude_pairs": 40,
+    "weighting": "equal initial groups, snapshots per group, axis/amplitude rows per snapshot",
+    "lead_steps": [
+      8,
+      16,
+      32
+    ],
+    "lead_weights": [
+      0.2,
+      0.3,
+      0.5
+    ],
+    "absolute_weight": 0.5,
+    "response_weight": 0.2
+  },
+  "components": [
+    1.5,
+    1.5,
+    1.5,
+    0.7,
+    0.7,
+    0.7,
+    0.4,
+    0.4,
+    0.4
+  ],
+  "response_scales_si": [
+    0.0005,
+    0.0005,
+    0.0005,
+    0.025,
+    0.025,
+    0.025,
+    0.5,
+    0.5,
+    0.5
+  ],
+  "normalization": "retained_training_v2, all retained S2 and paired training inputs; fixed SI loss and residual gains",
+  "selection": "fixed final update only; no development-validation checkpoint selection",
+  "evaluation": [
+    "Same frozen baseline and final candidate on all old/new development groups, amplitudes and both new histories.",
+    "Separate SI state RMSE, strong response direction/cosine/magnitude, and noise-unresolved counts.",
+    "S2 complete-route validation H8 position protection.",
+    "Record per-group/amp H32 position <=1.1x baseline, no reduction of strong positive or cosine>=0.5 counts; S2 route H8 position <=1.1x baseline. These are regression diagnostics, not control admission."
+  ],
+  "test_metrics_used": false,
+  "simulation_steps": 0,
+  "budget": {
+    "cpu_threads": 1,
+    "wall_s": 600,
+    "rss_gib": 1,
+    "commit_gib": 1.5,
+    "output_mib": 64
+  },
+  "stop_conditions": [
+    "nonfinite loss or gradient",
+    "data/source hash or split identity mismatch",
+    "resource or wall cap"
+  ],
+  "control_accepted": false,
+  "inputs_sha256": {
+    "runs/s3_history_coverage_20261114/merged_collection.json": "d33310719ece2af89efb479796af347cfc6993812514eb27b1c596e5c3083470",
+    "configs/s3_physical_scales.json": "ba13b57ddb8a52d46db15d453026c8a86df5ced53db6cb3c531f9fcd528985c9",
+    "runs/s3_physical_scales_20261113/full_training.npz": "15a70656a6154102f702a1d8c9e39a1fa35573b26d30b3107b3be0b0cb37924b",
+    "runs/s3_physical_scales_20261113/plan.json": "cfdb673b3c71a7da328d9745a523612233de12324a8eb6659df241eeb9dd4583",
+    "runs/s3_history_coverage_20261114/capture_validation.json": "801cdb1111859525f01677e62f6728fac7965dfe92bbebdb3ee1ff1e02f365bc",
+    "runs/s3_history_coverage_20261114/frozen_comparison.json": "6218845dd4b4d6959483e58ecea517318f60fda8a85038b49bff15efc550832f"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "stopped",
+  "stage": "admission",
+  "updates": 0,
+  "reason": "resource cap at admission, update 0",
+  "wall_s": 2.0588219999917783,
+  "simulation_steps": 0,
+  "test_episode_files_read": false,
+  "control_accepted": false
+}
